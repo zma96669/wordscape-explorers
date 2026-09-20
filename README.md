@@ -20,13 +20,13 @@ http://127.0.0.1:4173/play/
 
 ## GitHub Pages 部署
 
-仓库已经包含自动部署工作流。将代码推送到 GitHub 的 `main` 分支后，在仓库的 **Settings → Pages → Build and deployment** 中将 **Source** 设为 **GitHub Actions**。部署完成后，访问：
+在线版本：
 
 ```text
-https://<GitHub用户名>.github.io/<仓库名>/
+https://zma96669.github.io/wordscape-explorers/
 ```
 
-根地址会自动进入游戏页面。后续每次推送到 `main`，GitHub Pages 都会自动更新。
+仓库已使用 GitHub Actions 自动部署。根地址会自动进入游戏页面，后续每次推送到 `main`，GitHub Pages 都会自动更新。
 
 ## 当前内容
 
