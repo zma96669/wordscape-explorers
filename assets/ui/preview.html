@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>词境探险队 · 界面资源预览</title>
+  <link rel="stylesheet" href="components.css">
+  <style>
+    body { margin: 0; font-family: "Trebuchet MS", "Segoe UI", "Microsoft YaHei", sans-serif; background: #FFF8EC; color: #24364B; }
+    main { max-width: 1100px; margin: 0 auto; padding: 1.4rem; }
+    h1, h2 { margin: 0 0 .6rem; }
+    section { margin: 1.6rem 0; padding: 1rem; border: 3px solid #24364B; border-radius: 22px; background: #fff; }
+    .row { display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; }
+    .icon-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); gap: .8rem; }
+    .icon-card { text-align: center; font-size: .8rem; }
+    .icon-sizes { display: flex; justify-content: center; align-items: end; gap: .4rem; margin-bottom: .3rem; }
+    .on-dark { background: #24364B; color: #FFF8EC; padding: .8rem; border-radius: 16px; }
+    .on-cream { background: #FFF8EC; padding: .8rem; border-radius: 16px; }
+    code { background: #F3E2B8; padding: .05rem .3rem; border-radius: 6px; }
+  </style>
+</head>
+<body class="wx-ui">
+<main>
+  <h1 class="wx-title">词境探险队</h1>
+  <p>U01–U03 资源预览。图标在浅色与深色底上分别显示 24 / 48 / 64 像素。无外网字体和 CDN。</p>
+
+  <section>
+    <h2>图标</h2>
+    <div class="icon-grid" id="icons"></div>
+  </section>
+
+  <section>
+    <h2>控件状态</h2>
+    <div class="row">
+      <button class="wx-btn"><img src="icons/play.svg" alt="">开始探险</button>
+      <button class="wx-btn wx-btn--secondary">次要按钮</button>
+      <button class="wx-btn wx-btn--back"><img src="icons/back.svg" alt="">返回</button>
+      <button class="wx-icon-btn" aria-label="提示"><img src="icons/hint.svg" alt=""></button>
+      <button class="wx-btn is-pressed">按下</button>
+      <button class="wx-btn" disabled>不可用</button>
+    </div>
+    <p>主按钮对比：奶油字/探险绿 ≈ 4.2:1；正文深蓝/奶油 ≈ 11.7:1。</p>
+    <div class="row" style="margin-top:1rem">
+      <article class="wx-dialog">
+        <h2>要先听一遍吗？</h2>
+        <p>点喇叭可以重听任务，不会立刻判定对错。</p>
+        <button class="wx-btn">好</button>
+      </article>
+      <div>
+        <span class="wx-chip"><img src="icons/stardust.svg" alt="" width="20" height="20">星砂 6</span>
+        <div class="wx-progress" aria-label="进度 62%"><span></span></div>
+        <article class="wx-task-card"><strong>任务 2</strong>找到能帮助你应对雨天的物品。</article>
+        <div class="wx-bubble">这条路步数不够，试试更近的走法。</div>
+      </div>
+      <div class="wx-overlay" style="width:220px">提示层：先标记三个目标</div>
+      <button class="wx-audio-toggle" aria-pressed="true"><img src="icons/audio.svg" alt="" width="28" height="28">声音开</button>
+    </div>
+    <div class="row">
+      <span class="wx-status"><img src="icons/correct.svg" alt="" width="32" height="32">正确</span>
+      <span class="wx-status"><img src="icons/needs-revision.svg" alt="" width="32" height="32">需要修正</span>
+      <span class="wx-status"><img src="icons/task-complete.svg" alt="" width="32" height="32">任务完成</span>
+      <span class="wx-status"><img src="icons/series-complete.svg" alt="" width="32" height="32">系列集齐</span>
+    </div>
+  </section>
+
+  <section>
+    <h2>棋盘拼接</h2>
+    <div class="wx-board-preview" id="board"></div>
+    <div class="row" style="margin-top:1rem">
+      <img src="game/chest-closed.svg" width="120" alt="关闭收藏箱">
+      <img src="game/chest-open.svg" width="120" alt="开启收藏箱">
+      <img src="game/chest-empty.svg" width="120" alt="空收藏箱">
+      <img src="game/display-stand.svg" width="180" alt="展示台">
+      <img src="game/main-stand.svg" width="180" alt="主展示台">
+      <img src="game/collection-card.svg" width="90" alt="收藏卡底板">
+    </div>
+  </section>
+</main>
+<script>
+const icons = ["back","play","undo","reset","audio","audio-muted","hint","settings","collection","exchange","wish","stardust","duplicate","bridge","boots","compass","correct","needs-revision","task-complete","series-complete"];
+const box = document.getElementById("icons");
+for (const name of icons) {
+  const card = document.createElement("div");
+  card.className = "icon-card";
+  card.innerHTML = `<div class="on-cream icon-sizes">
+      <img src="icons/${name}.svg" width="24" height="24" alt="">
+      <img src="icons/${name}.svg" width="48" height="48" alt="">
+      <img src="icons/${name}.svg" width="64" height="64" alt="${name}">
+    </div>
+    <div class="on-dark icon-sizes">
+      <img src="icons/${name}.svg" width="24" height="24" alt="">
+      <img src="icons/${name}.svg" width="48" height="48" alt="">
+      <img src="icons/${name}.svg" width="64" height="64" alt="">
+    </div>
+    <div><code>${name}.svg</code></div>`;
+  box.appendChild(card);
+}
+const tiles = ["start","path","path","exit","ground","ravine","exploration-point","ground","path","ground","path","ground","ground","path","ground","ground"];
+const board = document.getElementById("board");
+for (const t of tiles) {
+  const img = document.createElement("img");
+  img.src = "game/" + t + ".svg";
+  img.alt = t;
+  board.appendChild(img);
+}
+</script>
+</body>
+</html>

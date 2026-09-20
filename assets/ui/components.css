@@ -1,0 +1,208 @@
+/* Wordscape Explorers UI components. No external fonts or CDN. */
+:root {
+  --navy: #24364B;
+  --green: #268574;
+  --sky: #6FB5DF;
+  --cream: #FFF8EC;
+  --orange: #E39A4A;
+  --yellow: #F4D27A;
+  --coral: #E07A5F;
+  --wood: #C9844A;
+  --shadow: rgba(36, 54, 75, 0.18);
+  --radius: 18px;
+  --touch: 44px;
+  --font: "Trebuchet MS", "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+}
+
+.wx-ui {
+  color: var(--navy);
+  font-family: var(--font);
+  line-height: 1.35;
+}
+
+.wx-title {
+  margin: 0;
+  font-size: 1.6rem;
+  letter-spacing: 0.04em;
+}
+
+.wx-btn,
+.wx-icon-btn {
+  min-height: var(--touch);
+  min-width: var(--touch);
+  border: 3px solid var(--navy);
+  border-radius: 999px;
+  background: var(--green);
+  color: var(--cream);
+  font: 700 1rem/1 var(--font);
+  padding: 0.55rem 1.1rem;
+  box-shadow: 0 4px 0 var(--navy);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+}
+
+.wx-btn:hover { filter: brightness(1.06); }
+.wx-btn:focus-visible,
+.wx-icon-btn:focus-visible {
+  outline: 3px solid var(--sky);
+  outline-offset: 3px;
+}
+.wx-btn:active,
+.wx-icon-btn:active,
+.wx-btn.is-pressed {
+  transform: translateY(3px);
+  box-shadow: 0 1px 0 var(--navy);
+}
+.wx-btn:disabled,
+.wx-icon-btn:disabled {
+  background: #9BB3A8;
+  color: #EEF4F0;
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
+.wx-btn--secondary {
+  background: var(--cream);
+  color: var(--navy);
+}
+
+.wx-btn--back {
+  background: var(--sky);
+  color: var(--navy);
+}
+
+.wx-icon-btn {
+  width: var(--touch);
+  padding: 0;
+  background: var(--cream);
+}
+
+.wx-icon-btn img,
+.wx-btn img {
+  width: 28px;
+  height: 28px;
+}
+
+.wx-dialog {
+  width: min(360px, 92vw);
+  background: var(--cream);
+  border: 4px solid var(--navy);
+  border-radius: 24px;
+  box-shadow: 0 10px 0 var(--navy);
+  padding: 1.1rem 1.2rem 1.2rem;
+}
+
+.wx-dialog h2 {
+  margin: 0 0 0.5rem;
+  font-size: 1.15rem;
+}
+
+.wx-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  min-height: 32px;
+  padding: 0.2rem 0.7rem;
+  border: 3px solid var(--navy);
+  border-radius: 999px;
+  background: var(--yellow);
+  font-weight: 700;
+}
+
+.wx-progress {
+  height: 16px;
+  border: 3px solid var(--navy);
+  border-radius: 999px;
+  background: #E8D9B4;
+  overflow: hidden;
+}
+
+.wx-progress > span {
+  display: block;
+  height: 100%;
+  width: 62%;
+  background: var(--green);
+}
+
+.wx-task-card {
+  width: min(320px, 100%);
+  min-height: 92px;
+  border: 4px solid var(--navy);
+  border-radius: 22px;
+  background: white;
+  padding: 0.8rem 0.9rem;
+  box-shadow: 0 6px 0 var(--shadow);
+}
+
+.wx-task-card strong {
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.wx-bubble {
+  position: relative;
+  max-width: 240px;
+  background: white;
+  border: 3px solid var(--navy);
+  border-radius: 18px 18px 18px 6px;
+  padding: 0.7rem 0.8rem;
+}
+
+.wx-overlay {
+  background: rgba(36, 54, 75, 0.45);
+  color: var(--cream);
+  border-radius: 20px;
+  min-height: 120px;
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+}
+
+.wx-audio-toggle {
+  min-height: var(--touch);
+  min-width: 132px;
+  border: 3px solid var(--navy);
+  border-radius: 16px;
+  background: var(--cream);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0 0.7rem;
+  font-weight: 700;
+}
+
+.wx-audio-toggle[aria-pressed="true"] {
+  background: var(--green);
+  color: var(--cream);
+}
+
+.wx-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-weight: 700;
+}
+
+.wx-board-preview {
+  display: grid;
+  grid-template-columns: repeat(4, 64px);
+  gap: 0;
+  width: max-content;
+  border: 4px solid var(--navy);
+  border-radius: 16px;
+  overflow: hidden;
+  background: #C8E29A;
+}
+
+.wx-board-preview img {
+  width: 64px;
+  height: 64px;
+  display: block;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .wx-btn, .wx-icon-btn { transition: none; }
+}

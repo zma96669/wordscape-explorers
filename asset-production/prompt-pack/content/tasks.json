@@ -1,0 +1,2359 @@
+{
+  "version": "0.1",
+  "status": "draft_pending_education_review",
+  "note": "Candidate IDs must be respected. Classroom and educational review pending.",
+  "tasks": [
+    {
+      "id": "listen-rabbit",
+      "type": "listen",
+      "targetId": "rabbit",
+      "promptZh": "听一听，找到对应的单词。",
+      "spokenText": "rabbit",
+      "correctIds": [
+        "rabbit"
+      ],
+      "distractorIds": [
+        "run",
+        "read",
+        "close"
+      ],
+      "hintZh": "这个词在这里表示“兔子”。",
+      "explanationZh": "rabbit 在本任务中表示“兔子”。",
+      "audioPath": "assets/audio/en-US/words/rabbit.mp3",
+      "status": "draft_pending_education_review"
+    },
+    {
+      "id": "meaning-rabbit",
+      "type": "meaning",
+      "targetId": "rabbit",
+      "promptZh": "找到表示“兔子”的词。",
+      "promptEn": "An animal with long ears that can hop.",
+      "spokenText": "An animal with long ears that can hop.",
+      "correctIds": [
+        "rabbit"
+      ],
+      "distractorIds": [
+        "run",
+        "read",
+        "close"
+      ],
+      "hintZh": "读一读解释，也可以听目标词的发音。",
+      "explanationZh": "rabbit：兔子。",
+      "audioPath": "assets/audio/en-US/tasks/meaning-rabbit.mp3",
+      "status": "draft_pending_education_review"
+    },
+    {
+      "id": "listen-tiger",
+      "type": "listen",
+      "targetId": "tiger",
+      "promptZh": "听一听，找到对应的单词。",
+      "spokenText": "tiger",
+      "correctIds": [
+        "tiger"
+      ],
+      "distractorIds": [
+        "walk",
+        "write",
+        "hot"
+      ],
+      "hintZh": "这个词在这里表示“老虎”。",
+      "explanationZh": "tiger 在本任务中表示“老虎”。",
+      "audioPath": "assets/audio/en-US/words/tiger.mp3",
+      "status": "draft_pending_education_review"
+    },
+    {
+      "id": "meaning-tiger",
+      "type": "meaning",
+      "targetId": "tiger",
+      "promptZh": "找到表示“老虎”的词。",
+      "promptEn": "A large wild cat with dark stripes.",
+      "spokenText": "A large wild cat with dark stripes.",
+      "correctIds": [
+        "tiger"
+      ],
+      "distractorIds": [
+        "walk",
+        "write",
+        "hot"
+      ],
+      "hintZh": "读一读解释，也可以听目标词的发音。",
+      "explanationZh": "tiger：老虎。",
+      "audioPath": "assets/audio/en-US/tasks/meaning-tiger.mp3",
+      "status": "draft_pending_education_review"
+    },
+    {
+      "id": "listen-turtle",
+      "type": "listen",
+      "targetId": "turtle",
+      "promptZh": "听一听，找到对应的单词。",
+      "spokenText": "turtle",
+      "correctIds": [
+        "turtle"
+      ],
+      "distractorIds": [
+        "jump",
+        "eat",
+        "cold"
+      ],
+      "hintZh": "这个词在这里表示“龟”。",
+      "explanationZh": "turtle 在本任务中表示“龟”。",
+      "audioPath": "assets/audio/en-US/words/turtle.mp3",
+      "status": "draft_pending_education_review"
+    },
+    {
+      "id": "meaning-turtle",
+      "type": "meaning",
+      "targetId": "turtle",
+      "promptZh": "找到表示“龟”的词。",
+      "promptEn": "An animal with a hard shell on its back.",
+      "spokenText": "An animal with a hard shell on its back.",
+      "correctIds": [
+        "turtle"
+      ],
+      "distractorIds": [
+        "jump",
+        "eat",
+        "cold"
+      ],
+      "hintZh": "读一读解释，也可以听目标词的发音。",
+      "explanationZh": "turtle：龟。",
+      "audioPath": "assets/audio/en-US/tasks/meaning-turtle.mp3",
+      "status": "draft_pending_education_review"
+    },
+    {
+      "id": "listen-fish",
+      "type": "listen",
+      "targetId": "fish",
+      "promptZh": "听一听，找到对应的单词。",
+      "spokenText": "fish",
+      "correctIds": [
+        "fish"
+      ],
+      "distractorIds": [
+        "swim",
+        "drink",
+        "big"
+      ],
+      "hintZh": "这个词在这里表示“鱼”。",
+      "explanationZh": "fish 在本任务中表示“鱼”。",
+      "audioPath": "assets/audio/en-US/words/fish.mp3",
+      "status": "draft_pending_education_review"
+    },
+    {
+      "id": "meaning-fish",
+      "type": "meaning",
+      "targetId": "fish",
+      "promptZh": "找到表示“鱼”的词。",
+      "promptEn": "An animal with gills and fins that lives in water.",
+      "spokenText": "An animal with gills and fins that lives in water.",
+      "correctIds": [
+        "fish"
+      ],
+      "distractorIds": [
+        "swim",
+        "drink",
+        "big"
+      ],
+      "hintZh": "读一读解释，也可以听目标词的发音。",
+      "explanationZh": "fish：鱼。",
+      "audioPath": "assets/audio/en-US/tasks/meaning-fish.mp3",
+      "status": "draft_pending_education_review"
+    },
+    {
+      "id": "listen-bird",
+      "type": "listen",
+      "targetId": "bird",
+      "promptZh": "听一听，找到对应的单词。",
+      "spokenText": "bird",
+      "correctIds": [
+        "bird"
+      ],
+      "distractorIds": [
+        "fly",
+        "sleep",
+        "small"
+      ],
+      "hintZh": "这个词在这里表示“鸟”。",
+      "explanationZh": "bird 在本任务中表示“鸟”。",
+      "audioPath": "assets/audio/en-US/words/bird.mp3",
+      "status": "draft_pending_education_review"
+    },
+    {
+      "id": "meaning-bird",
+      "type": "meaning",
+      "targetId": "bird",
+      "promptZh": "找到表示“鸟”的词。",
+      "promptEn": "An animal with feathers and a beak.",
+      "spokenText": "An animal with feathers and a beak.",
+      "correctIds": [
+        "bird"
+      ],
+      "distractorIds": [
+        "fly",
+        "sleep",
+        "small"
+      ],
+      "hintZh": "读一读解释，也可以听目标词的发音。",
+      "explanationZh": "bird：鸟。",
+      "audioPath": "assets/audio/en-US/tasks/meaning-bird.mp3",
+      "status": "draft_pending_education_review"
+    },
+    {
+      "id": "listen-dog",
+      "type": "listen",
+      "targetId": "dog",
+      "promptZh": "听一听，找到对应的单词。",
+      "spokenText": "dog",
+      "correctIds": [
+        "dog"
+      ],
+      "distractorIds": [
+        "read",
+        "open",
+        "long"
+      ],
+      "hintZh": "这个词在这里表示“狗”。",
+      "explanationZh": "dog 在本任务中表示“狗”。",
+      "audioPath": "assets/audio/en-US/words/dog.mp3",
+      "status": "draft_pending_education_review"
+    },
+    {
+      "id": "meaning-dog",
+      "type": "meaning",
+      "targetId": "dog",
+      "promptZh": "找到表示“狗”的词。",
+      "promptEn": "An animal that can bark.",
+      "spokenText": "An animal that can bark.",
+      "correctIds": [
+        "dog"
+      ],
+      "distractorIds": [
+        "read",
+        "open",
+        "long"
+      ],
+      "hintZh": "读一读解释，也可以听目标词的发音。",
+      "explanationZh": "dog：狗。",
+      "audioPath": "assets/audio/en-US/tasks/meaning-dog.mp3",
+      "status": "draft_pending_education_review"
+    },
+    {
+      "id": "listen-cat",
+      "type": "listen",
+      "targetId": "cat",
+      "promptZh": "听一听，找到对应的单词。",
+      "spokenText": "cat",
+      "correctIds": [
+        "cat"
+      ],
+      "distractorIds": [
+        "write",
+        "close",
+        "short"
+      ],
+      "hintZh": "这个词在这里表示“猫”。",
+      "explanationZh": "cat 在本任务中表示“猫”。",
+      "audioPath": "assets/audio/en-US/words/cat.mp3",
+      "status": "draft_pending_education_review"
+    },
+    {
+      "id": "meaning-cat",
+      "type": "meaning",
+      "targetId": "cat",
+      "promptZh": "找到表示“猫”的词。",
+      "promptEn": "An animal that can meow.",
+      "spokenText": "An animal that can meow.",
+      "correctIds": [
+        "cat"
+      ],
+      "distractorIds": [
+        "write",
+        "close",
+        "short"
+      ],
+      "hintZh": "读一读解释，也可以听目标词的发音。",
+      "explanationZh": "cat：猫。",
+      "audioPath": "assets/audio/en-US/tasks/meaning-cat.mp3",
+      "status": "draft_pending_education_review"
+    },
+    {
+      "id": "listen-umbrella",
+      "type": "listen",
+      "targetId": "umbrella",
+      "promptZh": "听一听，找到对应的单词。",
+      "spokenText": "umbrella",
+      "correctIds": [
+        "umbrella"
+      ],
+      "distractorIds": [
+        "eat",
+        "hot",
+        "happy"
+      ],
+      "hintZh": "这个词在这里表示“雨伞”。",
+      "explanationZh": "umbrella 在本任务中表示“雨伞”。",
+      "audioPath": "assets/audio/en-US/words/umbrella.mp3",
+      "status": "draft_pending_education_review"
+    },
+    {
+      "id": "meaning-umbrella",
+      "type": "meaning",
+      "targetId": "umbrella",
+      "promptZh": "找到表示“雨伞”的词。",
+      "promptEn": "Something you hold over your head to keep off the rain.",
+      "spokenText": "Something you hold over your head to keep off the rain.",
+      "correctIds": [
+        "umbrella"
+      ],
+      "distractorIds": [
+        "eat",
+        "hot",
+        "happy"
+      ],
+      "hintZh": "读一读解释，也可以听目标词的发音。",
+      "explanationZh": "umbrella：雨伞。",
+      "audioPath": "assets/audio/en-US/tasks/meaning-umbrella.mp3",
+      "status": "draft_pending_education_review"
+    },
+    {
+      "id": "listen-raincoat",
+      "type": "listen",
+      "targetId": "raincoat",
+      "promptZh": "听一听，找到对应的单词。",
+      "spokenText": "raincoat",
+      "correctIds": [
+        "raincoat"
+      ],
+      "distractorIds": [
+        "drink",
+        "cold",
+        "sad"
+      ],
+      "hintZh": "这个词在这里表示“雨衣”。",
+      "explanationZh": "raincoat 在本任务中表示“雨衣”。",
+      "audioPath": "assets/audio/en-US/words/raincoat.mp3",
+      "status": "draft_pending_education_review"
+    },
+    {
+      "id": "meaning-raincoat",
+      "type": "meaning",
+      "targetId": "raincoat",
+      "promptZh": "找到表示“雨衣”的词。",
+      "promptEn": "A coat you wear to keep dry in the rain.",
+      "spokenText": "A coat you wear to keep dry in the rain.",
+      "correctIds": [
+        "raincoat"
+      ],
+      "distractorIds": [
+        "drink",
+        "cold",
+        "sad"
+      ],
+      "hintZh": "读一读解释，也可以听目标词的发音。",
+      "explanationZh": "raincoat：雨衣。",
+      "audioPath": "assets/audio/en-US/tasks/meaning-raincoat.mp3",
+      "status": "draft_pending_education_review"
+    },
+    {
+      "id": "listen-coat",
+      "type": "listen",
+      "targetId": "coat",
+      "promptZh": "听一听，找到对应的单词。",
+      "spokenText": "coat",
+      "correctIds": [
+        "coat"
+      ],
+      "distractorIds": [
+        "sleep",
+        "big",
+        "clean"
+      ],
+      "hintZh": "这个词在这里表示“外套”。",
+      "explanationZh": "coat 在本任务中表示“外套”。",
+      "audioPath": "assets/audio/en-US/words/coat.mp3",
+      "status": "draft_pending_education_review"
+    },
+    {
+      "id": "meaning-coat",
+      "type": "meaning",
+      "targetId": "coat",
+      "promptZh": "找到表示“外套”的词。",
+      "promptEn": "A piece of clothing you wear over other clothes to keep warm.",
+      "spokenText": "A piece of clothing you wear over other clothes to keep warm.",
+      "correctIds": [
+        "coat"
+      ],
+      "distractorIds": [
+        "sleep",
+        "big",
+        "clean"
+      ],
+      "hintZh": "读一读解释，也可以听目标词的发音。",
+      "explanationZh": "coat：外套。",
+      "audioPath": "assets/audio/en-US/tasks/meaning-coat.mp3",
+      "status": "draft_pending_education_review"
+    },
+    {
+      "id": "listen-hat",
+      "type": "listen",
+      "targetId": "hat",
+      "promptZh": "听一听，找到对应的单词。",
+      "spokenText": "hat",
+      "correctIds": [
+        "hat"
+      ],
+      "distractorIds": [
+        "open",
+        "small",
+        "dirty"
+      ],
+      "hintZh": "这个词在这里表示“帽子”。",
+      "explanationZh": "hat 在本任务中表示“帽子”。",
+      "audioPath": "assets/audio/en-US/words/hat.mp3",
+      "status": "draft_pending_education_review"
+    },
+    {
+      "id": "meaning-hat",
+      "type": "meaning",
+      "targetId": "hat",
+      "promptZh": "找到表示“帽子”的词。",
+      "promptEn": "Something you wear on your head.",
+      "spokenText": "Something you wear on your head.",
+      "correctIds": [
+        "hat"
+      ],
+      "distractorIds": [
+        "open",
+        "small",
+        "dirty"
+      ],
+      "hintZh": "读一读解释，也可以听目标词的发音。",
+      "explanationZh": "hat：帽子。",
+      "audioPath": "assets/audio/en-US/tasks/meaning-hat.mp3",
+      "status": "draft_pending_education_review"
+    },
+    {
+      "id": "listen-shoes",
+      "type": "listen",
+      "targetId": "shoes",
+      "promptZh": "听一听，找到对应的单词。",
+      "spokenText": "shoes",
+      "correctIds": [
+        "shoes"
+      ],
+      "distractorIds": [
+        "close",
+        "long",
+        "fast"
+      ],
+      "hintZh": "这个词在这里表示“鞋”。",
+      "explanationZh": "shoes 在本任务中表示“鞋”。",
+      "audioPath": "assets/audio/en-US/words/shoes.mp3",
+      "status": "draft_pending_education_review"
+    },
+    {
+      "id": "meaning-shoes",
+      "type": "meaning",
+      "targetId": "shoes",
+      "promptZh": "找到表示“鞋”的词。",
+      "promptEn": "Things you wear on your feet when you go outside.",
+      "spokenText": "Things you wear on your feet when you go outside.",
+      "correctIds": [
+        "shoes"
+      ],
+      "distractorIds": [
+        "close",
+        "long",
+        "fast"
+      ],
+      "hintZh": "读一读解释，也可以听目标词的发音。",
+      "explanationZh": "shoes：鞋。",
+      "audioPath": "assets/audio/en-US/tasks/meaning-shoes.mp3",
+      "status": "draft_pending_education_review"
+    },
+    {
+      "id": "listen-bag",
+      "type": "listen",
+      "targetId": "bag",
+      "promptZh": "听一听，找到对应的单词。",
+      "spokenText": "bag",
+      "correctIds": [
+        "bag"
+      ],
+      "distractorIds": [
+        "hot",
+        "short",
+        "slow"
+      ],
+      "hintZh": "这个词在这里表示“包”。",
+      "explanationZh": "bag 在本任务中表示“包”。",
+      "audioPath": "assets/audio/en-US/words/bag.mp3",
+      "status": "draft_pending_education_review"
+    },
+    {
+      "id": "meaning-bag",
+      "type": "meaning",
+      "targetId": "bag",
+      "promptZh": "找到表示“包”的词。",
+      "promptEn": "Something you use to carry your things.",
+      "spokenText": "Something you use to carry your things.",
+      "correctIds": [
+        "bag"
+      ],
+      "distractorIds": [
+        "hot",
+        "short",
+        "slow"
+      ],
+      "hintZh": "读一读解释，也可以听目标词的发音。",
+      "explanationZh": "bag：包。",
+      "audioPath": "assets/audio/en-US/tasks/meaning-bag.mp3",
+      "status": "draft_pending_education_review"
+    },
+    {
+      "id": "listen-book",
+      "type": "listen",
+      "targetId": "book",
+      "promptZh": "听一听，找到对应的单词。",
+      "spokenText": "book",
+      "correctIds": [
+        "book"
+      ],
+      "distractorIds": [
+        "cold",
+        "happy",
+        "run"
+      ],
+      "hintZh": "这个词在这里表示“书”。",
+      "explanationZh": "book 在本任务中表示“书”。",
+      "audioPath": "assets/audio/en-US/words/book.mp3",
+      "status": "draft_pending_education_review"
+    },
+    {
+      "id": "meaning-book",
+      "type": "meaning",
+      "targetId": "book",
+      "promptZh": "找到表示“书”的词。",
+      "promptEn": "A set of pages you can read.",
+      "spokenText": "A set of pages you can read.",
+      "correctIds": [
+        "book"
+      ],
+      "distractorIds": [
+        "cold",
+        "happy",
+        "run"
+      ],
+      "hintZh": "读一读解释，也可以听目标词的发音。",
+      "explanationZh": "book：书。",
+      "audioPath": "assets/audio/en-US/tasks/meaning-book.mp3",
+      "status": "draft_pending_education_review"
+    },
+    {
+      "id": "listen-pencil",
+      "type": "listen",
+      "targetId": "pencil",
+      "promptZh": "听一听，找到对应的单词。",
+      "spokenText": "pencil",
+      "correctIds": [
+        "pencil"
+      ],
+      "distractorIds": [
+        "big",
+        "sad",
+        "walk"
+      ],
+      "hintZh": "这个词在这里表示“铅笔”。",
+      "explanationZh": "pencil 在本任务中表示“铅笔”。",
+      "audioPath": "assets/audio/en-US/words/pencil.mp3",
+      "status": "draft_pending_education_review"
+    },
+    {
+      "id": "meaning-pencil",
+      "type": "meaning",
+      "targetId": "pencil",
+      "promptZh": "找到表示“铅笔”的词。",
+      "promptEn": "Something you write with that can be sharpened.",
+      "spokenText": "Something you write with that can be sharpened.",
+      "correctIds": [
+        "pencil"
+      ],
+      "distractorIds": [
+        "big",
+        "sad",
+        "walk"
+      ],
+      "hintZh": "读一读解释，也可以听目标词的发音。",
+      "explanationZh": "pencil：铅笔。",
+      "audioPath": "assets/audio/en-US/tasks/meaning-pencil.mp3",
+      "status": "draft_pending_education_review"
+    },
+    {
+      "id": "listen-chair",
+      "type": "listen",
+      "targetId": "chair",
+      "promptZh": "听一听，找到对应的单词。",
+      "spokenText": "chair",
+      "correctIds": [
+        "chair"
+      ],
+      "distractorIds": [
+        "small",
+        "clean",
+        "jump"
+      ],
+      "hintZh": "这个词在这里表示“椅子”。",
+      "explanationZh": "chair 在本任务中表示“椅子”。",
+      "audioPath": "assets/audio/en-US/words/chair.mp3",
+      "status": "draft_pending_education_review"
+    },
+    {
+      "id": "meaning-chair",
+      "type": "meaning",
+      "targetId": "chair",
+      "promptZh": "找到表示“椅子”的词。",
+      "promptEn": "A seat for one person, usually with a back.",
+      "spokenText": "A seat for one person, usually with a back.",
+      "correctIds": [
+        "chair"
+      ],
+      "distractorIds": [
+        "small",
+        "clean",
+        "jump"
+      ],
+      "hintZh": "读一读解释，也可以听目标词的发音。",
+      "explanationZh": "chair：椅子。",
+      "audioPath": "assets/audio/en-US/tasks/meaning-chair.mp3",
+      "status": "draft_pending_education_review"
+    },
+    {
+      "id": "listen-table",
+      "type": "listen",
+      "targetId": "table",
+      "promptZh": "听一听，找到对应的单词。",
+      "spokenText": "table",
+      "correctIds": [
+        "table"
+      ],
+      "distractorIds": [
+        "long",
+        "dirty",
+        "swim"
+      ],
+      "hintZh": "这个词在这里表示“桌子”。",
+      "explanationZh": "table 在本任务中表示“桌子”。",
+      "audioPath": "assets/audio/en-US/words/table.mp3",
+      "status": "draft_pending_education_review"
+    },
+    {
+      "id": "meaning-table",
+      "type": "meaning",
+      "targetId": "table",
+      "promptZh": "找到表示“桌子”的词。",
+      "promptEn": "Furniture with a flat top where you can put your plate.",
+      "spokenText": "Furniture with a flat top where you can put your plate.",
+      "correctIds": [
+        "table"
+      ],
+      "distractorIds": [
+        "long",
+        "dirty",
+        "swim"
+      ],
+      "hintZh": "读一读解释，也可以听目标词的发音。",
+      "explanationZh": "table：桌子。",
+      "audioPath": "assets/audio/en-US/tasks/meaning-table.mp3",
+      "status": "draft_pending_education_review"
+    },
+    {
+      "id": "listen-bed",
+      "type": "listen",
+      "targetId": "bed",
+      "promptZh": "听一听，找到对应的单词。",
+      "spokenText": "bed",
+      "correctIds": [
+        "bed"
+      ],
+      "distractorIds": [
+        "short",
+        "fast",
+        "fly"
+      ],
+      "hintZh": "这个词在这里表示“床”。",
+      "explanationZh": "bed 在本任务中表示“床”。",
+      "audioPath": "assets/audio/en-US/words/bed.mp3",
+      "status": "draft_pending_education_review"
+    },
+    {
+      "id": "meaning-bed",
+      "type": "meaning",
+      "targetId": "bed",
+      "promptZh": "找到表示“床”的词。",
+      "promptEn": "Furniture you sleep in.",
+      "spokenText": "Furniture you sleep in.",
+      "correctIds": [
+        "bed"
+      ],
+      "distractorIds": [
+        "short",
+        "fast",
+        "fly"
+      ],
+      "hintZh": "读一读解释，也可以听目标词的发音。",
+      "explanationZh": "bed：床。",
+      "audioPath": "assets/audio/en-US/tasks/meaning-bed.mp3",
+      "status": "draft_pending_education_review"
+    },
+    {
+      "id": "listen-door",
+      "type": "listen",
+      "targetId": "door",
+      "promptZh": "听一听，找到对应的单词。",
+      "spokenText": "door",
+      "correctIds": [
+        "door"
+      ],
+      "distractorIds": [
+        "happy",
+        "slow",
+        "read"
+      ],
+      "hintZh": "这个词在这里表示“门”。",
+      "explanationZh": "door 在本任务中表示“门”。",
+      "audioPath": "assets/audio/en-US/words/door.mp3",
+      "status": "draft_pending_education_review"
+    },
+    {
+      "id": "meaning-door",
+      "type": "meaning",
+      "targetId": "door",
+      "promptZh": "找到表示“门”的词。",
+      "promptEn": "Something you open to enter a room.",
+      "spokenText": "Something you open to enter a room.",
+      "correctIds": [
+        "door"
+      ],
+      "distractorIds": [
+        "happy",
+        "slow",
+        "read"
+      ],
+      "hintZh": "读一读解释，也可以听目标词的发音。",
+      "explanationZh": "door：门。",
+      "audioPath": "assets/audio/en-US/tasks/meaning-door.mp3",
+      "status": "draft_pending_education_review"
+    },
+    {
+      "id": "listen-window",
+      "type": "listen",
+      "targetId": "window",
+      "promptZh": "听一听，找到对应的单词。",
+      "spokenText": "window",
+      "correctIds": [
+        "window"
+      ],
+      "distractorIds": [
+        "sad",
+        "run",
+        "write"
+      ],
+      "hintZh": "这个词在这里表示“窗户”。",
+      "explanationZh": "window 在本任务中表示“窗户”。",
+      "audioPath": "assets/audio/en-US/words/window.mp3",
+      "status": "draft_pending_education_review"
+    },
+    {
+      "id": "meaning-window",
+      "type": "meaning",
+      "targetId": "window",
+      "promptZh": "找到表示“窗户”的词。",
+      "promptEn": "An opening with glass that lets light into a room.",
+      "spokenText": "An opening with glass that lets light into a room.",
+      "correctIds": [
+        "window"
+      ],
+      "distractorIds": [
+        "sad",
+        "run",
+        "write"
+      ],
+      "hintZh": "读一读解释，也可以听目标词的发音。",
+      "explanationZh": "window：窗户。",
+      "audioPath": "assets/audio/en-US/tasks/meaning-window.mp3",
+      "status": "draft_pending_education_review"
+    },
+    {
+      "id": "listen-apple",
+      "type": "listen",
+      "targetId": "apple",
+      "promptZh": "听一听，找到对应的单词。",
+      "spokenText": "apple",
+      "correctIds": [
+        "apple"
+      ],
+      "distractorIds": [
+        "clean",
+        "walk",
+        "eat"
+      ],
+      "hintZh": "这个词在这里表示“苹果”。",
+      "explanationZh": "apple 在本任务中表示“苹果”。",
+      "audioPath": "assets/audio/en-US/words/apple.mp3",
+      "status": "draft_pending_education_review"
+    },
+    {
+      "id": "meaning-apple",
+      "type": "meaning",
+      "targetId": "apple",
+      "promptZh": "找到表示“苹果”的词。",
+      "promptEn": "A round fruit that can be red or green.",
+      "spokenText": "A round fruit that can be red or green.",
+      "correctIds": [
+        "apple"
+      ],
+      "distractorIds": [
+        "clean",
+        "walk",
+        "eat"
+      ],
+      "hintZh": "读一读解释，也可以听目标词的发音。",
+      "explanationZh": "apple：苹果。",
+      "audioPath": "assets/audio/en-US/tasks/meaning-apple.mp3",
+      "status": "draft_pending_education_review"
+    },
+    {
+      "id": "listen-banana",
+      "type": "listen",
+      "targetId": "banana",
+      "promptZh": "听一听，找到对应的单词。",
+      "spokenText": "banana",
+      "correctIds": [
+        "banana"
+      ],
+      "distractorIds": [
+        "dirty",
+        "jump",
+        "drink"
+      ],
+      "hintZh": "这个词在这里表示“香蕉”。",
+      "explanationZh": "banana 在本任务中表示“香蕉”。",
+      "audioPath": "assets/audio/en-US/words/banana.mp3",
+      "status": "draft_pending_education_review"
+    },
+    {
+      "id": "meaning-banana",
+      "type": "meaning",
+      "targetId": "banana",
+      "promptZh": "找到表示“香蕉”的词。",
+      "promptEn": "A long fruit with a yellow skin.",
+      "spokenText": "A long fruit with a yellow skin.",
+      "correctIds": [
+        "banana"
+      ],
+      "distractorIds": [
+        "dirty",
+        "jump",
+        "drink"
+      ],
+      "hintZh": "读一读解释，也可以听目标词的发音。",
+      "explanationZh": "banana：香蕉。",
+      "audioPath": "assets/audio/en-US/tasks/meaning-banana.mp3",
+      "status": "draft_pending_education_review"
+    },
+    {
+      "id": "listen-bread",
+      "type": "listen",
+      "targetId": "bread",
+      "promptZh": "听一听，找到对应的单词。",
+      "spokenText": "bread",
+      "correctIds": [
+        "bread"
+      ],
+      "distractorIds": [
+        "fast",
+        "swim",
+        "sleep"
+      ],
+      "hintZh": "这个词在这里表示“面包”。",
+      "explanationZh": "bread 在本任务中表示“面包”。",
+      "audioPath": "assets/audio/en-US/words/bread.mp3",
+      "status": "draft_pending_education_review"
+    },
+    {
+      "id": "meaning-bread",
+      "type": "meaning",
+      "targetId": "bread",
+      "promptZh": "找到表示“面包”的词。",
+      "promptEn": "Food made from flour and baked in an oven, often in a loaf.",
+      "spokenText": "Food made from flour and baked in an oven, often in a loaf.",
+      "correctIds": [
+        "bread"
+      ],
+      "distractorIds": [
+        "fast",
+        "swim",
+        "sleep"
+      ],
+      "hintZh": "读一读解释，也可以听目标词的发音。",
+      "explanationZh": "bread：面包。",
+      "audioPath": "assets/audio/en-US/tasks/meaning-bread.mp3",
+      "status": "draft_pending_education_review"
+    },
+    {
+      "id": "listen-milk",
+      "type": "listen",
+      "targetId": "milk",
+      "promptZh": "听一听，找到对应的单词。",
+      "spokenText": "milk",
+      "correctIds": [
+        "milk"
+      ],
+      "distractorIds": [
+        "slow",
+        "fly",
+        "open"
+      ],
+      "hintZh": "这个词在这里表示“牛奶”。",
+      "explanationZh": "milk 在本任务中表示“牛奶”。",
+      "audioPath": "assets/audio/en-US/words/milk.mp3",
+      "status": "draft_pending_education_review"
+    },
+    {
+      "id": "meaning-milk",
+      "type": "meaning",
+      "targetId": "milk",
+      "promptZh": "找到表示“牛奶”的词。",
+      "promptEn": "A white drink that can come from cows.",
+      "spokenText": "A white drink that can come from cows.",
+      "correctIds": [
+        "milk"
+      ],
+      "distractorIds": [
+        "slow",
+        "fly",
+        "open"
+      ],
+      "hintZh": "读一读解释，也可以听目标词的发音。",
+      "explanationZh": "milk：牛奶。",
+      "audioPath": "assets/audio/en-US/tasks/meaning-milk.mp3",
+      "status": "draft_pending_education_review"
+    },
+    {
+      "id": "listen-run",
+      "type": "listen",
+      "targetId": "run",
+      "promptZh": "听一听，找到对应的单词。",
+      "spokenText": "run",
+      "correctIds": [
+        "run"
+      ],
+      "distractorIds": [
+        "rabbit",
+        "dog",
+        "shoes"
+      ],
+      "hintZh": "这个词在这里表示“跑”。",
+      "explanationZh": "run 在本任务中表示“跑”。",
+      "audioPath": "assets/audio/en-US/words/run.mp3",
+      "status": "draft_pending_education_review"
+    },
+    {
+      "id": "meaning-run",
+      "type": "meaning",
+      "targetId": "run",
+      "promptZh": "找到表示“跑”的词。",
+      "promptEn": "To move quickly on your feet.",
+      "spokenText": "To move quickly on your feet.",
+      "correctIds": [
+        "run"
+      ],
+      "distractorIds": [
+        "rabbit",
+        "dog",
+        "shoes"
+      ],
+      "hintZh": "读一读解释，也可以听目标词的发音。",
+      "explanationZh": "run：跑。",
+      "audioPath": "assets/audio/en-US/tasks/meaning-run.mp3",
+      "status": "draft_pending_education_review"
+    },
+    {
+      "id": "listen-walk",
+      "type": "listen",
+      "targetId": "walk",
+      "promptZh": "听一听，找到对应的单词。",
+      "spokenText": "walk",
+      "correctIds": [
+        "walk"
+      ],
+      "distractorIds": [
+        "tiger",
+        "cat",
+        "bag"
+      ],
+      "hintZh": "这个词在这里表示“走”。",
+      "explanationZh": "walk 在本任务中表示“走”。",
+      "audioPath": "assets/audio/en-US/words/walk.mp3",
+      "status": "draft_pending_education_review"
+    },
+    {
+      "id": "meaning-walk",
+      "type": "meaning",
+      "targetId": "walk",
+      "promptZh": "找到表示“走”的词。",
+      "promptEn": "To move on your feet, more slowly than running.",
+      "spokenText": "To move on your feet, more slowly than running.",
+      "correctIds": [
+        "walk"
+      ],
+      "distractorIds": [
+        "tiger",
+        "cat",
+        "bag"
+      ],
+      "hintZh": "读一读解释，也可以听目标词的发音。",
+      "explanationZh": "walk：走。",
+      "audioPath": "assets/audio/en-US/tasks/meaning-walk.mp3",
+      "status": "draft_pending_education_review"
+    },
+    {
+      "id": "listen-jump",
+      "type": "listen",
+      "targetId": "jump",
+      "promptZh": "听一听，找到对应的单词。",
+      "spokenText": "jump",
+      "correctIds": [
+        "jump"
+      ],
+      "distractorIds": [
+        "turtle",
+        "umbrella",
+        "book"
+      ],
+      "hintZh": "这个词在这里表示“跳”。",
+      "explanationZh": "jump 在本任务中表示“跳”。",
+      "audioPath": "assets/audio/en-US/words/jump.mp3",
+      "status": "draft_pending_education_review"
+    },
+    {
+      "id": "meaning-jump",
+      "type": "meaning",
+      "targetId": "jump",
+      "promptZh": "找到表示“跳”的词。",
+      "promptEn": "To push yourself off the ground with your legs.",
+      "spokenText": "To push yourself off the ground with your legs.",
+      "correctIds": [
+        "jump"
+      ],
+      "distractorIds": [
+        "turtle",
+        "umbrella",
+        "book"
+      ],
+      "hintZh": "读一读解释，也可以听目标词的发音。",
+      "explanationZh": "jump：跳。",
+      "audioPath": "assets/audio/en-US/tasks/meaning-jump.mp3",
+      "status": "draft_pending_education_review"
+    },
+    {
+      "id": "listen-swim",
+      "type": "listen",
+      "targetId": "swim",
+      "promptZh": "听一听，找到对应的单词。",
+      "spokenText": "swim",
+      "correctIds": [
+        "swim"
+      ],
+      "distractorIds": [
+        "fish",
+        "raincoat",
+        "pencil"
+      ],
+      "hintZh": "这个词在这里表示“游泳”。",
+      "explanationZh": "swim 在本任务中表示“游泳”。",
+      "audioPath": "assets/audio/en-US/words/swim.mp3",
+      "status": "draft_pending_education_review"
+    },
+    {
+      "id": "meaning-swim",
+      "type": "meaning",
+      "targetId": "swim",
+      "promptZh": "找到表示“游泳”的词。",
+      "promptEn": "To move through water using your body.",
+      "spokenText": "To move through water using your body.",
+      "correctIds": [
+        "swim"
+      ],
+      "distractorIds": [
+        "fish",
+        "raincoat",
+        "pencil"
+      ],
+      "hintZh": "读一读解释，也可以听目标词的发音。",
+      "explanationZh": "swim：游泳。",
+      "audioPath": "assets/audio/en-US/tasks/meaning-swim.mp3",
+      "status": "draft_pending_education_review"
+    },
+    {
+      "id": "listen-fly",
+      "type": "listen",
+      "targetId": "fly",
+      "promptZh": "听一听，找到对应的单词。",
+      "spokenText": "fly",
+      "correctIds": [
+        "fly"
+      ],
+      "distractorIds": [
+        "bird",
+        "coat",
+        "chair"
+      ],
+      "hintZh": "这个词在这里表示“飞”。",
+      "explanationZh": "fly 在本任务中表示“飞”。",
+      "audioPath": "assets/audio/en-US/words/fly.mp3",
+      "status": "draft_pending_education_review"
+    },
+    {
+      "id": "meaning-fly",
+      "type": "meaning",
+      "targetId": "fly",
+      "promptZh": "找到表示“飞”的词。",
+      "promptEn": "To move through the air using wings.",
+      "spokenText": "To move through the air using wings.",
+      "correctIds": [
+        "fly"
+      ],
+      "distractorIds": [
+        "bird",
+        "coat",
+        "chair"
+      ],
+      "hintZh": "读一读解释，也可以听目标词的发音。",
+      "explanationZh": "fly：飞。",
+      "audioPath": "assets/audio/en-US/tasks/meaning-fly.mp3",
+      "status": "draft_pending_education_review"
+    },
+    {
+      "id": "listen-read",
+      "type": "listen",
+      "targetId": "read",
+      "promptZh": "听一听，找到对应的单词。",
+      "spokenText": "read",
+      "correctIds": [
+        "read"
+      ],
+      "distractorIds": [
+        "dog",
+        "hat",
+        "table"
+      ],
+      "hintZh": "这个词在这里表示“阅读”。",
+      "explanationZh": "read 在本任务中表示“阅读”。",
+      "audioPath": "assets/audio/en-US/words/read.mp3",
+      "status": "draft_pending_education_review"
+    },
+    {
+      "id": "meaning-read",
+      "type": "meaning",
+      "targetId": "read",
+      "promptZh": "找到表示“阅读”的词。",
+      "promptEn": "To look at written words and understand them.",
+      "spokenText": "To look at written words and understand them.",
+      "correctIds": [
+        "read"
+      ],
+      "distractorIds": [
+        "dog",
+        "hat",
+        "table"
+      ],
+      "hintZh": "读一读解释，也可以听目标词的发音。",
+      "explanationZh": "read：阅读。",
+      "audioPath": "assets/audio/en-US/tasks/meaning-read.mp3",
+      "status": "draft_pending_education_review"
+    },
+    {
+      "id": "listen-write",
+      "type": "listen",
+      "targetId": "write",
+      "promptZh": "听一听，找到对应的单词。",
+      "spokenText": "write",
+      "correctIds": [
+        "write"
+      ],
+      "distractorIds": [
+        "cat",
+        "shoes",
+        "bed"
+      ],
+      "hintZh": "这个词在这里表示“写”。",
+      "explanationZh": "write 在本任务中表示“写”。",
+      "audioPath": "assets/audio/en-US/words/write.mp3",
+      "status": "draft_pending_education_review"
+    },
+    {
+      "id": "meaning-write",
+      "type": "meaning",
+      "targetId": "write",
+      "promptZh": "找到表示“写”的词。",
+      "promptEn": "To make letters or words with a pen or pencil.",
+      "spokenText": "To make letters or words with a pen or pencil.",
+      "correctIds": [
+        "write"
+      ],
+      "distractorIds": [
+        "cat",
+        "shoes",
+        "bed"
+      ],
+      "hintZh": "读一读解释，也可以听目标词的发音。",
+      "explanationZh": "write：写。",
+      "audioPath": "assets/audio/en-US/tasks/meaning-write.mp3",
+      "status": "draft_pending_education_review"
+    },
+    {
+      "id": "listen-eat",
+      "type": "listen",
+      "targetId": "eat",
+      "promptZh": "听一听，找到对应的单词。",
+      "spokenText": "eat",
+      "correctIds": [
+        "eat"
+      ],
+      "distractorIds": [
+        "umbrella",
+        "bag",
+        "door"
+      ],
+      "hintZh": "这个词在这里表示“吃”。",
+      "explanationZh": "eat 在本任务中表示“吃”。",
+      "audioPath": "assets/audio/en-US/words/eat.mp3",
+      "status": "draft_pending_education_review"
+    },
+    {
+      "id": "meaning-eat",
+      "type": "meaning",
+      "targetId": "eat",
+      "promptZh": "找到表示“吃”的词。",
+      "promptEn": "To put food in your mouth and swallow it.",
+      "spokenText": "To put food in your mouth and swallow it.",
+      "correctIds": [
+        "eat"
+      ],
+      "distractorIds": [
+        "umbrella",
+        "bag",
+        "door"
+      ],
+      "hintZh": "读一读解释，也可以听目标词的发音。",
+      "explanationZh": "eat：吃。",
+      "audioPath": "assets/audio/en-US/tasks/meaning-eat.mp3",
+      "status": "draft_pending_education_review"
+    },
+    {
+      "id": "listen-drink",
+      "type": "listen",
+      "targetId": "drink",
+      "promptZh": "听一听，找到对应的单词。",
+      "spokenText": "drink",
+      "correctIds": [
+        "drink"
+      ],
+      "distractorIds": [
+        "raincoat",
+        "book",
+        "window"
+      ],
+      "hintZh": "这个词在这里表示“喝”。",
+      "explanationZh": "drink 在本任务中表示“喝”。",
+      "audioPath": "assets/audio/en-US/words/drink.mp3",
+      "status": "draft_pending_education_review"
+    },
+    {
+      "id": "meaning-drink",
+      "type": "meaning",
+      "targetId": "drink",
+      "promptZh": "找到表示“喝”的词。",
+      "promptEn": "To take water or another liquid into your mouth and swallow it.",
+      "spokenText": "To take water or another liquid into your mouth and swallow it.",
+      "correctIds": [
+        "drink"
+      ],
+      "distractorIds": [
+        "raincoat",
+        "book",
+        "window"
+      ],
+      "hintZh": "读一读解释，也可以听目标词的发音。",
+      "explanationZh": "drink：喝。",
+      "audioPath": "assets/audio/en-US/tasks/meaning-drink.mp3",
+      "status": "draft_pending_education_review"
+    },
+    {
+      "id": "listen-sleep",
+      "type": "listen",
+      "targetId": "sleep",
+      "promptZh": "听一听，找到对应的单词。",
+      "spokenText": "sleep",
+      "correctIds": [
+        "sleep"
+      ],
+      "distractorIds": [
+        "coat",
+        "pencil",
+        "apple"
+      ],
+      "hintZh": "这个词在这里表示“睡觉”。",
+      "explanationZh": "sleep 在本任务中表示“睡觉”。",
+      "audioPath": "assets/audio/en-US/words/sleep.mp3",
+      "status": "draft_pending_education_review"
+    },
+    {
+      "id": "meaning-sleep",
+      "type": "meaning",
+      "targetId": "sleep",
+      "promptZh": "找到表示“睡觉”的词。",
+      "promptEn": "To rest with your eyes closed while you are not awake.",
+      "spokenText": "To rest with your eyes closed while you are not awake.",
+      "correctIds": [
+        "sleep"
+      ],
+      "distractorIds": [
+        "coat",
+        "pencil",
+        "apple"
+      ],
+      "hintZh": "读一读解释，也可以听目标词的发音。",
+      "explanationZh": "sleep：睡觉。",
+      "audioPath": "assets/audio/en-US/tasks/meaning-sleep.mp3",
+      "status": "draft_pending_education_review"
+    },
+    {
+      "id": "listen-open",
+      "type": "listen",
+      "targetId": "open",
+      "promptZh": "听一听，找到对应的单词。",
+      "spokenText": "open",
+      "correctIds": [
+        "open"
+      ],
+      "distractorIds": [
+        "hat",
+        "chair",
+        "banana"
+      ],
+      "hintZh": "这个词在这里表示“打开”。",
+      "explanationZh": "open 在本任务中表示“打开”。",
+      "audioPath": "assets/audio/en-US/words/open.mp3",
+      "status": "draft_pending_education_review"
+    },
+    {
+      "id": "meaning-open",
+      "type": "meaning",
+      "targetId": "open",
+      "promptZh": "找到表示“打开”的词。",
+      "promptEn": "To move a door so that people can go through it.",
+      "spokenText": "To move a door so that people can go through it.",
+      "correctIds": [
+        "open"
+      ],
+      "distractorIds": [
+        "hat",
+        "chair",
+        "banana"
+      ],
+      "hintZh": "读一读解释，也可以听目标词的发音。",
+      "explanationZh": "open：打开。",
+      "audioPath": "assets/audio/en-US/tasks/meaning-open.mp3",
+      "status": "draft_pending_education_review"
+    },
+    {
+      "id": "listen-close",
+      "type": "listen",
+      "targetId": "close",
+      "promptZh": "听一听，找到对应的单词。",
+      "spokenText": "close",
+      "correctIds": [
+        "close"
+      ],
+      "distractorIds": [
+        "shoes",
+        "table",
+        "bread"
+      ],
+      "hintZh": "这个词在这里表示“关上”。",
+      "explanationZh": "close 在本任务中表示“关上”。",
+      "audioPath": "assets/audio/en-US/words/close.mp3",
+      "status": "draft_pending_education_review"
+    },
+    {
+      "id": "meaning-close",
+      "type": "meaning",
+      "targetId": "close",
+      "promptZh": "找到表示“关上”的词。",
+      "promptEn": "To move a door so that it is shut.",
+      "spokenText": "To move a door so that it is shut.",
+      "correctIds": [
+        "close"
+      ],
+      "distractorIds": [
+        "shoes",
+        "table",
+        "bread"
+      ],
+      "hintZh": "读一读解释，也可以听目标词的发音。",
+      "explanationZh": "close：关上。",
+      "audioPath": "assets/audio/en-US/tasks/meaning-close.mp3",
+      "status": "draft_pending_education_review"
+    },
+    {
+      "id": "listen-hot",
+      "type": "listen",
+      "targetId": "hot",
+      "promptZh": "听一听，找到对应的单词。",
+      "spokenText": "hot",
+      "correctIds": [
+        "hot"
+      ],
+      "distractorIds": [
+        "bag",
+        "bed",
+        "milk"
+      ],
+      "hintZh": "这个词在这里表示“热的”。",
+      "explanationZh": "hot 在本任务中表示“热的”。",
+      "audioPath": "assets/audio/en-US/words/hot.mp3",
+      "status": "draft_pending_education_review"
+    },
+    {
+      "id": "meaning-hot",
+      "type": "meaning",
+      "targetId": "hot",
+      "promptZh": "找到表示“热的”的词。",
+      "promptEn": "Having a high temperature; the opposite of cold.",
+      "spokenText": "Having a high temperature; the opposite of cold.",
+      "correctIds": [
+        "hot"
+      ],
+      "distractorIds": [
+        "bag",
+        "bed",
+        "milk"
+      ],
+      "hintZh": "读一读解释，也可以听目标词的发音。",
+      "explanationZh": "hot：热的。",
+      "audioPath": "assets/audio/en-US/tasks/meaning-hot.mp3",
+      "status": "draft_pending_education_review"
+    },
+    {
+      "id": "listen-cold",
+      "type": "listen",
+      "targetId": "cold",
+      "promptZh": "听一听，找到对应的单词。",
+      "spokenText": "cold",
+      "correctIds": [
+        "cold"
+      ],
+      "distractorIds": [
+        "book",
+        "door",
+        "rabbit"
+      ],
+      "hintZh": "这个词在这里表示“冷的”。",
+      "explanationZh": "cold 在本任务中表示“冷的”。",
+      "audioPath": "assets/audio/en-US/words/cold.mp3",
+      "status": "draft_pending_education_review"
+    },
+    {
+      "id": "meaning-cold",
+      "type": "meaning",
+      "targetId": "cold",
+      "promptZh": "找到表示“冷的”的词。",
+      "promptEn": "Having a low temperature; the opposite of hot.",
+      "spokenText": "Having a low temperature; the opposite of hot.",
+      "correctIds": [
+        "cold"
+      ],
+      "distractorIds": [
+        "book",
+        "door",
+        "rabbit"
+      ],
+      "hintZh": "读一读解释，也可以听目标词的发音。",
+      "explanationZh": "cold：冷的。",
+      "audioPath": "assets/audio/en-US/tasks/meaning-cold.mp3",
+      "status": "draft_pending_education_review"
+    },
+    {
+      "id": "listen-big",
+      "type": "listen",
+      "targetId": "big",
+      "promptZh": "听一听，找到对应的单词。",
+      "spokenText": "big",
+      "correctIds": [
+        "big"
+      ],
+      "distractorIds": [
+        "pencil",
+        "window",
+        "tiger"
+      ],
+      "hintZh": "这个词在这里表示“大的”。",
+      "explanationZh": "big 在本任务中表示“大的”。",
+      "audioPath": "assets/audio/en-US/words/big.mp3",
+      "status": "draft_pending_education_review"
+    },
+    {
+      "id": "meaning-big",
+      "type": "meaning",
+      "targetId": "big",
+      "promptZh": "找到表示“大的”的词。",
+      "promptEn": "Large in size; the opposite of small.",
+      "spokenText": "Large in size; the opposite of small.",
+      "correctIds": [
+        "big"
+      ],
+      "distractorIds": [
+        "pencil",
+        "window",
+        "tiger"
+      ],
+      "hintZh": "读一读解释，也可以听目标词的发音。",
+      "explanationZh": "big：大的。",
+      "audioPath": "assets/audio/en-US/tasks/meaning-big.mp3",
+      "status": "draft_pending_education_review"
+    },
+    {
+      "id": "listen-small",
+      "type": "listen",
+      "targetId": "small",
+      "promptZh": "听一听，找到对应的单词。",
+      "spokenText": "small",
+      "correctIds": [
+        "small"
+      ],
+      "distractorIds": [
+        "chair",
+        "apple",
+        "turtle"
+      ],
+      "hintZh": "这个词在这里表示“小的”。",
+      "explanationZh": "small 在本任务中表示“小的”。",
+      "audioPath": "assets/audio/en-US/words/small.mp3",
+      "status": "draft_pending_education_review"
+    },
+    {
+      "id": "meaning-small",
+      "type": "meaning",
+      "targetId": "small",
+      "promptZh": "找到表示“小的”的词。",
+      "promptEn": "Little in size; the opposite of big.",
+      "spokenText": "Little in size; the opposite of big.",
+      "correctIds": [
+        "small"
+      ],
+      "distractorIds": [
+        "chair",
+        "apple",
+        "turtle"
+      ],
+      "hintZh": "读一读解释，也可以听目标词的发音。",
+      "explanationZh": "small：小的。",
+      "audioPath": "assets/audio/en-US/tasks/meaning-small.mp3",
+      "status": "draft_pending_education_review"
+    },
+    {
+      "id": "listen-long",
+      "type": "listen",
+      "targetId": "long",
+      "promptZh": "听一听，找到对应的单词。",
+      "spokenText": "long",
+      "correctIds": [
+        "long"
+      ],
+      "distractorIds": [
+        "table",
+        "banana",
+        "fish"
+      ],
+      "hintZh": "这个词在这里表示“长的”。",
+      "explanationZh": "long 在本任务中表示“长的”。",
+      "audioPath": "assets/audio/en-US/words/long.mp3",
+      "status": "draft_pending_education_review"
+    },
+    {
+      "id": "meaning-long",
+      "type": "meaning",
+      "targetId": "long",
+      "promptZh": "找到表示“长的”的词。",
+      "promptEn": "Measuring a large distance from one end to the other.",
+      "spokenText": "Measuring a large distance from one end to the other.",
+      "correctIds": [
+        "long"
+      ],
+      "distractorIds": [
+        "table",
+        "banana",
+        "fish"
+      ],
+      "hintZh": "读一读解释，也可以听目标词的发音。",
+      "explanationZh": "long：长的。",
+      "audioPath": "assets/audio/en-US/tasks/meaning-long.mp3",
+      "status": "draft_pending_education_review"
+    },
+    {
+      "id": "listen-short",
+      "type": "listen",
+      "targetId": "short",
+      "promptZh": "听一听，找到对应的单词。",
+      "spokenText": "short",
+      "correctIds": [
+        "short"
+      ],
+      "distractorIds": [
+        "bed",
+        "bread",
+        "bird"
+      ],
+      "hintZh": "这个词在这里表示“短的”。",
+      "explanationZh": "short 在本任务中表示“短的”。",
+      "audioPath": "assets/audio/en-US/words/short.mp3",
+      "status": "draft_pending_education_review"
+    },
+    {
+      "id": "meaning-short",
+      "type": "meaning",
+      "targetId": "short",
+      "promptZh": "找到表示“短的”的词。",
+      "promptEn": "Measuring a small distance from one end to the other.",
+      "spokenText": "Measuring a small distance from one end to the other.",
+      "correctIds": [
+        "short"
+      ],
+      "distractorIds": [
+        "bed",
+        "bread",
+        "bird"
+      ],
+      "hintZh": "读一读解释，也可以听目标词的发音。",
+      "explanationZh": "short：短的。",
+      "audioPath": "assets/audio/en-US/tasks/meaning-short.mp3",
+      "status": "draft_pending_education_review"
+    },
+    {
+      "id": "listen-happy",
+      "type": "listen",
+      "targetId": "happy",
+      "promptZh": "听一听，找到对应的单词。",
+      "spokenText": "happy",
+      "correctIds": [
+        "happy"
+      ],
+      "distractorIds": [
+        "door",
+        "milk",
+        "dog"
+      ],
+      "hintZh": "这个词在这里表示“开心的”。",
+      "explanationZh": "happy 在本任务中表示“开心的”。",
+      "audioPath": "assets/audio/en-US/words/happy.mp3",
+      "status": "draft_pending_education_review"
+    },
+    {
+      "id": "meaning-happy",
+      "type": "meaning",
+      "targetId": "happy",
+      "promptZh": "找到表示“开心的”的词。",
+      "promptEn": "Feeling pleased or glad.",
+      "spokenText": "Feeling pleased or glad.",
+      "correctIds": [
+        "happy"
+      ],
+      "distractorIds": [
+        "door",
+        "milk",
+        "dog"
+      ],
+      "hintZh": "读一读解释，也可以听目标词的发音。",
+      "explanationZh": "happy：开心的。",
+      "audioPath": "assets/audio/en-US/tasks/meaning-happy.mp3",
+      "status": "draft_pending_education_review"
+    },
+    {
+      "id": "listen-sad",
+      "type": "listen",
+      "targetId": "sad",
+      "promptZh": "听一听，找到对应的单词。",
+      "spokenText": "sad",
+      "correctIds": [
+        "sad"
+      ],
+      "distractorIds": [
+        "window",
+        "rabbit",
+        "cat"
+      ],
+      "hintZh": "这个词在这里表示“难过的”。",
+      "explanationZh": "sad 在本任务中表示“难过的”。",
+      "audioPath": "assets/audio/en-US/words/sad.mp3",
+      "status": "draft_pending_education_review"
+    },
+    {
+      "id": "meaning-sad",
+      "type": "meaning",
+      "targetId": "sad",
+      "promptZh": "找到表示“难过的”的词。",
+      "promptEn": "Feeling unhappy.",
+      "spokenText": "Feeling unhappy.",
+      "correctIds": [
+        "sad"
+      ],
+      "distractorIds": [
+        "window",
+        "rabbit",
+        "cat"
+      ],
+      "hintZh": "读一读解释，也可以听目标词的发音。",
+      "explanationZh": "sad：难过的。",
+      "audioPath": "assets/audio/en-US/tasks/meaning-sad.mp3",
+      "status": "draft_pending_education_review"
+    },
+    {
+      "id": "listen-clean",
+      "type": "listen",
+      "targetId": "clean",
+      "promptZh": "听一听，找到对应的单词。",
+      "spokenText": "clean",
+      "correctIds": [
+        "clean"
+      ],
+      "distractorIds": [
+        "apple",
+        "tiger",
+        "umbrella"
+      ],
+      "hintZh": "这个词在这里表示“干净的”。",
+      "explanationZh": "clean 在本任务中表示“干净的”。",
+      "audioPath": "assets/audio/en-US/words/clean.mp3",
+      "status": "draft_pending_education_review"
+    },
+    {
+      "id": "meaning-clean",
+      "type": "meaning",
+      "targetId": "clean",
+      "promptZh": "找到表示“干净的”的词。",
+      "promptEn": "Not dirty.",
+      "spokenText": "Not dirty.",
+      "correctIds": [
+        "clean"
+      ],
+      "distractorIds": [
+        "apple",
+        "tiger",
+        "umbrella"
+      ],
+      "hintZh": "读一读解释，也可以听目标词的发音。",
+      "explanationZh": "clean：干净的。",
+      "audioPath": "assets/audio/en-US/tasks/meaning-clean.mp3",
+      "status": "draft_pending_education_review"
+    },
+    {
+      "id": "listen-dirty",
+      "type": "listen",
+      "targetId": "dirty",
+      "promptZh": "听一听，找到对应的单词。",
+      "spokenText": "dirty",
+      "correctIds": [
+        "dirty"
+      ],
+      "distractorIds": [
+        "banana",
+        "turtle",
+        "raincoat"
+      ],
+      "hintZh": "这个词在这里表示“脏的”。",
+      "explanationZh": "dirty 在本任务中表示“脏的”。",
+      "audioPath": "assets/audio/en-US/words/dirty.mp3",
+      "status": "draft_pending_education_review"
+    },
+    {
+      "id": "meaning-dirty",
+      "type": "meaning",
+      "targetId": "dirty",
+      "promptZh": "找到表示“脏的”的词。",
+      "promptEn": "Not clean.",
+      "spokenText": "Not clean.",
+      "correctIds": [
+        "dirty"
+      ],
+      "distractorIds": [
+        "banana",
+        "turtle",
+        "raincoat"
+      ],
+      "hintZh": "读一读解释，也可以听目标词的发音。",
+      "explanationZh": "dirty：脏的。",
+      "audioPath": "assets/audio/en-US/tasks/meaning-dirty.mp3",
+      "status": "draft_pending_education_review"
+    },
+    {
+      "id": "listen-fast",
+      "type": "listen",
+      "targetId": "fast",
+      "promptZh": "听一听，找到对应的单词。",
+      "spokenText": "fast",
+      "correctIds": [
+        "fast"
+      ],
+      "distractorIds": [
+        "bread",
+        "fish",
+        "coat"
+      ],
+      "hintZh": "这个词在这里表示“快的”。",
+      "explanationZh": "fast 在本任务中表示“快的”。",
+      "audioPath": "assets/audio/en-US/words/fast.mp3",
+      "status": "draft_pending_education_review"
+    },
+    {
+      "id": "meaning-fast",
+      "type": "meaning",
+      "targetId": "fast",
+      "promptZh": "找到表示“快的”的词。",
+      "promptEn": "Moving quickly; the opposite of slow.",
+      "spokenText": "Moving quickly; the opposite of slow.",
+      "correctIds": [
+        "fast"
+      ],
+      "distractorIds": [
+        "bread",
+        "fish",
+        "coat"
+      ],
+      "hintZh": "读一读解释，也可以听目标词的发音。",
+      "explanationZh": "fast：快的。",
+      "audioPath": "assets/audio/en-US/tasks/meaning-fast.mp3",
+      "status": "draft_pending_education_review"
+    },
+    {
+      "id": "listen-slow",
+      "type": "listen",
+      "targetId": "slow",
+      "promptZh": "听一听，找到对应的单词。",
+      "spokenText": "slow",
+      "correctIds": [
+        "slow"
+      ],
+      "distractorIds": [
+        "milk",
+        "bird",
+        "hat"
+      ],
+      "hintZh": "这个词在这里表示“慢的”。",
+      "explanationZh": "slow 在本任务中表示“慢的”。",
+      "audioPath": "assets/audio/en-US/words/slow.mp3",
+      "status": "draft_pending_education_review"
+    },
+    {
+      "id": "meaning-slow",
+      "type": "meaning",
+      "targetId": "slow",
+      "promptZh": "找到表示“慢的”的词。",
+      "promptEn": "Not moving quickly; the opposite of fast.",
+      "spokenText": "Not moving quickly; the opposite of fast.",
+      "correctIds": [
+        "slow"
+      ],
+      "distractorIds": [
+        "milk",
+        "bird",
+        "hat"
+      ],
+      "hintZh": "读一读解释，也可以听目标词的发音。",
+      "explanationZh": "slow：慢的。",
+      "audioPath": "assets/audio/en-US/tasks/meaning-slow.mp3",
+      "status": "draft_pending_education_review"
+    },
+    {
+      "id": "context-run",
+      "type": "context",
+      "targetId": "run",
+      "promptZh": "根据句子选出合适的单词。",
+      "promptEn": "During the race, I ___ as fast as I can.",
+      "spokenText": "During the race, I blank as fast as I can.",
+      "correctIds": [
+        "run"
+      ],
+      "distractorIds": [
+        "eat",
+        "read",
+        "sleep"
+      ],
+      "hintZh": "关注句子描述的动作或前后对比。",
+      "explanationZh": "比赛时，我尽可能快地跑。",
+      "audioPath": "assets/audio/en-US/tasks/context-run.mp3",
+      "status": "draft_pending_education_review"
+    },
+    {
+      "id": "context-walk",
+      "type": "context",
+      "targetId": "walk",
+      "promptZh": "根据句子选出合适的单词。",
+      "promptEn": "I ___ slowly to school on foot.",
+      "spokenText": "I blank slowly to school on foot.",
+      "correctIds": [
+        "walk"
+      ],
+      "distractorIds": [
+        "fly",
+        "swim",
+        "drink"
+      ],
+      "hintZh": "关注句子描述的动作或前后对比。",
+      "explanationZh": "我慢慢步行去学校。",
+      "audioPath": "assets/audio/en-US/tasks/context-walk.mp3",
+      "status": "draft_pending_education_review"
+    },
+    {
+      "id": "context-jump",
+      "type": "context",
+      "targetId": "jump",
+      "promptZh": "根据句子选出合适的单词。",
+      "promptEn": "I ___ into the air over the low rope.",
+      "spokenText": "I blank into the air over the low rope.",
+      "correctIds": [
+        "jump"
+      ],
+      "distractorIds": [
+        "sleep",
+        "drink",
+        "read"
+      ],
+      "hintZh": "关注句子描述的动作或前后对比。",
+      "explanationZh": "我跃起跳过低矮的绳子。",
+      "audioPath": "assets/audio/en-US/tasks/context-jump.mp3",
+      "status": "draft_pending_education_review"
+    },
+    {
+      "id": "context-swim",
+      "type": "context",
+      "targetId": "swim",
+      "promptZh": "根据句子选出合适的单词。",
+      "promptEn": "Fish ___ in the water.",
+      "spokenText": "Fish blank in the water.",
+      "correctIds": [
+        "swim"
+      ],
+      "distractorIds": [
+        "walk",
+        "read",
+        "write"
+      ],
+      "hintZh": "关注句子描述的动作或前后对比。",
+      "explanationZh": "鱼在水中游泳。",
+      "audioPath": "assets/audio/en-US/tasks/context-swim.mp3",
+      "status": "draft_pending_education_review"
+    },
+    {
+      "id": "context-fly",
+      "type": "context",
+      "targetId": "fly",
+      "promptZh": "根据句子选出合适的单词。",
+      "promptEn": "Birds ___ through the sky.",
+      "spokenText": "Birds blank through the sky.",
+      "correctIds": [
+        "fly"
+      ],
+      "distractorIds": [
+        "write",
+        "close",
+        "read"
+      ],
+      "hintZh": "关注句子描述的动作或前后对比。",
+      "explanationZh": "鸟儿在天空中飞。",
+      "audioPath": "assets/audio/en-US/tasks/context-fly.mp3",
+      "status": "draft_pending_education_review"
+    },
+    {
+      "id": "context-read",
+      "type": "context",
+      "targetId": "read",
+      "promptZh": "根据句子选出合适的单词。",
+      "promptEn": "I ___ a story in my book.",
+      "spokenText": "I blank a story in my book.",
+      "correctIds": [
+        "read"
+      ],
+      "distractorIds": [
+        "swim",
+        "jump",
+        "drink"
+      ],
+      "hintZh": "关注句子描述的动作或前后对比。",
+      "explanationZh": "我阅读书里的故事。",
+      "audioPath": "assets/audio/en-US/tasks/context-read.mp3",
+      "status": "draft_pending_education_review"
+    },
+    {
+      "id": "context-write",
+      "type": "context",
+      "targetId": "write",
+      "promptZh": "根据句子选出合适的单词。",
+      "promptEn": "I ___ my name with a pencil.",
+      "spokenText": "I blank my name with a pencil.",
+      "correctIds": [
+        "write"
+      ],
+      "distractorIds": [
+        "swim",
+        "drink",
+        "sleep"
+      ],
+      "hintZh": "关注句子描述的动作或前后对比。",
+      "explanationZh": "我用铅笔写下名字。",
+      "audioPath": "assets/audio/en-US/tasks/context-write.mp3",
+      "status": "draft_pending_education_review"
+    },
+    {
+      "id": "context-eat",
+      "type": "context",
+      "targetId": "eat",
+      "promptZh": "根据句子选出合适的单词。",
+      "promptEn": "I ___ a banana for breakfast.",
+      "spokenText": "I blank a banana for breakfast.",
+      "correctIds": [
+        "eat"
+      ],
+      "distractorIds": [
+        "read",
+        "write",
+        "close"
+      ],
+      "hintZh": "关注句子描述的动作或前后对比。",
+      "explanationZh": "我早餐吃一根香蕉。",
+      "audioPath": "assets/audio/en-US/tasks/context-eat.mp3",
+      "status": "draft_pending_education_review"
+    },
+    {
+      "id": "context-drink",
+      "type": "context",
+      "targetId": "drink",
+      "promptZh": "根据句子选出合适的单词。",
+      "promptEn": "I ___ a glass of milk.",
+      "spokenText": "I blank a glass of milk.",
+      "correctIds": [
+        "drink"
+      ],
+      "distractorIds": [
+        "jump",
+        "fly",
+        "write"
+      ],
+      "hintZh": "关注句子描述的动作或前后对比。",
+      "explanationZh": "我喝一杯牛奶。",
+      "audioPath": "assets/audio/en-US/tasks/context-drink.mp3",
+      "status": "draft_pending_education_review"
+    },
+    {
+      "id": "context-sleep",
+      "type": "context",
+      "targetId": "sleep",
+      "promptZh": "根据句子选出合适的单词。",
+      "promptEn": "At night, I ___ in my bed until morning.",
+      "spokenText": "At night, I blank in my bed until morning.",
+      "correctIds": [
+        "sleep"
+      ],
+      "distractorIds": [
+        "fly",
+        "swim",
+        "open"
+      ],
+      "hintZh": "关注句子描述的动作或前后对比。",
+      "explanationZh": "晚上我在床上睡到早晨。",
+      "audioPath": "assets/audio/en-US/tasks/context-sleep.mp3",
+      "status": "draft_pending_education_review"
+    },
+    {
+      "id": "context-open",
+      "type": "context",
+      "targetId": "open",
+      "promptZh": "根据句子选出合适的单词。",
+      "promptEn": "Please ___ the closed door so I can come in.",
+      "spokenText": "Please blank the closed door so I can come in.",
+      "correctIds": [
+        "open"
+      ],
+      "distractorIds": [
+        "close",
+        "eat",
+        "drink"
+      ],
+      "hintZh": "关注句子描述的动作或前后对比。",
+      "explanationZh": "请打开关着的门，让我进来。",
+      "audioPath": "assets/audio/en-US/tasks/context-open.mp3",
+      "status": "draft_pending_education_review"
+    },
+    {
+      "id": "context-close",
+      "type": "context",
+      "targetId": "close",
+      "promptZh": "根据句子选出合适的单词。",
+      "promptEn": "Please ___ the open door to keep the cold wind out.",
+      "spokenText": "Please blank the open door to keep the cold wind out.",
+      "correctIds": [
+        "close"
+      ],
+      "distractorIds": [
+        "open",
+        "swim",
+        "sleep"
+      ],
+      "hintZh": "关注句子描述的动作或前后对比。",
+      "explanationZh": "请关上开着的门，挡住冷风。",
+      "audioPath": "assets/audio/en-US/tasks/context-close.mp3",
+      "status": "draft_pending_education_review"
+    },
+    {
+      "id": "context-hot",
+      "type": "context",
+      "targetId": "hot",
+      "promptZh": "根据句子选出合适的单词。",
+      "promptEn": "This soup is too ___ to eat. Let it cool.",
+      "spokenText": "This soup is too blank to eat. Let it cool.",
+      "correctIds": [
+        "hot"
+      ],
+      "distractorIds": [
+        "cold",
+        "happy",
+        "short"
+      ],
+      "hintZh": "关注句子描述的动作或前后对比。",
+      "explanationZh": "汤太热，先让它凉一凉。",
+      "audioPath": "assets/audio/en-US/tasks/context-hot.mp3",
+      "status": "draft_pending_education_review"
+    },
+    {
+      "id": "context-cold",
+      "type": "context",
+      "targetId": "cold",
+      "promptZh": "根据句子选出合适的单词。",
+      "promptEn": "The ice feels ___ in my hand.",
+      "spokenText": "The ice feels blank in my hand.",
+      "correctIds": [
+        "cold"
+      ],
+      "distractorIds": [
+        "hot",
+        "happy",
+        "long"
+      ],
+      "hintZh": "关注句子描述的动作或前后对比。",
+      "explanationZh": "手里的冰感觉很冷。",
+      "audioPath": "assets/audio/en-US/tasks/context-cold.mp3",
+      "status": "draft_pending_education_review"
+    },
+    {
+      "id": "context-big",
+      "type": "context",
+      "targetId": "big",
+      "promptZh": "根据句子选出合适的单词。",
+      "promptEn": "This box is too ___ to fit through the small door.",
+      "spokenText": "This box is too blank to fit through the small door.",
+      "correctIds": [
+        "big"
+      ],
+      "distractorIds": [
+        "small",
+        "happy",
+        "cold"
+      ],
+      "hintZh": "关注句子描述的动作或前后对比。",
+      "explanationZh": "箱子太大，无法通过小门。",
+      "audioPath": "assets/audio/en-US/tasks/context-big.mp3",
+      "status": "draft_pending_education_review"
+    },
+    {
+      "id": "context-small",
+      "type": "context",
+      "targetId": "small",
+      "promptZh": "根据句子选出合适的单词。",
+      "promptEn": "The shoes are too ___ for my feet. I need a bigger pair.",
+      "spokenText": "The shoes are too blank for my feet. I need a bigger pair.",
+      "correctIds": [
+        "small"
+      ],
+      "distractorIds": [
+        "big",
+        "happy",
+        "slow"
+      ],
+      "hintZh": "关注句子描述的动作或前后对比。",
+      "explanationZh": "鞋子太小，我需要更大的一双。",
+      "audioPath": "assets/audio/en-US/tasks/context-small.mp3",
+      "status": "draft_pending_education_review"
+    },
+    {
+      "id": "context-long",
+      "type": "context",
+      "targetId": "long",
+      "promptZh": "根据句子选出合适的单词。",
+      "promptEn": "The rope is too ___. Please cut some off.",
+      "spokenText": "The rope is too blank. Please cut some off.",
+      "correctIds": [
+        "long"
+      ],
+      "distractorIds": [
+        "short",
+        "happy",
+        "cold"
+      ],
+      "hintZh": "关注句子描述的动作或前后对比。",
+      "explanationZh": "绳子太长，请剪掉一段。",
+      "audioPath": "assets/audio/en-US/tasks/context-long.mp3",
+      "status": "draft_pending_education_review"
+    },
+    {
+      "id": "context-short",
+      "type": "context",
+      "targetId": "short",
+      "promptZh": "根据句子选出合适的单词。",
+      "promptEn": "The rope is too ___ to reach the other side. We need a longer one.",
+      "spokenText": "The rope is too blank to reach the other side. We need a longer one.",
+      "correctIds": [
+        "short"
+      ],
+      "distractorIds": [
+        "long",
+        "happy",
+        "cold"
+      ],
+      "hintZh": "关注句子描述的动作或前后对比。",
+      "explanationZh": "绳子太短，够不到另一边，需要更长的。",
+      "audioPath": "assets/audio/en-US/tasks/context-short.mp3",
+      "status": "draft_pending_education_review"
+    },
+    {
+      "id": "context-happy",
+      "type": "context",
+      "targetId": "happy",
+      "promptZh": "根据句子选出合适的单词。",
+      "promptEn": "I am ___ because I got a lovely gift.",
+      "spokenText": "I am blank because I got a lovely gift.",
+      "correctIds": [
+        "happy"
+      ],
+      "distractorIds": [
+        "sad",
+        "dirty",
+        "short"
+      ],
+      "hintZh": "关注句子描述的动作或前后对比。",
+      "explanationZh": "收到可爱的礼物，我很开心。",
+      "audioPath": "assets/audio/en-US/tasks/context-happy.mp3",
+      "status": "draft_pending_education_review"
+    },
+    {
+      "id": "context-sad",
+      "type": "context",
+      "targetId": "sad",
+      "promptZh": "根据句子选出合适的单词。",
+      "promptEn": "I feel ___ because I lost my favorite toy.",
+      "spokenText": "I feel blank because I lost my favorite toy.",
+      "correctIds": [
+        "sad"
+      ],
+      "distractorIds": [
+        "happy",
+        "clean",
+        "long"
+      ],
+      "hintZh": "关注句子描述的动作或前后对比。",
+      "explanationZh": "丢了最喜欢的玩具，我很难过。",
+      "audioPath": "assets/audio/en-US/tasks/context-sad.mp3",
+      "status": "draft_pending_education_review"
+    },
+    {
+      "id": "context-clean",
+      "type": "context",
+      "targetId": "clean",
+      "promptZh": "根据句子选出合适的单词。",
+      "promptEn": "After washing away all the mud, my hands are ___.",
+      "spokenText": "After washing away all the mud, my hands are blank.",
+      "correctIds": [
+        "clean"
+      ],
+      "distractorIds": [
+        "dirty",
+        "sad",
+        "long"
+      ],
+      "hintZh": "关注句子描述的动作或前后对比。",
+      "explanationZh": "洗掉所有泥后，我的手干净了。",
+      "audioPath": "assets/audio/en-US/tasks/context-clean.mp3",
+      "status": "draft_pending_education_review"
+    },
+    {
+      "id": "context-dirty",
+      "type": "context",
+      "targetId": "dirty",
+      "promptZh": "根据句子选出合适的单词。",
+      "promptEn": "My shoes are ___ because they are covered in mud.",
+      "spokenText": "My shoes are blank because they are covered in mud.",
+      "correctIds": [
+        "dirty"
+      ],
+      "distractorIds": [
+        "clean",
+        "happy",
+        "short"
+      ],
+      "hintZh": "关注句子描述的动作或前后对比。",
+      "explanationZh": "鞋子沾满泥，所以很脏。",
+      "audioPath": "assets/audio/en-US/tasks/context-dirty.mp3",
+      "status": "draft_pending_education_review"
+    },
+    {
+      "id": "context-fast",
+      "type": "context",
+      "targetId": "fast",
+      "promptZh": "根据句子选出合适的单词。",
+      "promptEn": "This car is ___. It moves quickly.",
+      "spokenText": "This car is blank. It moves quickly.",
+      "correctIds": [
+        "fast"
+      ],
+      "distractorIds": [
+        "slow",
+        "sad",
+        "short"
+      ],
+      "hintZh": "关注句子描述的动作或前后对比。",
+      "explanationZh": "这辆车速度快。",
+      "audioPath": "assets/audio/en-US/tasks/context-fast.mp3",
+      "status": "draft_pending_education_review"
+    },
+    {
+      "id": "context-slow",
+      "type": "context",
+      "targetId": "slow",
+      "promptZh": "根据句子选出合适的单词。",
+      "promptEn": "This car is ___. It does not move quickly.",
+      "spokenText": "This car is blank. It does not move quickly.",
+      "correctIds": [
+        "slow"
+      ],
+      "distractorIds": [
+        "fast",
+        "happy",
+        "long"
+      ],
+      "hintZh": "关注句子描述的动作或前后对比。",
+      "explanationZh": "这辆车速度慢。",
+      "audioPath": "assets/audio/en-US/tasks/context-slow.mp3",
+      "status": "draft_pending_education_review"
+    }
+  ]
+}

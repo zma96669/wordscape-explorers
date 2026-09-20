@@ -1,0 +1,37 @@
+{
+  "version": "1.0",
+  "updated": "2026-09-20",
+  "project": "词境探险队",
+  "records": [
+    {
+      "scope": "角色、背景与18件收藏插画",
+      "source": "项目内生成式图像工作流",
+      "notes": "最终运行图与透明衍生图保存在 assets/art；连续动作帧保存在 assets/motion。"
+    },
+    {
+      "scope": "界面图标与棋盘组件",
+      "source": "项目内可编辑 SVG 与 CSS",
+      "notes": "由 asset-production/scripts/generate_ui_svgs.py 和项目样式文件维护。"
+    },
+    {
+      "scope": "棋盘动态水面素材",
+      "source": "gpt-image-2",
+      "notes": "俯视水面源图位于 assets/art/terrain/river-water-source.png，运行图位于 assets/art/terrain/river-water.webp；整块棋盘以该图作为连续水面，CSS 提供缓慢水流与光纹动画。"
+    },
+    {
+      "scope": "英语语音",
+      "source": "gpt-4o-mini-tts，voice coral",
+      "notes": "156条运行时 MP3，文本映射见 assets/content/voice-script.csv。"
+    },
+    {
+      "scope": "背景音乐与操作音效",
+      "source": "项目内程序合成",
+      "notes": "生成脚本位于 asset-production/scripts；运行时文件保存在 assets/audio。"
+    },
+    {
+      "scope": "字体",
+      "source": "用户设备系统字体",
+      "notes": "项目不分发第三方字体文件，详见 assets/licenses/fonts.md。"
+    }
+  ]
+}

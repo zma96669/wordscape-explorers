@@ -1,0 +1,1909 @@
+{
+  "version": "1.0",
+  "created": "2026-09-16",
+  "status": "ready_for_delivery",
+  "entryCount": 195,
+  "note": "Each entry represents one runtime file or an explicitly identified bundle/directory. Learning images are intentionally omitted because the shipped gameplay is text and audio based.",
+  "assets": [
+    {
+      "id": "title-lockup",
+      "category": "ui",
+      "plannedPath": "assets/ui/title-lockup.svg",
+      "status": "complete_runtime",
+      "productionMethod": "editable_svg",
+      "acceptance": "viewBox完整；小尺寸可读；不得依靠颜色单独传达状态",
+      "dependsOn": []
+    },
+    {
+      "id": "app-entry",
+      "category": "ui",
+      "plannedPath": "assets/ui/app-entry.svg",
+      "status": "complete_runtime",
+      "productionMethod": "editable_svg",
+      "acceptance": "viewBox完整；小尺寸可读；不得依靠颜色单独传达状态",
+      "dependsOn": []
+    },
+    {
+      "id": "back",
+      "category": "ui",
+      "plannedPath": "assets/ui/icons/back.svg",
+      "status": "complete_runtime",
+      "productionMethod": "editable_svg",
+      "acceptance": "viewBox完整；小尺寸可读；不得依靠颜色单独传达状态",
+      "dependsOn": []
+    },
+    {
+      "id": "play",
+      "category": "ui",
+      "plannedPath": "assets/ui/icons/play.svg",
+      "status": "complete_runtime",
+      "productionMethod": "editable_svg",
+      "acceptance": "viewBox完整；小尺寸可读；不得依靠颜色单独传达状态",
+      "dependsOn": []
+    },
+    {
+      "id": "undo",
+      "category": "ui",
+      "plannedPath": "assets/ui/icons/undo.svg",
+      "status": "complete_runtime",
+      "productionMethod": "editable_svg",
+      "acceptance": "viewBox完整；小尺寸可读；不得依靠颜色单独传达状态",
+      "dependsOn": []
+    },
+    {
+      "id": "reset",
+      "category": "ui",
+      "plannedPath": "assets/ui/icons/reset.svg",
+      "status": "complete_runtime",
+      "productionMethod": "editable_svg",
+      "acceptance": "viewBox完整；小尺寸可读；不得依靠颜色单独传达状态",
+      "dependsOn": []
+    },
+    {
+      "id": "audio",
+      "category": "ui",
+      "plannedPath": "assets/ui/icons/audio.svg",
+      "status": "complete_runtime",
+      "productionMethod": "editable_svg",
+      "acceptance": "viewBox完整；小尺寸可读；不得依靠颜色单独传达状态",
+      "dependsOn": []
+    },
+    {
+      "id": "hint",
+      "category": "ui",
+      "plannedPath": "assets/ui/icons/hint.svg",
+      "status": "complete_runtime",
+      "productionMethod": "editable_svg",
+      "acceptance": "viewBox完整；小尺寸可读；不得依靠颜色单独传达状态",
+      "dependsOn": []
+    },
+    {
+      "id": "settings",
+      "category": "ui",
+      "plannedPath": "assets/ui/icons/settings.svg",
+      "status": "complete_runtime",
+      "productionMethod": "editable_svg",
+      "acceptance": "viewBox完整；小尺寸可读；不得依靠颜色单独传达状态",
+      "dependsOn": []
+    },
+    {
+      "id": "collection",
+      "category": "ui",
+      "plannedPath": "assets/ui/icons/collection.svg",
+      "status": "complete_runtime",
+      "productionMethod": "editable_svg",
+      "acceptance": "viewBox完整；小尺寸可读；不得依靠颜色单独传达状态",
+      "dependsOn": []
+    },
+    {
+      "id": "exchange",
+      "category": "ui",
+      "plannedPath": "assets/ui/icons/exchange.svg",
+      "status": "complete_runtime",
+      "productionMethod": "editable_svg",
+      "acceptance": "viewBox完整；小尺寸可读；不得依靠颜色单独传达状态",
+      "dependsOn": []
+    },
+    {
+      "id": "wish",
+      "category": "ui",
+      "plannedPath": "assets/ui/icons/wish.svg",
+      "status": "complete_runtime",
+      "productionMethod": "editable_svg",
+      "acceptance": "viewBox完整；小尺寸可读；不得依靠颜色单独传达状态",
+      "dependsOn": []
+    },
+    {
+      "id": "stardust",
+      "category": "ui",
+      "plannedPath": "assets/ui/icons/stardust.svg",
+      "status": "complete_runtime",
+      "productionMethod": "editable_svg",
+      "acceptance": "viewBox完整；小尺寸可读；不得依靠颜色单独传达状态",
+      "dependsOn": []
+    },
+    {
+      "id": "duplicate",
+      "category": "ui",
+      "plannedPath": "assets/ui/icons/duplicate.svg",
+      "status": "complete_runtime",
+      "productionMethod": "editable_svg",
+      "acceptance": "viewBox完整；小尺寸可读；不得依靠颜色单独传达状态",
+      "dependsOn": []
+    },
+    {
+      "id": "bridge",
+      "category": "ui",
+      "plannedPath": "assets/ui/icons/bridge.svg",
+      "status": "complete_runtime",
+      "productionMethod": "editable_svg",
+      "acceptance": "viewBox完整；小尺寸可读；不得依靠颜色单独传达状态",
+      "dependsOn": []
+    },
+    {
+      "id": "boots",
+      "category": "ui",
+      "plannedPath": "assets/ui/icons/boots.svg",
+      "status": "complete_runtime",
+      "productionMethod": "editable_svg",
+      "acceptance": "viewBox完整；小尺寸可读；不得依靠颜色单独传达状态",
+      "dependsOn": []
+    },
+    {
+      "id": "compass",
+      "category": "ui",
+      "plannedPath": "assets/ui/icons/compass.svg",
+      "status": "complete_runtime",
+      "productionMethod": "editable_svg",
+      "acceptance": "viewBox完整；小尺寸可读；不得依靠颜色单独传达状态",
+      "dependsOn": []
+    },
+    {
+      "id": "ui-components",
+      "category": "ui",
+      "plannedPath": "assets/ui/components.css",
+      "status": "complete_runtime",
+      "productionMethod": "css",
+      "acceptance": "按钮、弹窗、标签、进度、任务卡、提示的默认/聚焦/禁用状态齐全",
+      "dependsOn": []
+    },
+    {
+      "id": "explorer",
+      "category": "character",
+      "plannedPath": "assets/art/characters/explorer.png",
+      "status": "complete_runtime",
+      "productionMethod": "image_generation_then_animation_preparation",
+      "acceptance": "主形象一致；待机/移动/思考/开心/鼓励动作不改变身份",
+      "dependsOn": []
+    },
+    {
+      "id": "camp",
+      "category": "background",
+      "plannedPath": "assets/art/backgrounds/camp.png",
+      "status": "complete_runtime",
+      "productionMethod": "image_generation",
+      "acceptance": "手机竖屏裁切安全；界面区域留白；无烘焙文字",
+      "dependsOn": []
+    },
+    {
+      "id": "board",
+      "category": "background",
+      "plannedPath": "assets/art/backgrounds/board.png",
+      "status": "complete_runtime",
+      "productionMethod": "image_generation",
+      "acceptance": "手机竖屏裁切安全；界面区域留白；无烘焙文字",
+      "dependsOn": []
+    },
+    {
+      "id": "ground",
+      "category": "game_component",
+      "plannedPath": "assets/ui/game/ground.svg",
+      "status": "complete_runtime",
+      "productionMethod": "editable_svg",
+      "acceptance": "形状统一、可缩放；可交互状态清楚",
+      "dependsOn": []
+    },
+    {
+      "id": "path",
+      "category": "game_component",
+      "plannedPath": "assets/ui/game/path.svg",
+      "status": "complete_runtime",
+      "productionMethod": "editable_svg",
+      "acceptance": "形状统一、可缩放；可交互状态清楚",
+      "dependsOn": []
+    },
+    {
+      "id": "start",
+      "category": "game_component",
+      "plannedPath": "assets/ui/game/start.svg",
+      "status": "complete_runtime",
+      "productionMethod": "editable_svg",
+      "acceptance": "形状统一、可缩放；可交互状态清楚",
+      "dependsOn": []
+    },
+    {
+      "id": "exit",
+      "category": "game_component",
+      "plannedPath": "assets/ui/game/exit.svg",
+      "status": "complete_runtime",
+      "productionMethod": "editable_svg",
+      "acceptance": "形状统一、可缩放；可交互状态清楚",
+      "dependsOn": []
+    },
+    {
+      "id": "ravine",
+      "category": "game_component",
+      "plannedPath": "assets/art/terrain/river-water.webp",
+      "status": "complete_runtime",
+      "productionMethod": "gpt-image-2_full_board_texture_with_css_motion",
+      "acceptance": "整块棋盘为连续动态水面；可行走位置使用漂浮石台；阻挡位置为水下暗礁；无独立蓝色障碍块或旋转圆环",
+      "dependsOn": []
+    },
+    {
+      "id": "exploration-point",
+      "category": "game_component",
+      "plannedPath": "assets/ui/game/exploration-point.svg",
+      "status": "complete_runtime",
+      "productionMethod": "editable_svg",
+      "acceptance": "形状统一、可缩放；可交互状态清楚",
+      "dependsOn": []
+    },
+    {
+      "id": "route",
+      "category": "game_component",
+      "plannedPath": "assets/ui/game/route.svg",
+      "status": "complete_runtime",
+      "productionMethod": "editable_svg",
+      "acceptance": "形状统一、可缩放；可交互状态清楚",
+      "dependsOn": []
+    },
+    {
+      "id": "target",
+      "category": "game_component",
+      "plannedPath": "assets/ui/game/target.svg",
+      "status": "complete_runtime",
+      "productionMethod": "editable_svg",
+      "acceptance": "形状统一、可缩放；可交互状态清楚",
+      "dependsOn": []
+    },
+    {
+      "id": "display-stand",
+      "category": "game_component",
+      "plannedPath": "assets/ui/game/display-stand.svg",
+      "status": "complete_runtime",
+      "productionMethod": "editable_svg",
+      "acceptance": "形状统一、可缩放；可交互状态清楚",
+      "dependsOn": []
+    },
+    {
+      "id": "main-stand",
+      "category": "game_component",
+      "plannedPath": "assets/ui/game/main-stand.svg",
+      "status": "complete_runtime",
+      "productionMethod": "editable_svg",
+      "acceptance": "形状统一、可缩放；可交互状态清楚",
+      "dependsOn": []
+    },
+    {
+      "id": "collection-card",
+      "category": "game_component",
+      "plannedPath": "assets/ui/game/collection-card.svg",
+      "status": "complete_runtime",
+      "productionMethod": "editable_svg",
+      "acceptance": "形状统一、可缩放；可交互状态清楚",
+      "dependsOn": []
+    },
+    {
+      "id": "chest-closed",
+      "category": "game_component",
+      "plannedPath": "assets/ui/game/chest-closed.svg",
+      "status": "complete_runtime",
+      "productionMethod": "editable_svg",
+      "acceptance": "形状统一、可缩放；可交互状态清楚",
+      "dependsOn": []
+    },
+    {
+      "id": "chest-open",
+      "category": "game_component",
+      "plannedPath": "assets/ui/game/chest-open.svg",
+      "status": "complete_runtime",
+      "productionMethod": "editable_svg",
+      "acceptance": "形状统一、可缩放；可交互状态清楚",
+      "dependsOn": []
+    },
+    {
+      "id": "chest-empty",
+      "category": "game_component",
+      "plannedPath": "assets/ui/game/chest-empty.svg",
+      "status": "complete_runtime",
+      "productionMethod": "editable_svg",
+      "acceptance": "形状统一、可缩放；可交互状态清楚",
+      "dependsOn": []
+    },
+    {
+      "id": "collectible-triceratops",
+      "category": "collectible",
+      "plannedPath": "assets/art/collectibles/dinosaur/triceratops.png",
+      "status": "complete_runtime",
+      "productionMethod": "image_generation",
+      "acceptance": "独立透明底、无裁切；收藏格与详情中均可辨认；与系列参考风格一致",
+      "dependsOn": []
+    },
+    {
+      "id": "runtime-triceratops",
+      "category": "collectible_derivative",
+      "plannedPath": "assets/art/collectibles/dinosaur/triceratops.webp",
+      "status": "complete_runtime",
+      "productionMethod": "image_export",
+      "acceptance": "保留透明度；从主图导出并检查缩放边缘",
+      "dependsOn": [
+        "collectible-triceratops"
+      ]
+    },
+    {
+      "id": "thumb-triceratops",
+      "category": "collectible_derivative",
+      "plannedPath": "assets/art/thumbnails/triceratops.webp",
+      "status": "complete_runtime",
+      "productionMethod": "image_export",
+      "acceptance": "256px缩略图，不挤压变形",
+      "dependsOn": [
+        "collectible-triceratops"
+      ]
+    },
+    {
+      "id": "silhouette-triceratops",
+      "category": "collectible_derivative",
+      "plannedPath": "assets/art/silhouettes/triceratops.webp",
+      "status": "complete_runtime",
+      "productionMethod": "alpha_silhouette",
+      "acceptance": "沿真实透明度生成轮廓，不包含棋盘背景",
+      "dependsOn": [
+        "collectible-triceratops"
+      ]
+    },
+    {
+      "id": "motion-triceratops",
+      "category": "animation",
+      "plannedPath": "assets/motion/collectibles/triceratops/reveal/",
+      "status": "complete_runtime",
+      "productionMethod": "transform_animation",
+      "acceptance": "提供动作参数及可播放预览；分层需可编辑资产，不能假定单张PNG已有分层",
+      "dependsOn": [
+        "collectible-triceratops"
+      ]
+    },
+    {
+      "id": "voice-triceratops-name",
+      "category": "voice",
+      "plannedPath": "assets/audio/en-US/collectibles/triceratops-name.mp3",
+      "status": "complete_runtime",
+      "productionMethod": "existing_company_audio_or_confirmed_tts",
+      "acceptance": "统一英语口音；真人试听核对；无切字、明显噪声或削波",
+      "dependsOn": []
+    },
+    {
+      "id": "voice-triceratops-line",
+      "category": "voice",
+      "plannedPath": "assets/audio/en-US/collectibles/triceratops-line.mp3",
+      "status": "complete_runtime",
+      "productionMethod": "existing_company_audio_or_confirmed_tts",
+      "acceptance": "统一英语口音；真人试听核对；无切字、明显噪声或削波",
+      "dependsOn": []
+    },
+    {
+      "id": "collectible-stegosaurus",
+      "category": "collectible",
+      "plannedPath": "assets/art/collectibles/dinosaur/stegosaurus.png",
+      "status": "complete_runtime",
+      "productionMethod": "image_generation",
+      "acceptance": "独立透明底、无裁切；收藏格与详情中均可辨认；与系列参考风格一致",
+      "dependsOn": []
+    },
+    {
+      "id": "runtime-stegosaurus",
+      "category": "collectible_derivative",
+      "plannedPath": "assets/art/collectibles/dinosaur/stegosaurus.webp",
+      "status": "complete_runtime",
+      "productionMethod": "image_export",
+      "acceptance": "保留透明度；从主图导出并检查缩放边缘",
+      "dependsOn": [
+        "collectible-stegosaurus"
+      ]
+    },
+    {
+      "id": "thumb-stegosaurus",
+      "category": "collectible_derivative",
+      "plannedPath": "assets/art/thumbnails/stegosaurus.webp",
+      "status": "complete_runtime",
+      "productionMethod": "image_export",
+      "acceptance": "256px缩略图，不挤压变形",
+      "dependsOn": [
+        "collectible-stegosaurus"
+      ]
+    },
+    {
+      "id": "silhouette-stegosaurus",
+      "category": "collectible_derivative",
+      "plannedPath": "assets/art/silhouettes/stegosaurus.webp",
+      "status": "complete_runtime",
+      "productionMethod": "alpha_silhouette",
+      "acceptance": "沿真实透明度生成轮廓，不包含棋盘背景",
+      "dependsOn": [
+        "collectible-stegosaurus"
+      ]
+    },
+    {
+      "id": "motion-stegosaurus",
+      "category": "animation",
+      "plannedPath": "assets/motion/collectibles/stegosaurus/reveal/",
+      "status": "complete_runtime",
+      "productionMethod": "transform_animation",
+      "acceptance": "提供动作参数及可播放预览；分层需可编辑资产，不能假定单张PNG已有分层",
+      "dependsOn": [
+        "collectible-stegosaurus"
+      ]
+    },
+    {
+      "id": "voice-stegosaurus-name",
+      "category": "voice",
+      "plannedPath": "assets/audio/en-US/collectibles/stegosaurus-name.mp3",
+      "status": "complete_runtime",
+      "productionMethod": "existing_company_audio_or_confirmed_tts",
+      "acceptance": "统一英语口音；真人试听核对；无切字、明显噪声或削波",
+      "dependsOn": []
+    },
+    {
+      "id": "voice-stegosaurus-line",
+      "category": "voice",
+      "plannedPath": "assets/audio/en-US/collectibles/stegosaurus-line.mp3",
+      "status": "complete_runtime",
+      "productionMethod": "existing_company_audio_or_confirmed_tts",
+      "acceptance": "统一英语口音；真人试听核对；无切字、明显噪声或削波",
+      "dependsOn": []
+    },
+    {
+      "id": "collectible-pterosaur",
+      "category": "collectible",
+      "plannedPath": "assets/art/collectibles/dinosaur/pterosaur.png",
+      "status": "complete_runtime",
+      "productionMethod": "image_generation",
+      "acceptance": "独立透明底、无裁切；收藏格与详情中均可辨认；与系列参考风格一致",
+      "dependsOn": []
+    },
+    {
+      "id": "runtime-pterosaur",
+      "category": "collectible_derivative",
+      "plannedPath": "assets/art/collectibles/dinosaur/pterosaur.webp",
+      "status": "complete_runtime",
+      "productionMethod": "image_export",
+      "acceptance": "保留透明度；从主图导出并检查缩放边缘",
+      "dependsOn": [
+        "collectible-pterosaur"
+      ]
+    },
+    {
+      "id": "thumb-pterosaur",
+      "category": "collectible_derivative",
+      "plannedPath": "assets/art/thumbnails/pterosaur.webp",
+      "status": "complete_runtime",
+      "productionMethod": "image_export",
+      "acceptance": "256px缩略图，不挤压变形",
+      "dependsOn": [
+        "collectible-pterosaur"
+      ]
+    },
+    {
+      "id": "silhouette-pterosaur",
+      "category": "collectible_derivative",
+      "plannedPath": "assets/art/silhouettes/pterosaur.webp",
+      "status": "complete_runtime",
+      "productionMethod": "alpha_silhouette",
+      "acceptance": "沿真实透明度生成轮廓，不包含棋盘背景",
+      "dependsOn": [
+        "collectible-pterosaur"
+      ]
+    },
+    {
+      "id": "motion-pterosaur",
+      "category": "animation",
+      "plannedPath": "assets/motion/collectibles/pterosaur/reveal/",
+      "status": "complete_runtime",
+      "productionMethod": "transform_animation",
+      "acceptance": "提供动作参数及可播放预览；分层需可编辑资产，不能假定单张PNG已有分层",
+      "dependsOn": [
+        "collectible-pterosaur"
+      ]
+    },
+    {
+      "id": "voice-pterosaur-name",
+      "category": "voice",
+      "plannedPath": "assets/audio/en-US/collectibles/pterosaur-name.mp3",
+      "status": "complete_runtime",
+      "productionMethod": "existing_company_audio_or_confirmed_tts",
+      "acceptance": "统一英语口音；真人试听核对；无切字、明显噪声或削波",
+      "dependsOn": []
+    },
+    {
+      "id": "voice-pterosaur-line",
+      "category": "voice",
+      "plannedPath": "assets/audio/en-US/collectibles/pterosaur-line.mp3",
+      "status": "complete_runtime",
+      "productionMethod": "existing_company_audio_or_confirmed_tts",
+      "acceptance": "统一英语口音；真人试听核对；无切字、明显噪声或削波",
+      "dependsOn": []
+    },
+    {
+      "id": "collectible-dinosaur-egg",
+      "category": "collectible",
+      "plannedPath": "assets/art/collectibles/dinosaur/dinosaur-egg.png",
+      "status": "complete_runtime",
+      "productionMethod": "image_generation",
+      "acceptance": "独立透明底、无裁切；收藏格与详情中均可辨认；与系列参考风格一致",
+      "dependsOn": []
+    },
+    {
+      "id": "runtime-dinosaur-egg",
+      "category": "collectible_derivative",
+      "plannedPath": "assets/art/collectibles/dinosaur/dinosaur-egg.webp",
+      "status": "complete_runtime",
+      "productionMethod": "image_export",
+      "acceptance": "保留透明度；从主图导出并检查缩放边缘",
+      "dependsOn": [
+        "collectible-dinosaur-egg"
+      ]
+    },
+    {
+      "id": "thumb-dinosaur-egg",
+      "category": "collectible_derivative",
+      "plannedPath": "assets/art/thumbnails/dinosaur-egg.webp",
+      "status": "complete_runtime",
+      "productionMethod": "image_export",
+      "acceptance": "256px缩略图，不挤压变形",
+      "dependsOn": [
+        "collectible-dinosaur-egg"
+      ]
+    },
+    {
+      "id": "silhouette-dinosaur-egg",
+      "category": "collectible_derivative",
+      "plannedPath": "assets/art/silhouettes/dinosaur-egg.webp",
+      "status": "complete_runtime",
+      "productionMethod": "alpha_silhouette",
+      "acceptance": "沿真实透明度生成轮廓，不包含棋盘背景",
+      "dependsOn": [
+        "collectible-dinosaur-egg"
+      ]
+    },
+    {
+      "id": "motion-dinosaur-egg",
+      "category": "animation",
+      "plannedPath": "assets/motion/collectibles/dinosaur-egg/reveal/",
+      "status": "complete_runtime",
+      "productionMethod": "transform_animation",
+      "acceptance": "提供动作参数及可播放预览；分层需可编辑资产，不能假定单张PNG已有分层",
+      "dependsOn": [
+        "collectible-dinosaur-egg"
+      ]
+    },
+    {
+      "id": "voice-dinosaur-egg-name",
+      "category": "voice",
+      "plannedPath": "assets/audio/en-US/collectibles/dinosaur-egg-name.mp3",
+      "status": "complete_runtime",
+      "productionMethod": "existing_company_audio_or_confirmed_tts",
+      "acceptance": "统一英语口音；真人试听核对；无切字、明显噪声或削波",
+      "dependsOn": []
+    },
+    {
+      "id": "voice-dinosaur-egg-line",
+      "category": "voice",
+      "plannedPath": "assets/audio/en-US/collectibles/dinosaur-egg-line.mp3",
+      "status": "complete_runtime",
+      "productionMethod": "existing_company_audio_or_confirmed_tts",
+      "acceptance": "统一英语口音；真人试听核对；无切字、明显噪声或削波",
+      "dependsOn": []
+    },
+    {
+      "id": "collectible-fossil-display",
+      "category": "collectible",
+      "plannedPath": "assets/art/collectibles/dinosaur/fossil-display.png",
+      "status": "complete_runtime",
+      "productionMethod": "image_generation",
+      "acceptance": "独立透明底、无裁切；收藏格与详情中均可辨认；与系列参考风格一致",
+      "dependsOn": []
+    },
+    {
+      "id": "runtime-fossil-display",
+      "category": "collectible_derivative",
+      "plannedPath": "assets/art/collectibles/dinosaur/fossil-display.webp",
+      "status": "complete_runtime",
+      "productionMethod": "image_export",
+      "acceptance": "保留透明度；从主图导出并检查缩放边缘",
+      "dependsOn": [
+        "collectible-fossil-display"
+      ]
+    },
+    {
+      "id": "thumb-fossil-display",
+      "category": "collectible_derivative",
+      "plannedPath": "assets/art/thumbnails/fossil-display.webp",
+      "status": "complete_runtime",
+      "productionMethod": "image_export",
+      "acceptance": "256px缩略图，不挤压变形",
+      "dependsOn": [
+        "collectible-fossil-display"
+      ]
+    },
+    {
+      "id": "silhouette-fossil-display",
+      "category": "collectible_derivative",
+      "plannedPath": "assets/art/silhouettes/fossil-display.webp",
+      "status": "complete_runtime",
+      "productionMethod": "alpha_silhouette",
+      "acceptance": "沿真实透明度生成轮廓，不包含棋盘背景",
+      "dependsOn": [
+        "collectible-fossil-display"
+      ]
+    },
+    {
+      "id": "motion-fossil-display",
+      "category": "animation",
+      "plannedPath": "assets/motion/collectibles/fossil-display/reveal/",
+      "status": "complete_runtime",
+      "productionMethod": "transform_animation",
+      "acceptance": "提供动作参数及可播放预览；分层需可编辑资产，不能假定单张PNG已有分层",
+      "dependsOn": [
+        "collectible-fossil-display"
+      ]
+    },
+    {
+      "id": "voice-fossil-display-name",
+      "category": "voice",
+      "plannedPath": "assets/audio/en-US/collectibles/fossil-display-name.mp3",
+      "status": "complete_runtime",
+      "productionMethod": "existing_company_audio_or_confirmed_tts",
+      "acceptance": "统一英语口音；真人试听核对；无切字、明显噪声或削波",
+      "dependsOn": []
+    },
+    {
+      "id": "voice-fossil-display-line",
+      "category": "voice",
+      "plannedPath": "assets/audio/en-US/collectibles/fossil-display-line.mp3",
+      "status": "complete_runtime",
+      "productionMethod": "existing_company_audio_or_confirmed_tts",
+      "acceptance": "统一英语口音；真人试听核对；无切字、明显噪声或削波",
+      "dependsOn": []
+    },
+    {
+      "id": "collectible-little-tyrannosaurus",
+      "category": "collectible",
+      "plannedPath": "assets/art/collectibles/dinosaur/little-tyrannosaurus.png",
+      "status": "complete_runtime",
+      "productionMethod": "image_generation",
+      "acceptance": "独立透明底、无裁切；收藏格与详情中均可辨认；与系列参考风格一致",
+      "dependsOn": []
+    },
+    {
+      "id": "runtime-little-tyrannosaurus",
+      "category": "collectible_derivative",
+      "plannedPath": "assets/art/collectibles/dinosaur/little-tyrannosaurus.webp",
+      "status": "complete_runtime",
+      "productionMethod": "image_export",
+      "acceptance": "保留透明度；从主图导出并检查缩放边缘",
+      "dependsOn": [
+        "collectible-little-tyrannosaurus"
+      ]
+    },
+    {
+      "id": "thumb-little-tyrannosaurus",
+      "category": "collectible_derivative",
+      "plannedPath": "assets/art/thumbnails/little-tyrannosaurus.webp",
+      "status": "complete_runtime",
+      "productionMethod": "image_export",
+      "acceptance": "256px缩略图，不挤压变形",
+      "dependsOn": [
+        "collectible-little-tyrannosaurus"
+      ]
+    },
+    {
+      "id": "silhouette-little-tyrannosaurus",
+      "category": "collectible_derivative",
+      "plannedPath": "assets/art/silhouettes/little-tyrannosaurus.webp",
+      "status": "complete_runtime",
+      "productionMethod": "alpha_silhouette",
+      "acceptance": "沿真实透明度生成轮廓，不包含棋盘背景",
+      "dependsOn": [
+        "collectible-little-tyrannosaurus"
+      ]
+    },
+    {
+      "id": "motion-little-tyrannosaurus",
+      "category": "animation",
+      "plannedPath": "assets/motion/collectibles/little-tyrannosaurus/reveal/",
+      "status": "complete_runtime",
+      "productionMethod": "segmented_animation_or_frames",
+      "acceptance": "提供动作参数及可播放预览；分层需可编辑资产，不能假定单张PNG已有分层",
+      "dependsOn": [
+        "collectible-little-tyrannosaurus"
+      ]
+    },
+    {
+      "id": "voice-little-tyrannosaurus-name",
+      "category": "voice",
+      "plannedPath": "assets/audio/en-US/collectibles/little-tyrannosaurus-name.mp3",
+      "status": "complete_runtime",
+      "productionMethod": "existing_company_audio_or_confirmed_tts",
+      "acceptance": "统一英语口音；真人试听核对；无切字、明显噪声或削波",
+      "dependsOn": []
+    },
+    {
+      "id": "voice-little-tyrannosaurus-line",
+      "category": "voice",
+      "plannedPath": "assets/audio/en-US/collectibles/little-tyrannosaurus-line.mp3",
+      "status": "complete_runtime",
+      "productionMethod": "existing_company_audio_or_confirmed_tts",
+      "acceptance": "统一英语口音；真人试听核对；无切字、明显噪声或削波",
+      "dependsOn": []
+    },
+    {
+      "id": "collectible-rocket",
+      "category": "collectible",
+      "plannedPath": "assets/art/collectibles/space/rocket.png",
+      "status": "complete_runtime",
+      "productionMethod": "image_generation",
+      "acceptance": "独立透明底、无裁切；收藏格与详情中均可辨认；与系列参考风格一致",
+      "dependsOn": []
+    },
+    {
+      "id": "runtime-rocket",
+      "category": "collectible_derivative",
+      "plannedPath": "assets/art/collectibles/space/rocket.webp",
+      "status": "complete_runtime",
+      "productionMethod": "image_export",
+      "acceptance": "保留透明度；从主图导出并检查缩放边缘",
+      "dependsOn": [
+        "collectible-rocket"
+      ]
+    },
+    {
+      "id": "thumb-rocket",
+      "category": "collectible_derivative",
+      "plannedPath": "assets/art/thumbnails/rocket.webp",
+      "status": "complete_runtime",
+      "productionMethod": "image_export",
+      "acceptance": "256px缩略图，不挤压变形",
+      "dependsOn": [
+        "collectible-rocket"
+      ]
+    },
+    {
+      "id": "silhouette-rocket",
+      "category": "collectible_derivative",
+      "plannedPath": "assets/art/silhouettes/rocket.webp",
+      "status": "complete_runtime",
+      "productionMethod": "alpha_silhouette",
+      "acceptance": "沿真实透明度生成轮廓，不包含棋盘背景",
+      "dependsOn": [
+        "collectible-rocket"
+      ]
+    },
+    {
+      "id": "motion-rocket",
+      "category": "animation",
+      "plannedPath": "assets/motion/collectibles/rocket/reveal/",
+      "status": "complete_runtime",
+      "productionMethod": "transform_animation",
+      "acceptance": "提供动作参数及可播放预览；分层需可编辑资产，不能假定单张PNG已有分层",
+      "dependsOn": [
+        "collectible-rocket"
+      ]
+    },
+    {
+      "id": "voice-rocket-name",
+      "category": "voice",
+      "plannedPath": "assets/audio/en-US/collectibles/rocket-name.mp3",
+      "status": "complete_runtime",
+      "productionMethod": "existing_company_audio_or_confirmed_tts",
+      "acceptance": "统一英语口音；真人试听核对；无切字、明显噪声或削波",
+      "dependsOn": []
+    },
+    {
+      "id": "voice-rocket-line",
+      "category": "voice",
+      "plannedPath": "assets/audio/en-US/collectibles/rocket-line.mp3",
+      "status": "complete_runtime",
+      "productionMethod": "existing_company_audio_or_confirmed_tts",
+      "acceptance": "统一英语口音；真人试听核对；无切字、明显噪声或削波",
+      "dependsOn": []
+    },
+    {
+      "id": "collectible-moon-rover",
+      "category": "collectible",
+      "plannedPath": "assets/art/collectibles/space/moon-rover.png",
+      "status": "complete_runtime",
+      "productionMethod": "image_generation",
+      "acceptance": "独立透明底、无裁切；收藏格与详情中均可辨认；与系列参考风格一致",
+      "dependsOn": []
+    },
+    {
+      "id": "runtime-moon-rover",
+      "category": "collectible_derivative",
+      "plannedPath": "assets/art/collectibles/space/moon-rover.webp",
+      "status": "complete_runtime",
+      "productionMethod": "image_export",
+      "acceptance": "保留透明度；从主图导出并检查缩放边缘",
+      "dependsOn": [
+        "collectible-moon-rover"
+      ]
+    },
+    {
+      "id": "thumb-moon-rover",
+      "category": "collectible_derivative",
+      "plannedPath": "assets/art/thumbnails/moon-rover.webp",
+      "status": "complete_runtime",
+      "productionMethod": "image_export",
+      "acceptance": "256px缩略图，不挤压变形",
+      "dependsOn": [
+        "collectible-moon-rover"
+      ]
+    },
+    {
+      "id": "silhouette-moon-rover",
+      "category": "collectible_derivative",
+      "plannedPath": "assets/art/silhouettes/moon-rover.webp",
+      "status": "complete_runtime",
+      "productionMethod": "alpha_silhouette",
+      "acceptance": "沿真实透明度生成轮廓，不包含棋盘背景",
+      "dependsOn": [
+        "collectible-moon-rover"
+      ]
+    },
+    {
+      "id": "motion-moon-rover",
+      "category": "animation",
+      "plannedPath": "assets/motion/collectibles/moon-rover/reveal/",
+      "status": "complete_runtime",
+      "productionMethod": "transform_animation",
+      "acceptance": "提供动作参数及可播放预览；分层需可编辑资产，不能假定单张PNG已有分层",
+      "dependsOn": [
+        "collectible-moon-rover"
+      ]
+    },
+    {
+      "id": "voice-moon-rover-name",
+      "category": "voice",
+      "plannedPath": "assets/audio/en-US/collectibles/moon-rover-name.mp3",
+      "status": "complete_runtime",
+      "productionMethod": "existing_company_audio_or_confirmed_tts",
+      "acceptance": "统一英语口音；真人试听核对；无切字、明显噪声或削波",
+      "dependsOn": []
+    },
+    {
+      "id": "voice-moon-rover-line",
+      "category": "voice",
+      "plannedPath": "assets/audio/en-US/collectibles/moon-rover-line.mp3",
+      "status": "complete_runtime",
+      "productionMethod": "existing_company_audio_or_confirmed_tts",
+      "acceptance": "统一英语口音；真人试听核对；无切字、明显噪声或削波",
+      "dependsOn": []
+    },
+    {
+      "id": "collectible-satellite",
+      "category": "collectible",
+      "plannedPath": "assets/art/collectibles/space/satellite.png",
+      "status": "complete_runtime",
+      "productionMethod": "image_generation",
+      "acceptance": "独立透明底、无裁切；收藏格与详情中均可辨认；与系列参考风格一致",
+      "dependsOn": []
+    },
+    {
+      "id": "runtime-satellite",
+      "category": "collectible_derivative",
+      "plannedPath": "assets/art/collectibles/space/satellite.webp",
+      "status": "complete_runtime",
+      "productionMethod": "image_export",
+      "acceptance": "保留透明度；从主图导出并检查缩放边缘",
+      "dependsOn": [
+        "collectible-satellite"
+      ]
+    },
+    {
+      "id": "thumb-satellite",
+      "category": "collectible_derivative",
+      "plannedPath": "assets/art/thumbnails/satellite.webp",
+      "status": "complete_runtime",
+      "productionMethod": "image_export",
+      "acceptance": "256px缩略图，不挤压变形",
+      "dependsOn": [
+        "collectible-satellite"
+      ]
+    },
+    {
+      "id": "silhouette-satellite",
+      "category": "collectible_derivative",
+      "plannedPath": "assets/art/silhouettes/satellite.webp",
+      "status": "complete_runtime",
+      "productionMethod": "alpha_silhouette",
+      "acceptance": "沿真实透明度生成轮廓，不包含棋盘背景",
+      "dependsOn": [
+        "collectible-satellite"
+      ]
+    },
+    {
+      "id": "motion-satellite",
+      "category": "animation",
+      "plannedPath": "assets/motion/collectibles/satellite/reveal/",
+      "status": "complete_runtime",
+      "productionMethod": "transform_animation",
+      "acceptance": "提供动作参数及可播放预览；分层需可编辑资产，不能假定单张PNG已有分层",
+      "dependsOn": [
+        "collectible-satellite"
+      ]
+    },
+    {
+      "id": "voice-satellite-name",
+      "category": "voice",
+      "plannedPath": "assets/audio/en-US/collectibles/satellite-name.mp3",
+      "status": "complete_runtime",
+      "productionMethod": "existing_company_audio_or_confirmed_tts",
+      "acceptance": "统一英语口音；真人试听核对；无切字、明显噪声或削波",
+      "dependsOn": []
+    },
+    {
+      "id": "voice-satellite-line",
+      "category": "voice",
+      "plannedPath": "assets/audio/en-US/collectibles/satellite-line.mp3",
+      "status": "complete_runtime",
+      "productionMethod": "existing_company_audio_or_confirmed_tts",
+      "acceptance": "统一英语口音；真人试听核对；无切字、明显噪声或削波",
+      "dependsOn": []
+    },
+    {
+      "id": "collectible-space-helmet",
+      "category": "collectible",
+      "plannedPath": "assets/art/collectibles/space/space-helmet.png",
+      "status": "complete_runtime",
+      "productionMethod": "image_generation",
+      "acceptance": "独立透明底、无裁切；收藏格与详情中均可辨认；与系列参考风格一致",
+      "dependsOn": []
+    },
+    {
+      "id": "runtime-space-helmet",
+      "category": "collectible_derivative",
+      "plannedPath": "assets/art/collectibles/space/space-helmet.webp",
+      "status": "complete_runtime",
+      "productionMethod": "image_export",
+      "acceptance": "保留透明度；从主图导出并检查缩放边缘",
+      "dependsOn": [
+        "collectible-space-helmet"
+      ]
+    },
+    {
+      "id": "thumb-space-helmet",
+      "category": "collectible_derivative",
+      "plannedPath": "assets/art/thumbnails/space-helmet.webp",
+      "status": "complete_runtime",
+      "productionMethod": "image_export",
+      "acceptance": "256px缩略图，不挤压变形",
+      "dependsOn": [
+        "collectible-space-helmet"
+      ]
+    },
+    {
+      "id": "silhouette-space-helmet",
+      "category": "collectible_derivative",
+      "plannedPath": "assets/art/silhouettes/space-helmet.webp",
+      "status": "complete_runtime",
+      "productionMethod": "alpha_silhouette",
+      "acceptance": "沿真实透明度生成轮廓，不包含棋盘背景",
+      "dependsOn": [
+        "collectible-space-helmet"
+      ]
+    },
+    {
+      "id": "motion-space-helmet",
+      "category": "animation",
+      "plannedPath": "assets/motion/collectibles/space-helmet/reveal/",
+      "status": "complete_runtime",
+      "productionMethod": "transform_animation",
+      "acceptance": "提供动作参数及可播放预览；分层需可编辑资产，不能假定单张PNG已有分层",
+      "dependsOn": [
+        "collectible-space-helmet"
+      ]
+    },
+    {
+      "id": "voice-space-helmet-name",
+      "category": "voice",
+      "plannedPath": "assets/audio/en-US/collectibles/space-helmet-name.mp3",
+      "status": "complete_runtime",
+      "productionMethod": "existing_company_audio_or_confirmed_tts",
+      "acceptance": "统一英语口音；真人试听核对；无切字、明显噪声或削波",
+      "dependsOn": []
+    },
+    {
+      "id": "voice-space-helmet-line",
+      "category": "voice",
+      "plannedPath": "assets/audio/en-US/collectibles/space-helmet-line.mp3",
+      "status": "complete_runtime",
+      "productionMethod": "existing_company_audio_or_confirmed_tts",
+      "acceptance": "统一英语口音；真人试听核对；无切字、明显噪声或削波",
+      "dependsOn": []
+    },
+    {
+      "id": "collectible-planet-model",
+      "category": "collectible",
+      "plannedPath": "assets/art/collectibles/space/planet-model.png",
+      "status": "complete_runtime",
+      "productionMethod": "image_generation",
+      "acceptance": "独立透明底、无裁切；收藏格与详情中均可辨认；与系列参考风格一致",
+      "dependsOn": []
+    },
+    {
+      "id": "runtime-planet-model",
+      "category": "collectible_derivative",
+      "plannedPath": "assets/art/collectibles/space/planet-model.webp",
+      "status": "complete_runtime",
+      "productionMethod": "image_export",
+      "acceptance": "保留透明度；从主图导出并检查缩放边缘",
+      "dependsOn": [
+        "collectible-planet-model"
+      ]
+    },
+    {
+      "id": "thumb-planet-model",
+      "category": "collectible_derivative",
+      "plannedPath": "assets/art/thumbnails/planet-model.webp",
+      "status": "complete_runtime",
+      "productionMethod": "image_export",
+      "acceptance": "256px缩略图，不挤压变形",
+      "dependsOn": [
+        "collectible-planet-model"
+      ]
+    },
+    {
+      "id": "silhouette-planet-model",
+      "category": "collectible_derivative",
+      "plannedPath": "assets/art/silhouettes/planet-model.webp",
+      "status": "complete_runtime",
+      "productionMethod": "alpha_silhouette",
+      "acceptance": "沿真实透明度生成轮廓，不包含棋盘背景",
+      "dependsOn": [
+        "collectible-planet-model"
+      ]
+    },
+    {
+      "id": "motion-planet-model",
+      "category": "animation",
+      "plannedPath": "assets/motion/collectibles/planet-model/reveal/",
+      "status": "complete_runtime",
+      "productionMethod": "transform_animation",
+      "acceptance": "提供动作参数及可播放预览；分层需可编辑资产，不能假定单张PNG已有分层",
+      "dependsOn": [
+        "collectible-planet-model"
+      ]
+    },
+    {
+      "id": "voice-planet-model-name",
+      "category": "voice",
+      "plannedPath": "assets/audio/en-US/collectibles/planet-model-name.mp3",
+      "status": "complete_runtime",
+      "productionMethod": "existing_company_audio_or_confirmed_tts",
+      "acceptance": "统一英语口音；真人试听核对；无切字、明显噪声或削波",
+      "dependsOn": []
+    },
+    {
+      "id": "voice-planet-model-line",
+      "category": "voice",
+      "plannedPath": "assets/audio/en-US/collectibles/planet-model-line.mp3",
+      "status": "complete_runtime",
+      "productionMethod": "existing_company_audio_or_confirmed_tts",
+      "acceptance": "统一英语口音；真人试听核对；无切字、明显噪声或削波",
+      "dependsOn": []
+    },
+    {
+      "id": "collectible-star-robot",
+      "category": "collectible",
+      "plannedPath": "assets/art/collectibles/space/star-robot.png",
+      "status": "complete_runtime",
+      "productionMethod": "image_generation",
+      "acceptance": "独立透明底、无裁切；收藏格与详情中均可辨认；与系列参考风格一致",
+      "dependsOn": []
+    },
+    {
+      "id": "runtime-star-robot",
+      "category": "collectible_derivative",
+      "plannedPath": "assets/art/collectibles/space/star-robot.webp",
+      "status": "complete_runtime",
+      "productionMethod": "image_export",
+      "acceptance": "保留透明度；从主图导出并检查缩放边缘",
+      "dependsOn": [
+        "collectible-star-robot"
+      ]
+    },
+    {
+      "id": "thumb-star-robot",
+      "category": "collectible_derivative",
+      "plannedPath": "assets/art/thumbnails/star-robot.webp",
+      "status": "complete_runtime",
+      "productionMethod": "image_export",
+      "acceptance": "256px缩略图，不挤压变形",
+      "dependsOn": [
+        "collectible-star-robot"
+      ]
+    },
+    {
+      "id": "silhouette-star-robot",
+      "category": "collectible_derivative",
+      "plannedPath": "assets/art/silhouettes/star-robot.webp",
+      "status": "complete_runtime",
+      "productionMethod": "alpha_silhouette",
+      "acceptance": "沿真实透明度生成轮廓，不包含棋盘背景",
+      "dependsOn": [
+        "collectible-star-robot"
+      ]
+    },
+    {
+      "id": "motion-star-robot",
+      "category": "animation",
+      "plannedPath": "assets/motion/collectibles/star-robot/reveal/",
+      "status": "complete_runtime",
+      "productionMethod": "segmented_animation_or_frames",
+      "acceptance": "提供动作参数及可播放预览；分层需可编辑资产，不能假定单张PNG已有分层",
+      "dependsOn": [
+        "collectible-star-robot"
+      ]
+    },
+    {
+      "id": "voice-star-robot-name",
+      "category": "voice",
+      "plannedPath": "assets/audio/en-US/collectibles/star-robot-name.mp3",
+      "status": "complete_runtime",
+      "productionMethod": "existing_company_audio_or_confirmed_tts",
+      "acceptance": "统一英语口音；真人试听核对；无切字、明显噪声或削波",
+      "dependsOn": []
+    },
+    {
+      "id": "voice-star-robot-line",
+      "category": "voice",
+      "plannedPath": "assets/audio/en-US/collectibles/star-robot-line.mp3",
+      "status": "complete_runtime",
+      "productionMethod": "existing_company_audio_or_confirmed_tts",
+      "acceptance": "统一英语口音；真人试听核对；无切字、明显噪声或削波",
+      "dependsOn": []
+    },
+    {
+      "id": "collectible-sea-turtle",
+      "category": "collectible",
+      "plannedPath": "assets/art/collectibles/ocean/sea-turtle.png",
+      "status": "complete_runtime",
+      "productionMethod": "image_generation",
+      "acceptance": "独立透明底、无裁切；收藏格与详情中均可辨认；与系列参考风格一致",
+      "dependsOn": []
+    },
+    {
+      "id": "runtime-sea-turtle",
+      "category": "collectible_derivative",
+      "plannedPath": "assets/art/collectibles/ocean/sea-turtle.webp",
+      "status": "complete_runtime",
+      "productionMethod": "image_export",
+      "acceptance": "保留透明度；从主图导出并检查缩放边缘",
+      "dependsOn": [
+        "collectible-sea-turtle"
+      ]
+    },
+    {
+      "id": "thumb-sea-turtle",
+      "category": "collectible_derivative",
+      "plannedPath": "assets/art/thumbnails/sea-turtle.webp",
+      "status": "complete_runtime",
+      "productionMethod": "image_export",
+      "acceptance": "256px缩略图，不挤压变形",
+      "dependsOn": [
+        "collectible-sea-turtle"
+      ]
+    },
+    {
+      "id": "silhouette-sea-turtle",
+      "category": "collectible_derivative",
+      "plannedPath": "assets/art/silhouettes/sea-turtle.webp",
+      "status": "complete_runtime",
+      "productionMethod": "alpha_silhouette",
+      "acceptance": "沿真实透明度生成轮廓，不包含棋盘背景",
+      "dependsOn": [
+        "collectible-sea-turtle"
+      ]
+    },
+    {
+      "id": "motion-sea-turtle",
+      "category": "animation",
+      "plannedPath": "assets/motion/collectibles/sea-turtle/reveal/",
+      "status": "complete_runtime",
+      "productionMethod": "transform_animation",
+      "acceptance": "提供动作参数及可播放预览；分层需可编辑资产，不能假定单张PNG已有分层",
+      "dependsOn": [
+        "collectible-sea-turtle"
+      ]
+    },
+    {
+      "id": "voice-sea-turtle-name",
+      "category": "voice",
+      "plannedPath": "assets/audio/en-US/collectibles/sea-turtle-name.mp3",
+      "status": "complete_runtime",
+      "productionMethod": "existing_company_audio_or_confirmed_tts",
+      "acceptance": "统一英语口音；真人试听核对；无切字、明显噪声或削波",
+      "dependsOn": []
+    },
+    {
+      "id": "voice-sea-turtle-line",
+      "category": "voice",
+      "plannedPath": "assets/audio/en-US/collectibles/sea-turtle-line.mp3",
+      "status": "complete_runtime",
+      "productionMethod": "existing_company_audio_or_confirmed_tts",
+      "acceptance": "统一英语口音；真人试听核对；无切字、明显噪声或削波",
+      "dependsOn": []
+    },
+    {
+      "id": "collectible-clownfish",
+      "category": "collectible",
+      "plannedPath": "assets/art/collectibles/ocean/clownfish.png",
+      "status": "complete_runtime",
+      "productionMethod": "image_generation",
+      "acceptance": "独立透明底、无裁切；收藏格与详情中均可辨认；与系列参考风格一致",
+      "dependsOn": []
+    },
+    {
+      "id": "runtime-clownfish",
+      "category": "collectible_derivative",
+      "plannedPath": "assets/art/collectibles/ocean/clownfish.webp",
+      "status": "complete_runtime",
+      "productionMethod": "image_export",
+      "acceptance": "保留透明度；从主图导出并检查缩放边缘",
+      "dependsOn": [
+        "collectible-clownfish"
+      ]
+    },
+    {
+      "id": "thumb-clownfish",
+      "category": "collectible_derivative",
+      "plannedPath": "assets/art/thumbnails/clownfish.webp",
+      "status": "complete_runtime",
+      "productionMethod": "image_export",
+      "acceptance": "256px缩略图，不挤压变形",
+      "dependsOn": [
+        "collectible-clownfish"
+      ]
+    },
+    {
+      "id": "silhouette-clownfish",
+      "category": "collectible_derivative",
+      "plannedPath": "assets/art/silhouettes/clownfish.webp",
+      "status": "complete_runtime",
+      "productionMethod": "alpha_silhouette",
+      "acceptance": "沿真实透明度生成轮廓，不包含棋盘背景",
+      "dependsOn": [
+        "collectible-clownfish"
+      ]
+    },
+    {
+      "id": "motion-clownfish",
+      "category": "animation",
+      "plannedPath": "assets/motion/collectibles/clownfish/reveal/",
+      "status": "complete_runtime",
+      "productionMethod": "transform_animation",
+      "acceptance": "提供动作参数及可播放预览；分层需可编辑资产，不能假定单张PNG已有分层",
+      "dependsOn": [
+        "collectible-clownfish"
+      ]
+    },
+    {
+      "id": "voice-clownfish-name",
+      "category": "voice",
+      "plannedPath": "assets/audio/en-US/collectibles/clownfish-name.mp3",
+      "status": "complete_runtime",
+      "productionMethod": "existing_company_audio_or_confirmed_tts",
+      "acceptance": "统一英语口音；真人试听核对；无切字、明显噪声或削波",
+      "dependsOn": []
+    },
+    {
+      "id": "voice-clownfish-line",
+      "category": "voice",
+      "plannedPath": "assets/audio/en-US/collectibles/clownfish-line.mp3",
+      "status": "complete_runtime",
+      "productionMethod": "existing_company_audio_or_confirmed_tts",
+      "acceptance": "统一英语口音；真人试听核对；无切字、明显噪声或削波",
+      "dependsOn": []
+    },
+    {
+      "id": "collectible-octopus",
+      "category": "collectible",
+      "plannedPath": "assets/art/collectibles/ocean/octopus.png",
+      "status": "complete_runtime",
+      "productionMethod": "image_generation",
+      "acceptance": "独立透明底、无裁切；收藏格与详情中均可辨认；与系列参考风格一致",
+      "dependsOn": []
+    },
+    {
+      "id": "runtime-octopus",
+      "category": "collectible_derivative",
+      "plannedPath": "assets/art/collectibles/ocean/octopus.webp",
+      "status": "complete_runtime",
+      "productionMethod": "image_export",
+      "acceptance": "保留透明度；从主图导出并检查缩放边缘",
+      "dependsOn": [
+        "collectible-octopus"
+      ]
+    },
+    {
+      "id": "thumb-octopus",
+      "category": "collectible_derivative",
+      "plannedPath": "assets/art/thumbnails/octopus.webp",
+      "status": "complete_runtime",
+      "productionMethod": "image_export",
+      "acceptance": "256px缩略图，不挤压变形",
+      "dependsOn": [
+        "collectible-octopus"
+      ]
+    },
+    {
+      "id": "silhouette-octopus",
+      "category": "collectible_derivative",
+      "plannedPath": "assets/art/silhouettes/octopus.webp",
+      "status": "complete_runtime",
+      "productionMethod": "alpha_silhouette",
+      "acceptance": "沿真实透明度生成轮廓，不包含棋盘背景",
+      "dependsOn": [
+        "collectible-octopus"
+      ]
+    },
+    {
+      "id": "motion-octopus",
+      "category": "animation",
+      "plannedPath": "assets/motion/collectibles/octopus/reveal/",
+      "status": "complete_runtime",
+      "productionMethod": "transform_animation",
+      "acceptance": "提供动作参数及可播放预览；分层需可编辑资产，不能假定单张PNG已有分层",
+      "dependsOn": [
+        "collectible-octopus"
+      ]
+    },
+    {
+      "id": "voice-octopus-name",
+      "category": "voice",
+      "plannedPath": "assets/audio/en-US/collectibles/octopus-name.mp3",
+      "status": "complete_runtime",
+      "productionMethod": "existing_company_audio_or_confirmed_tts",
+      "acceptance": "统一英语口音；真人试听核对；无切字、明显噪声或削波",
+      "dependsOn": []
+    },
+    {
+      "id": "voice-octopus-line",
+      "category": "voice",
+      "plannedPath": "assets/audio/en-US/collectibles/octopus-line.mp3",
+      "status": "complete_runtime",
+      "productionMethod": "existing_company_audio_or_confirmed_tts",
+      "acceptance": "统一英语口音；真人试听核对；无切字、明显噪声或削波",
+      "dependsOn": []
+    },
+    {
+      "id": "collectible-shell-house",
+      "category": "collectible",
+      "plannedPath": "assets/art/collectibles/ocean/shell-house.png",
+      "status": "complete_runtime",
+      "productionMethod": "image_generation",
+      "acceptance": "独立透明底、无裁切；收藏格与详情中均可辨认；与系列参考风格一致",
+      "dependsOn": []
+    },
+    {
+      "id": "runtime-shell-house",
+      "category": "collectible_derivative",
+      "plannedPath": "assets/art/collectibles/ocean/shell-house.webp",
+      "status": "complete_runtime",
+      "productionMethod": "image_export",
+      "acceptance": "保留透明度；从主图导出并检查缩放边缘",
+      "dependsOn": [
+        "collectible-shell-house"
+      ]
+    },
+    {
+      "id": "thumb-shell-house",
+      "category": "collectible_derivative",
+      "plannedPath": "assets/art/thumbnails/shell-house.webp",
+      "status": "complete_runtime",
+      "productionMethod": "image_export",
+      "acceptance": "256px缩略图，不挤压变形",
+      "dependsOn": [
+        "collectible-shell-house"
+      ]
+    },
+    {
+      "id": "silhouette-shell-house",
+      "category": "collectible_derivative",
+      "plannedPath": "assets/art/silhouettes/shell-house.webp",
+      "status": "complete_runtime",
+      "productionMethod": "alpha_silhouette",
+      "acceptance": "沿真实透明度生成轮廓，不包含棋盘背景",
+      "dependsOn": [
+        "collectible-shell-house"
+      ]
+    },
+    {
+      "id": "motion-shell-house",
+      "category": "animation",
+      "plannedPath": "assets/motion/collectibles/shell-house/reveal/",
+      "status": "complete_runtime",
+      "productionMethod": "transform_animation",
+      "acceptance": "提供动作参数及可播放预览；分层需可编辑资产，不能假定单张PNG已有分层",
+      "dependsOn": [
+        "collectible-shell-house"
+      ]
+    },
+    {
+      "id": "voice-shell-house-name",
+      "category": "voice",
+      "plannedPath": "assets/audio/en-US/collectibles/shell-house-name.mp3",
+      "status": "complete_runtime",
+      "productionMethod": "existing_company_audio_or_confirmed_tts",
+      "acceptance": "统一英语口音；真人试听核对；无切字、明显噪声或削波",
+      "dependsOn": []
+    },
+    {
+      "id": "voice-shell-house-line",
+      "category": "voice",
+      "plannedPath": "assets/audio/en-US/collectibles/shell-house-line.mp3",
+      "status": "complete_runtime",
+      "productionMethod": "existing_company_audio_or_confirmed_tts",
+      "acceptance": "统一英语口音；真人试听核对；无切字、明显噪声或削波",
+      "dependsOn": []
+    },
+    {
+      "id": "collectible-submarine",
+      "category": "collectible",
+      "plannedPath": "assets/art/collectibles/ocean/submarine.png",
+      "status": "complete_runtime",
+      "productionMethod": "image_generation",
+      "acceptance": "独立透明底、无裁切；收藏格与详情中均可辨认；与系列参考风格一致",
+      "dependsOn": []
+    },
+    {
+      "id": "runtime-submarine",
+      "category": "collectible_derivative",
+      "plannedPath": "assets/art/collectibles/ocean/submarine.webp",
+      "status": "complete_runtime",
+      "productionMethod": "image_export",
+      "acceptance": "保留透明度；从主图导出并检查缩放边缘",
+      "dependsOn": [
+        "collectible-submarine"
+      ]
+    },
+    {
+      "id": "thumb-submarine",
+      "category": "collectible_derivative",
+      "plannedPath": "assets/art/thumbnails/submarine.webp",
+      "status": "complete_runtime",
+      "productionMethod": "image_export",
+      "acceptance": "256px缩略图，不挤压变形",
+      "dependsOn": [
+        "collectible-submarine"
+      ]
+    },
+    {
+      "id": "silhouette-submarine",
+      "category": "collectible_derivative",
+      "plannedPath": "assets/art/silhouettes/submarine.webp",
+      "status": "complete_runtime",
+      "productionMethod": "alpha_silhouette",
+      "acceptance": "沿真实透明度生成轮廓，不包含棋盘背景",
+      "dependsOn": [
+        "collectible-submarine"
+      ]
+    },
+    {
+      "id": "motion-submarine",
+      "category": "animation",
+      "plannedPath": "assets/motion/collectibles/submarine/reveal/",
+      "status": "complete_runtime",
+      "productionMethod": "transform_animation",
+      "acceptance": "提供动作参数及可播放预览；分层需可编辑资产，不能假定单张PNG已有分层",
+      "dependsOn": [
+        "collectible-submarine"
+      ]
+    },
+    {
+      "id": "voice-submarine-name",
+      "category": "voice",
+      "plannedPath": "assets/audio/en-US/collectibles/submarine-name.mp3",
+      "status": "complete_runtime",
+      "productionMethod": "existing_company_audio_or_confirmed_tts",
+      "acceptance": "统一英语口音；真人试听核对；无切字、明显噪声或削波",
+      "dependsOn": []
+    },
+    {
+      "id": "voice-submarine-line",
+      "category": "voice",
+      "plannedPath": "assets/audio/en-US/collectibles/submarine-line.mp3",
+      "status": "complete_runtime",
+      "productionMethod": "existing_company_audio_or_confirmed_tts",
+      "acceptance": "统一英语口音；真人试听核对；无切字、明显噪声或削波",
+      "dependsOn": []
+    },
+    {
+      "id": "collectible-little-whale",
+      "category": "collectible",
+      "plannedPath": "assets/art/collectibles/ocean/little-whale.png",
+      "status": "complete_runtime",
+      "productionMethod": "image_generation",
+      "acceptance": "独立透明底、无裁切；收藏格与详情中均可辨认；与系列参考风格一致",
+      "dependsOn": []
+    },
+    {
+      "id": "runtime-little-whale",
+      "category": "collectible_derivative",
+      "plannedPath": "assets/art/collectibles/ocean/little-whale.webp",
+      "status": "complete_runtime",
+      "productionMethod": "image_export",
+      "acceptance": "保留透明度；从主图导出并检查缩放边缘",
+      "dependsOn": [
+        "collectible-little-whale"
+      ]
+    },
+    {
+      "id": "thumb-little-whale",
+      "category": "collectible_derivative",
+      "plannedPath": "assets/art/thumbnails/little-whale.webp",
+      "status": "complete_runtime",
+      "productionMethod": "image_export",
+      "acceptance": "256px缩略图，不挤压变形",
+      "dependsOn": [
+        "collectible-little-whale"
+      ]
+    },
+    {
+      "id": "silhouette-little-whale",
+      "category": "collectible_derivative",
+      "plannedPath": "assets/art/silhouettes/little-whale.webp",
+      "status": "complete_runtime",
+      "productionMethod": "alpha_silhouette",
+      "acceptance": "沿真实透明度生成轮廓，不包含棋盘背景",
+      "dependsOn": [
+        "collectible-little-whale"
+      ]
+    },
+    {
+      "id": "motion-little-whale",
+      "category": "animation",
+      "plannedPath": "assets/motion/collectibles/little-whale/reveal/",
+      "status": "complete_runtime",
+      "productionMethod": "segmented_animation_or_frames",
+      "acceptance": "提供动作参数及可播放预览；分层需可编辑资产，不能假定单张PNG已有分层",
+      "dependsOn": [
+        "collectible-little-whale"
+      ]
+    },
+    {
+      "id": "voice-little-whale-name",
+      "category": "voice",
+      "plannedPath": "assets/audio/en-US/collectibles/little-whale-name.mp3",
+      "status": "complete_runtime",
+      "productionMethod": "existing_company_audio_or_confirmed_tts",
+      "acceptance": "统一英语口音；真人试听核对；无切字、明显噪声或削波",
+      "dependsOn": []
+    },
+    {
+      "id": "voice-little-whale-line",
+      "category": "voice",
+      "plannedPath": "assets/audio/en-US/collectibles/little-whale-line.mp3",
+      "status": "complete_runtime",
+      "productionMethod": "existing_company_audio_or_confirmed_tts",
+      "acceptance": "统一英语口音；真人试听核对；无切字、明显噪声或削波",
+      "dependsOn": []
+    },
+    {
+      "id": "dinosaur-cover",
+      "category": "series",
+      "plannedPath": "assets/ui/series/dinosaur-cover.svg",
+      "status": "complete_runtime",
+      "productionMethod": "svg_composition",
+      "acceptance": "与系列配色一致；封面可组合已完成主图",
+      "dependsOn": []
+    },
+    {
+      "id": "dinosaur-badge",
+      "category": "series",
+      "plannedPath": "assets/ui/series/dinosaur-badge.svg",
+      "status": "complete_runtime",
+      "productionMethod": "svg_composition",
+      "acceptance": "与系列配色一致；封面可组合已完成主图",
+      "dependsOn": []
+    },
+    {
+      "id": "dinosaur-complete",
+      "category": "series",
+      "plannedPath": "assets/ui/series/dinosaur-complete.svg",
+      "status": "complete_runtime",
+      "productionMethod": "svg_composition",
+      "acceptance": "与系列配色一致；封面可组合已完成主图",
+      "dependsOn": []
+    },
+    {
+      "id": "space-cover",
+      "category": "series",
+      "plannedPath": "assets/ui/series/space-cover.svg",
+      "status": "complete_runtime",
+      "productionMethod": "svg_composition",
+      "acceptance": "与系列配色一致；封面可组合已完成主图",
+      "dependsOn": []
+    },
+    {
+      "id": "space-badge",
+      "category": "series",
+      "plannedPath": "assets/ui/series/space-badge.svg",
+      "status": "complete_runtime",
+      "productionMethod": "svg_composition",
+      "acceptance": "与系列配色一致；封面可组合已完成主图",
+      "dependsOn": []
+    },
+    {
+      "id": "space-complete",
+      "category": "series",
+      "plannedPath": "assets/ui/series/space-complete.svg",
+      "status": "complete_runtime",
+      "productionMethod": "svg_composition",
+      "acceptance": "与系列配色一致；封面可组合已完成主图",
+      "dependsOn": []
+    },
+    {
+      "id": "ocean-cover",
+      "category": "series",
+      "plannedPath": "assets/ui/series/ocean-cover.svg",
+      "status": "complete_runtime",
+      "productionMethod": "svg_composition",
+      "acceptance": "与系列配色一致；封面可组合已完成主图",
+      "dependsOn": []
+    },
+    {
+      "id": "ocean-badge",
+      "category": "series",
+      "plannedPath": "assets/ui/series/ocean-badge.svg",
+      "status": "complete_runtime",
+      "productionMethod": "svg_composition",
+      "acceptance": "与系列配色一致；封面可组合已完成主图",
+      "dependsOn": []
+    },
+    {
+      "id": "ocean-complete",
+      "category": "series",
+      "plannedPath": "assets/ui/series/ocean-complete.svg",
+      "status": "complete_runtime",
+      "productionMethod": "svg_composition",
+      "acceptance": "与系列配色一致；封面可组合已完成主图",
+      "dependsOn": []
+    },
+    {
+      "id": "sfx-click",
+      "category": "sfx",
+      "plannedPath": "assets/audio/sfx/click.wav",
+      "status": "complete_runtime",
+      "productionMethod": "procedural_audio",
+      "acceptance": "短促、柔和、无削波；连续触发不刺耳；试听检查",
+      "dependsOn": []
+    },
+    {
+      "id": "sfx-mark",
+      "category": "sfx",
+      "plannedPath": "assets/audio/sfx/mark.wav",
+      "status": "complete_runtime",
+      "productionMethod": "procedural_audio",
+      "acceptance": "短促、柔和、无削波；连续触发不刺耳；试听检查",
+      "dependsOn": []
+    },
+    {
+      "id": "sfx-route",
+      "category": "sfx",
+      "plannedPath": "assets/audio/sfx/route.wav",
+      "status": "complete_runtime",
+      "productionMethod": "procedural_audio",
+      "acceptance": "短促、柔和、无削波；连续触发不刺耳；试听检查",
+      "dependsOn": []
+    },
+    {
+      "id": "sfx-undo",
+      "category": "sfx",
+      "plannedPath": "assets/audio/sfx/undo.wav",
+      "status": "complete_runtime",
+      "productionMethod": "procedural_audio",
+      "acceptance": "短促、柔和、无削波；连续触发不刺耳；试听检查",
+      "dependsOn": []
+    },
+    {
+      "id": "sfx-move",
+      "category": "sfx",
+      "plannedPath": "assets/audio/sfx/move.wav",
+      "status": "complete_runtime",
+      "productionMethod": "procedural_audio",
+      "acceptance": "短促、柔和、无削波；连续触发不刺耳；试听检查",
+      "dependsOn": []
+    },
+    {
+      "id": "sfx-collect",
+      "category": "sfx",
+      "plannedPath": "assets/audio/sfx/collect.wav",
+      "status": "complete_runtime",
+      "productionMethod": "procedural_audio",
+      "acceptance": "短促、柔和、无削波；连续触发不刺耳；试听检查",
+      "dependsOn": []
+    },
+    {
+      "id": "sfx-tool",
+      "category": "sfx",
+      "plannedPath": "assets/audio/sfx/tool.wav",
+      "status": "complete_runtime",
+      "productionMethod": "procedural_audio",
+      "acceptance": "短促、柔和、无削波；连续触发不刺耳；试听检查",
+      "dependsOn": []
+    },
+    {
+      "id": "sfx-complete",
+      "category": "sfx",
+      "plannedPath": "assets/audio/sfx/complete.wav",
+      "status": "complete_runtime",
+      "productionMethod": "procedural_audio",
+      "acceptance": "短促、柔和、无削波；连续触发不刺耳；试听检查",
+      "dependsOn": []
+    },
+    {
+      "id": "sfx-chest",
+      "category": "sfx",
+      "plannedPath": "assets/audio/sfx/chest.wav",
+      "status": "complete_runtime",
+      "productionMethod": "procedural_audio",
+      "acceptance": "短促、柔和、无削波；连续触发不刺耳；试听检查",
+      "dependsOn": []
+    },
+    {
+      "id": "sfx-reward",
+      "category": "sfx",
+      "plannedPath": "assets/audio/sfx/reward.wav",
+      "status": "complete_runtime",
+      "productionMethod": "procedural_audio",
+      "acceptance": "短促、柔和、无削波；连续触发不刺耳；试听检查",
+      "dependsOn": []
+    },
+    {
+      "id": "sfx-rare",
+      "category": "sfx",
+      "plannedPath": "assets/audio/sfx/rare.wav",
+      "status": "complete_runtime",
+      "productionMethod": "procedural_audio",
+      "acceptance": "短促、柔和、无削波；连续触发不刺耳；试听检查",
+      "dependsOn": []
+    },
+    {
+      "id": "sfx-exchange",
+      "category": "sfx",
+      "plannedPath": "assets/audio/sfx/exchange.wav",
+      "status": "complete_runtime",
+      "productionMethod": "procedural_audio",
+      "acceptance": "短促、柔和、无削波；连续触发不刺耳；试听检查",
+      "dependsOn": []
+    },
+    {
+      "id": "sfx-series-complete",
+      "category": "sfx",
+      "plannedPath": "assets/audio/sfx/series-complete.wav",
+      "status": "complete_runtime",
+      "productionMethod": "procedural_audio",
+      "acceptance": "短促、柔和、无削波；连续触发不刺耳；试听检查",
+      "dependsOn": []
+    },
+    {
+      "id": "music-camp",
+      "category": "music",
+      "plannedPath": "assets/audio/music/camp-loop.wav",
+      "status": "complete_runtime",
+      "productionMethod": "procedural_demo_or_confirmed_music_provider",
+      "acceptance": "可循环、不喧宾夺主；基础合成版与成品配乐分别标记",
+      "dependsOn": []
+    },
+    {
+      "id": "music-exploration",
+      "category": "music",
+      "plannedPath": "assets/audio/music/explore-loop.wav",
+      "status": "complete_runtime",
+      "productionMethod": "procedural_demo_or_confirmed_music_provider",
+      "acceptance": "可循环、不喧宾夺主；基础合成版与成品配乐分别标记",
+      "dependsOn": []
+    },
+    {
+      "id": "vocabulary",
+      "category": "content_or_delivery",
+      "plannedPath": "assets/content/vocabulary.json",
+      "status": "complete_runtime_programmatically_validated",
+      "productionMethod": "authoring_or_dependent_production",
+      "acceptance": "40—60词；两个词包；词义、任务、干扰项和解释经审核",
+      "dependsOn": []
+    },
+    {
+      "id": "tasks",
+      "category": "content_or_delivery",
+      "plannedPath": "assets/content/tasks.json",
+      "status": "complete_runtime_programmatically_validated",
+      "productionMethod": "authoring_or_dependent_production",
+      "acceptance": "三类任务；明确多种合理答案；避免语义歧义",
+      "dependsOn": []
+    },
+    {
+      "id": "levels",
+      "category": "content_or_delivery",
+      "plannedPath": "assets/content/levels.json",
+      "status": "complete_runtime_programmatically_validated",
+      "productionMethod": "authoring_or_dependent_production",
+      "acceptance": "教学关1个、普通模板8—12个；按最终玩法规则验证可解",
+      "dependsOn": []
+    },
+    {
+      "id": "ui-copy",
+      "category": "content_or_delivery",
+      "plannedPath": "assets/content/ui-copy.zh-CN.json",
+      "status": "complete_runtime_programmatically_validated",
+      "productionMethod": "authoring_or_dependent_production",
+      "acceptance": "引导、鼓励、结算、概率、兑换与退出文案完整",
+      "dependsOn": []
+    },
+    {
+      "id": "word-voices",
+      "category": "content_or_delivery",
+      "plannedPath": "assets/audio/en-US/words/",
+      "status": "complete_runtime",
+      "productionMethod": "authoring_or_dependent_production",
+      "acceptance": "实际条目数由词包决定；每条独立核对发音",
+      "dependsOn": []
+    },
+    {
+      "id": "task-voices",
+      "category": "content_or_delivery",
+      "plannedPath": "assets/audio/en-US/tasks/",
+      "status": "complete_runtime",
+      "productionMethod": "authoring_or_dependent_production",
+      "acceptance": "实际条目数由任务决定；试听核对",
+      "dependsOn": []
+    },
+    {
+      "id": "learning-images",
+      "category": "content_or_delivery",
+      "plannedPath": "assets/art/learning/",
+      "status": "not_required_text_based_gameplay",
+      "productionMethod": "not_required",
+      "acceptance": "仅按教学需要制作；数量待词包确定",
+      "dependsOn": []
+    },
+    {
+      "id": "font-license",
+      "category": "content_or_delivery",
+      "plannedPath": "assets/licenses/fonts.md",
+      "status": "complete_runtime",
+      "productionMethod": "authoring_or_dependent_production",
+      "acceptance": "字体文件及对应许可来源明确",
+      "dependsOn": []
+    },
+    {
+      "id": "credits",
+      "category": "content_or_delivery",
+      "plannedPath": "assets/licenses/sources.json",
+      "status": "complete_runtime",
+      "productionMethod": "authoring_or_dependent_production",
+      "acceptance": "实际工具、生成日期、来源与修改记录；不虚构权利保证",
+      "dependsOn": []
+    },
+    {
+      "id": "showcase",
+      "category": "content_or_delivery",
+      "plannedPath": "assets/showcase/",
+      "status": "complete_runtime",
+      "productionMethod": "authoring_or_dependent_production",
+      "acceptance": "封面、真实游戏截图、演示视频；在游戏完成后制作",
+      "dependsOn": []
+    }
+  ],
+  "updated": "2026-09-20"
+}

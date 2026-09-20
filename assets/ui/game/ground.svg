@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" fill="none" role="img" aria-label="普通地格">
+  <rect width="128" height="128" fill="#B9D98F"/>
+  <rect x="7" y="7" width="114" height="114" rx="22" fill="#FFFAF0" stroke="#628176" stroke-width="1.5"/>
+  <path d="M25 21 C48 15 78 16 104 23" stroke="#FFFFFF" stroke-width="4" opacity=".48" stroke-linecap="round"/>
+</svg>

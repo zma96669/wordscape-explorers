@@ -1,0 +1,475 @@
+{
+  "ok": 18,
+  "missing": [],
+  "failed": [],
+  "items": [
+    {
+      "id": "triceratops",
+      "series": "dinosaur",
+      "src": "assets/art/collectibles/dinosaur/triceratops.png",
+      "status": "ok",
+      "source": {
+        "size": [
+          1254,
+          1254
+        ],
+        "alphaRange": [
+          0,
+          255
+        ],
+        "cornerAlpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "transparent": true
+      },
+      "runtime": "assets/art/collectibles/dinosaur/triceratops.webp",
+      "thumbnail": "assets/art/thumbnails/triceratops.webp",
+      "silhouette": "assets/art/silhouettes/triceratops.webp"
+    },
+    {
+      "id": "stegosaurus",
+      "series": "dinosaur",
+      "src": "assets/art/collectibles/dinosaur/stegosaurus.png",
+      "status": "ok",
+      "source": {
+        "size": [
+          1254,
+          1254
+        ],
+        "alphaRange": [
+          0,
+          255
+        ],
+        "cornerAlpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "transparent": true
+      },
+      "runtime": "assets/art/collectibles/dinosaur/stegosaurus.webp",
+      "thumbnail": "assets/art/thumbnails/stegosaurus.webp",
+      "silhouette": "assets/art/silhouettes/stegosaurus.webp"
+    },
+    {
+      "id": "pterosaur",
+      "series": "dinosaur",
+      "src": "assets/art/collectibles/dinosaur/pterosaur.png",
+      "status": "ok",
+      "source": {
+        "size": [
+          1254,
+          1254
+        ],
+        "alphaRange": [
+          0,
+          255
+        ],
+        "cornerAlpha": [
+          1,
+          0,
+          0,
+          0
+        ],
+        "transparent": true
+      },
+      "runtime": "assets/art/collectibles/dinosaur/pterosaur.webp",
+      "thumbnail": "assets/art/thumbnails/pterosaur.webp",
+      "silhouette": "assets/art/silhouettes/pterosaur.webp"
+    },
+    {
+      "id": "dinosaur-egg",
+      "series": "dinosaur",
+      "src": "assets/art/collectibles/dinosaur/dinosaur-egg.png",
+      "status": "ok",
+      "source": {
+        "size": [
+          1254,
+          1254
+        ],
+        "alphaRange": [
+          0,
+          255
+        ],
+        "cornerAlpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "transparent": true
+      },
+      "runtime": "assets/art/collectibles/dinosaur/dinosaur-egg.webp",
+      "thumbnail": "assets/art/thumbnails/dinosaur-egg.webp",
+      "silhouette": "assets/art/silhouettes/dinosaur-egg.webp"
+    },
+    {
+      "id": "fossil-display",
+      "series": "dinosaur",
+      "src": "assets/art/collectibles/dinosaur/fossil-display.png",
+      "status": "ok",
+      "source": {
+        "size": [
+          1254,
+          1254
+        ],
+        "alphaRange": [
+          0,
+          255
+        ],
+        "cornerAlpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "transparent": true
+      },
+      "runtime": "assets/art/collectibles/dinosaur/fossil-display.webp",
+      "thumbnail": "assets/art/thumbnails/fossil-display.webp",
+      "silhouette": "assets/art/silhouettes/fossil-display.webp"
+    },
+    {
+      "id": "little-tyrannosaurus",
+      "series": "dinosaur",
+      "src": "assets/art/collectibles/dinosaur/little-tyrannosaurus.png",
+      "status": "ok",
+      "source": {
+        "size": [
+          1254,
+          1254
+        ],
+        "alphaRange": [
+          0,
+          255
+        ],
+        "cornerAlpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "transparent": true
+      },
+      "runtime": "assets/art/collectibles/dinosaur/little-tyrannosaurus.webp",
+      "thumbnail": "assets/art/thumbnails/little-tyrannosaurus.webp",
+      "silhouette": "assets/art/silhouettes/little-tyrannosaurus.webp"
+    },
+    {
+      "id": "rocket",
+      "series": "space",
+      "src": "assets/art/collectibles/space/rocket.png",
+      "status": "ok",
+      "source": {
+        "size": [
+          1254,
+          1254
+        ],
+        "alphaRange": [
+          0,
+          255
+        ],
+        "cornerAlpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "transparent": true
+      },
+      "runtime": "assets/art/collectibles/space/rocket.webp",
+      "thumbnail": "assets/art/thumbnails/rocket.webp",
+      "silhouette": "assets/art/silhouettes/rocket.webp"
+    },
+    {
+      "id": "moon-rover",
+      "series": "space",
+      "src": "assets/art/collectibles/space/moon-rover.png",
+      "status": "ok",
+      "source": {
+        "size": [
+          1254,
+          1254
+        ],
+        "alphaRange": [
+          0,
+          255
+        ],
+        "cornerAlpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "transparent": true
+      },
+      "runtime": "assets/art/collectibles/space/moon-rover.webp",
+      "thumbnail": "assets/art/thumbnails/moon-rover.webp",
+      "silhouette": "assets/art/silhouettes/moon-rover.webp"
+    },
+    {
+      "id": "satellite",
+      "series": "space",
+      "src": "assets/art/collectibles/space/satellite.png",
+      "status": "ok",
+      "source": {
+        "size": [
+          1254,
+          1254
+        ],
+        "alphaRange": [
+          0,
+          255
+        ],
+        "cornerAlpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "transparent": true
+      },
+      "runtime": "assets/art/collectibles/space/satellite.webp",
+      "thumbnail": "assets/art/thumbnails/satellite.webp",
+      "silhouette": "assets/art/silhouettes/satellite.webp"
+    },
+    {
+      "id": "space-helmet",
+      "series": "space",
+      "src": "assets/art/collectibles/space/space-helmet.png",
+      "status": "ok",
+      "source": {
+        "size": [
+          1254,
+          1254
+        ],
+        "alphaRange": [
+          0,
+          255
+        ],
+        "cornerAlpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "transparent": true
+      },
+      "runtime": "assets/art/collectibles/space/space-helmet.webp",
+      "thumbnail": "assets/art/thumbnails/space-helmet.webp",
+      "silhouette": "assets/art/silhouettes/space-helmet.webp"
+    },
+    {
+      "id": "planet-model",
+      "series": "space",
+      "src": "assets/art/collectibles/space/planet-model.png",
+      "status": "ok",
+      "source": {
+        "size": [
+          1254,
+          1254
+        ],
+        "alphaRange": [
+          0,
+          255
+        ],
+        "cornerAlpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "transparent": true
+      },
+      "runtime": "assets/art/collectibles/space/planet-model.webp",
+      "thumbnail": "assets/art/thumbnails/planet-model.webp",
+      "silhouette": "assets/art/silhouettes/planet-model.webp"
+    },
+    {
+      "id": "star-robot",
+      "series": "space",
+      "src": "assets/art/collectibles/space/star-robot.png",
+      "status": "ok",
+      "source": {
+        "size": [
+          1254,
+          1254
+        ],
+        "alphaRange": [
+          0,
+          255
+        ],
+        "cornerAlpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "transparent": true
+      },
+      "runtime": "assets/art/collectibles/space/star-robot.webp",
+      "thumbnail": "assets/art/thumbnails/star-robot.webp",
+      "silhouette": "assets/art/silhouettes/star-robot.webp"
+    },
+    {
+      "id": "sea-turtle",
+      "series": "ocean",
+      "src": "assets/art/collectibles/ocean/sea-turtle.png",
+      "status": "ok",
+      "source": {
+        "size": [
+          1254,
+          1254
+        ],
+        "alphaRange": [
+          0,
+          255
+        ],
+        "cornerAlpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "transparent": true
+      },
+      "runtime": "assets/art/collectibles/ocean/sea-turtle.webp",
+      "thumbnail": "assets/art/thumbnails/sea-turtle.webp",
+      "silhouette": "assets/art/silhouettes/sea-turtle.webp"
+    },
+    {
+      "id": "clownfish",
+      "series": "ocean",
+      "src": "assets/art/collectibles/ocean/clownfish.png",
+      "status": "ok",
+      "source": {
+        "size": [
+          1254,
+          1254
+        ],
+        "alphaRange": [
+          0,
+          255
+        ],
+        "cornerAlpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "transparent": true
+      },
+      "runtime": "assets/art/collectibles/ocean/clownfish.webp",
+      "thumbnail": "assets/art/thumbnails/clownfish.webp",
+      "silhouette": "assets/art/silhouettes/clownfish.webp"
+    },
+    {
+      "id": "octopus",
+      "series": "ocean",
+      "src": "assets/art/collectibles/ocean/octopus.png",
+      "status": "ok",
+      "source": {
+        "size": [
+          1254,
+          1254
+        ],
+        "alphaRange": [
+          0,
+          255
+        ],
+        "cornerAlpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "transparent": true
+      },
+      "runtime": "assets/art/collectibles/ocean/octopus.webp",
+      "thumbnail": "assets/art/thumbnails/octopus.webp",
+      "silhouette": "assets/art/silhouettes/octopus.webp"
+    },
+    {
+      "id": "shell-house",
+      "series": "ocean",
+      "src": "assets/art/collectibles/ocean/shell-house.png",
+      "status": "ok",
+      "source": {
+        "size": [
+          1254,
+          1254
+        ],
+        "alphaRange": [
+          0,
+          255
+        ],
+        "cornerAlpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "transparent": true
+      },
+      "runtime": "assets/art/collectibles/ocean/shell-house.webp",
+      "thumbnail": "assets/art/thumbnails/shell-house.webp",
+      "silhouette": "assets/art/silhouettes/shell-house.webp"
+    },
+    {
+      "id": "submarine",
+      "series": "ocean",
+      "src": "assets/art/collectibles/ocean/submarine.png",
+      "status": "ok",
+      "source": {
+        "size": [
+          1254,
+          1254
+        ],
+        "alphaRange": [
+          0,
+          255
+        ],
+        "cornerAlpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "transparent": true
+      },
+      "runtime": "assets/art/collectibles/ocean/submarine.webp",
+      "thumbnail": "assets/art/thumbnails/submarine.webp",
+      "silhouette": "assets/art/silhouettes/submarine.webp"
+    },
+    {
+      "id": "little-whale",
+      "series": "ocean",
+      "src": "assets/art/collectibles/ocean/little-whale.png",
+      "status": "ok",
+      "source": {
+        "size": [
+          1254,
+          1254
+        ],
+        "alphaRange": [
+          0,
+          255
+        ],
+        "cornerAlpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "transparent": true
+      },
+      "runtime": "assets/art/collectibles/ocean/little-whale.webp",
+      "thumbnail": "assets/art/thumbnails/little-whale.webp",
+      "silhouette": "assets/art/silhouettes/little-whale.webp"
+    }
+  ]
+}

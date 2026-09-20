@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>程序动效预览</title>
+  <link rel="stylesheet" href="../components.css">
+  <link rel="stylesheet" href="motion.css">
+  <style>
+    body { font-family: "Trebuchet MS", "Segoe UI", "Microsoft YaHei", sans-serif; background: #FFF8EC; color: #24364B; padding: 1rem; }
+    .controls { display: flex; flex-wrap: wrap; gap: .5rem; margin: 1rem 0; }
+    #log { min-height: 2rem; }
+    .pawn { left: 40px; top: 300px; width: 72px; }
+    .mark { left: 170px; top: 210px; width: 64px; opacity: 0; }
+    .route { left: 112px; top: 120px; width: 18px; height: 180px; transform-origin: bottom; }
+    .card { left: 250px; top: 40px; width: 72px; }
+    .chest { left: 150px; top: 40px; width: 140px; }
+    .reward { left: 175px; top: 70px; width: 96px; opacity: 0; }
+  </style>
+</head>
+<body>
+  <h1>词境探险队动效</h1>
+  <p>动画只负责表现，不发奖。声音仅打日志回调。尊重系统“减少动态效果”。</p>
+  <div class="controls">
+    <button class="wx-btn" data-play="press">轻按</button>
+    <button class="wx-btn" data-play="mark">标记</button>
+    <button class="wx-btn" data-play="route">路线</button>
+    <button class="wx-btn" data-play="move">移动</button>
+    <button class="wx-btn" data-play="fly">词卡飞入</button>
+    <button class="wx-btn" data-play="correct">正确</button>
+    <button class="wx-btn" data-play="revise">需修正</button>
+    <button class="wx-btn" data-play="bridge">小桥</button>
+    <button class="wx-btn" data-play="compass">指南针</button>
+    <button class="wx-btn" data-play="complete">结算</button>
+    <button class="wx-btn" data-play="chest">开箱</button>
+    <button class="wx-btn" data-play="common">普通收藏</button>
+    <button class="wx-btn" data-play="rare">珍藏</button>
+    <button class="wx-btn" data-play="convert">重复转化</button>
+    <button class="wx-btn" data-play="exchange">兑换</button>
+    <button class="wx-btn" data-play="series">系列完成</button>
+    <button class="wx-btn wx-btn--secondary" id="skip">跳过</button>
+    <button class="wx-btn wx-btn--secondary" id="reduce">减少动画</button>
+  </div>
+  <div id="wx-stage">
+    <img class="chest" id="chest" src="../game/chest-closed.svg" alt="箱子">
+    <img class="reward" id="reward" src="../../art/collectibles/space/star-robot.png" alt="奖励">
+    <img class="route" id="route" src="../game/route-segment.svg" alt="路线">
+    <img class="mark" id="mark" src="../game/target-marker.svg" alt="标记">
+    <img class="card" id="card" src="../icons/collection.svg" alt="词卡">
+    <img class="pawn" id="pawn" src="../../art/characters/explorer.png" alt="探险员">
+  </div>
+  <p id="log"></p>
+  <script type="module">
+    import { play, onMotionEvent, skipNext, clearSkip, setReduced } from "./motion.js";
+    const log = document.getElementById("log");
+    onMotionEvent((name) => { log.textContent = "事件: " + name + "（未播放音频）"; });
+    const els = {
+      press: document.querySelector("[data-play=press]"),
+      mark: document.getElementById("mark"),
+      route: document.getElementById("route"),
+      move: document.getElementById("pawn"),
+      fly: document.getElementById("card"),
+      correct: document.getElementById("mark"),
+      revise: document.getElementById("card"),
+      bridge: document.getElementById("route"),
+      compass: document.getElementById("mark"),
+      complete: document.getElementById("card"),
+      chest: document.getElementById("chest"),
+      common: document.getElementById("reward"),
+      rare: document.getElementById("reward"),
+      convert: document.getElementById("reward"),
+      exchange: document.getElementById("reward"),
+      series: document.getElementById("reward")
+    };
+    document.querySelectorAll("[data-play]").forEach((btn) => {
+      btn.addEventListener("click", async () => {
+        const name = btn.dataset.play;
+        if (name === "chest") document.getElementById("chest").src = "../game/chest-open.svg";
+        if (name === "rare") document.getElementById("reward").src = "../../art/collectibles/dinosaur/little-tyrannosaurus.png";
+        if (name === "common") document.getElementById("reward").src = "../../art/collectibles/space/rocket.png";
+        els[name].style.opacity = "1";
+        await play(name, els[name]);
+        clearSkip();
+      });
+    });
+    document.getElementById("skip").onclick = () => skipNext();
+    document.getElementById("reduce").onclick = () => {
+      const on = !document.documentElement.classList.contains("wx-reduced");
+      setReduced(on);
+    };
+  </script>
+</body>
+</html>

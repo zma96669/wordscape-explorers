@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>探险员动作预览</title>
+  <link rel="stylesheet" href="../components.css">
+  <link rel="stylesheet" href="character-motion.css">
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      padding: 24px;
+      font-family: "Trebuchet MS", "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+      color: #24364b;
+      background: #fff8ec;
+    }
+    main { width: min(820px, 100%); margin: 0 auto; }
+    h1 { margin: 0 0 6px; font-size: clamp(1.65rem, 5vw, 2.4rem); }
+    .note { margin: 0 0 20px; color: #486071; }
+    .preview-layout { display: grid; grid-template-columns: minmax(280px, 360px) 1fr; gap: 22px; align-items: start; }
+    .controls { display: grid; gap: 10px; }
+    .action-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+    .action-list button { min-height: 50px; }
+    .action-list button[aria-pressed="true"] { box-shadow: 0 0 0 4px #f4d27a; }
+    .status { padding: 14px 16px; border: 3px solid #24364b; border-radius: 18px; background: #fff; }
+    .status strong { display: block; color: #268574; }
+    .status p { margin: 4px 0 0; }
+    .technical { font-size: .86rem; color: #486071; }
+    @media (max-width: 680px) {
+      body { padding: 14px; }
+      .preview-layout { grid-template-columns: 1fr; }
+      .character-stage { margin: 0 auto; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>探险员动作预览</h1>
+    <p class="note">五种基础动作共用同一角色、尺寸和落脚点。</p>
+    <div class="preview-layout">
+      <div class="character-stage" id="stage">
+        <img class="character-actor" id="actor" data-action="idle" src="../../art/characters/explorer.png" alt="小探险员">
+      </div>
+      <section class="controls" aria-label="动作控制">
+        <div class="action-list" id="actions">
+          <button class="wx-btn" type="button" data-action="idle" aria-pressed="true">待机</button>
+          <button class="wx-btn wx-btn--secondary" type="button" data-action="move" aria-pressed="false">移动</button>
+          <button class="wx-btn wx-btn--secondary" type="button" data-action="think" aria-pressed="false">思考</button>
+          <button class="wx-btn wx-btn--secondary" type="button" data-action="happy" aria-pressed="false">开心</button>
+          <button class="wx-btn wx-btn--secondary" type="button" data-action="encourage" aria-pressed="false">鼓励</button>
+        </div>
+        <button class="wx-btn wx-btn--secondary" type="button" id="reduce" aria-pressed="false">减少动画：关</button>
+        <div class="status" aria-live="polite">
+          <strong id="action-name">待机 · 3秒循环</strong>
+          <p id="action-description">轻微呼吸和重心起伏</p>
+        </div>
+        <p class="technical">当前是单张PNG的整图变换基础版。真正的眨眼、挥手和交替步伐仍需要分层部件或逐帧素材。</p>
+      </section>
+    </div>
+  </main>
+  <script>
+    const actor = document.getElementById("actor");
+    const stage = document.getElementById("stage");
+    const reduce = document.getElementById("reduce");
+    const actionName = document.getElementById("action-name");
+    const actionDescription = document.getElementById("action-description");
+    const details = {
+      idle: ["待机 · 3秒循环", "轻微呼吸和重心起伏"],
+      move: ["移动 · 1.2秒循环", "原地轻步与身体小幅摆动"],
+      think: ["思考 · 2秒", "停顿后轻轻歪头"],
+      happy: ["开心 · 2秒", "小幅跳起后回到原位"],
+      encourage: ["鼓励 · 2秒", "友好地左右轻摆"]
+    };
+
+    document.getElementById("actions").addEventListener("click", (event) => {
+      const button = event.target.closest("[data-action]");
+      if (!button) return;
+      document.querySelectorAll("[data-action]").forEach((item) => {
+        const active = item === button;
+        item.setAttribute("aria-pressed", String(active));
+        item.classList.toggle("wx-btn--secondary", !active);
+      });
+      actor.removeAttribute("data-action");
+      void actor.offsetWidth;
+      actor.dataset.action = button.dataset.action;
+      actionName.textContent = details[button.dataset.action][0];
+      actionDescription.textContent = details[button.dataset.action][1];
+    });
+
+    reduce.addEventListener("click", () => {
+      const on = stage.classList.toggle("reduce-motion");
+      reduce.setAttribute("aria-pressed", String(on));
+      reduce.textContent = `减少动画：${on ? "开" : "关"}`;
+    });
+  </script>
+</body>
+</html>

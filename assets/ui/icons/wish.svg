@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" role="img" aria-label="心愿">
+  <rect x="4" y="4" width="56" height="56" rx="14" fill="#FFF8EC" stroke="#24364B" stroke-width="2.5"/>
+  <path d="M32 18.5 L35.3 27.2 L44.6 27.8 L37.6 33.8 L40 42.8 L32 37.8 L24 42.8 L26.4 33.8 L19.4 27.8 L28.7 27.2 Z" fill="#F4D27A" stroke="#24364B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

@@ -1,0 +1,48 @@
+{
+  "result": "passed",
+  "animations": {
+    "groups": 23,
+    "frames": 196,
+    "ready": 23
+  },
+  "audio": {
+    "voiceFiles": 156,
+    "musicFiles": 2,
+    "soundEffectFiles": 13
+  },
+  "manifest": {
+    "entries": 195,
+    "missing": 0,
+    "notRequired": 1
+  },
+  "showcase": {
+    "files": 5,
+    "required": 5,
+    "dimensions": {
+      "board.png": [
+        1280,
+        931
+      ],
+      "camp.png": [
+        1280,
+        931
+      ],
+      "chest.png": [
+        1280,
+        720
+      ],
+      "collection.png": [
+        1280,
+        720
+      ],
+      "concept-cover.png": [
+        1600,
+        900
+      ]
+    }
+  },
+  "runtimeReferences": {
+    "staticFilesChecked": 29
+  },
+  "errors": []
+}

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" fill="none" role="img" aria-label="海洋系列完成">
+  <circle cx="64" cy="64" r="50" fill="#F4D27A" stroke="#24364B" stroke-width="4"/>
+  <circle cx="64" cy="64" r="34" fill="#FFF8EC" stroke="#24364B" stroke-width="3"/>
+  <path d="M46 65 L58 77 L84 47" stroke="#24364B" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+
+</svg>

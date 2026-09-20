@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" fill="none" role="img" aria-label="河流障碍">
+  <rect width="128" height="128" fill="#B9D98F"/>
+  <rect x="7" y="7" width="114" height="114" rx="22" fill="#FFFAF0" stroke="#628176" stroke-width="1.5"/>
+  <path d="M18 18 C40 12, 70 14, 110 22" stroke="#FFFFFF" stroke-width="4" opacity=".35" stroke-linecap="round"/>
+  <path d="M0 46 C36 70, 92 34, 128 58 L128 90 C88 62, 40 98, 0 78 Z" fill="#6FB5DF"/>
+  <path d="M0 54 C36 78, 92 42, 128 66 L128 82 C88 54, 40 90, 0 70 Z" fill="#3E7CA8"/>
+  <path d="M0 46 C36 70, 92 34, 128 58" stroke="#326B82" stroke-width="2" fill="none"/>
+  <path d="M0 78 C40 98, 88 62, 128 90" stroke="#326B82" stroke-width="2" fill="none"/>
+  <circle cx="26" cy="34" r="5" fill="#8FBF6A" stroke="#486A58" stroke-width="1.5"/>
+  <circle cx="104" cy="96" r="6" fill="#5A8F4A" stroke="#486A58" stroke-width="1.5"/>
+
+</svg>

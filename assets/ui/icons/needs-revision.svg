@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" role="img" aria-label="需要修正">
+  <rect x="4" y="4" width="56" height="56" rx="14" fill="#FFF8EC" stroke="#24364B" stroke-width="2.5"/>
+  <rect x="17" y="17" width="30" height="30" rx="8" transform="rotate(45 32 32)" fill="#E39A4A" stroke="#24364B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M32 24 V35" stroke="#FFF8EC" stroke-width="3.2" stroke-linecap="round"/>
+  <circle cx="32" cy="41" r="2" fill="#FFF8EC"/>
+</svg>

@@ -1,0 +1,170 @@
+{
+  "version": "1.0",
+  "framePattern": "frame-000.png",
+  "notes": "Set ready to true only after every numbered transparent PNG frame exists.",
+  "explorer": {
+    "idle": {
+      "ready": true,
+      "path": "../assets/motion/explorer/idle",
+      "frameCount": 8,
+      "fps": 8,
+      "loop": true
+    },
+    "move": {
+      "ready": true,
+      "path": "../assets/motion/explorer/move",
+      "frameCount": 8,
+      "fps": 8,
+      "loop": true
+    },
+    "think": {
+      "ready": true,
+      "path": "../assets/motion/explorer/think",
+      "frameCount": 8,
+      "fps": 8,
+      "loop": false
+    },
+    "happy": {
+      "ready": true,
+      "path": "../assets/motion/explorer/happy",
+      "frameCount": 8,
+      "fps": 10,
+      "loop": false
+    },
+    "encourage": {
+      "ready": true,
+      "path": "../assets/motion/explorer/encourage",
+      "frameCount": 8,
+      "fps": 8,
+      "loop": false
+    }
+  },
+  "collectibles": {
+    "triceratops": {
+      "ready": true,
+      "path": "../assets/motion/collectibles/triceratops/reveal",
+      "frameCount": 8,
+      "fps": 8,
+      "loop": false
+    },
+    "stegosaurus": {
+      "ready": true,
+      "path": "../assets/motion/collectibles/stegosaurus/reveal",
+      "frameCount": 8,
+      "fps": 8,
+      "loop": false
+    },
+    "pterosaur": {
+      "ready": true,
+      "path": "../assets/motion/collectibles/pterosaur/reveal",
+      "frameCount": 8,
+      "fps": 10,
+      "loop": false
+    },
+    "dinosaur-egg": {
+      "ready": true,
+      "path": "../assets/motion/collectibles/dinosaur-egg/reveal",
+      "frameCount": 8,
+      "fps": 10,
+      "loop": false
+    },
+    "fossil-display": {
+      "ready": true,
+      "path": "../assets/motion/collectibles/fossil-display/reveal",
+      "frameCount": 8,
+      "fps": 8,
+      "loop": false
+    },
+    "little-tyrannosaurus": {
+      "ready": true,
+      "path": "../assets/motion/collectibles/little-tyrannosaurus/reveal",
+      "frameCount": 12,
+      "fps": 10,
+      "loop": false
+    },
+    "rocket": {
+      "ready": true,
+      "path": "../assets/motion/collectibles/rocket/reveal",
+      "frameCount": 8,
+      "fps": 10,
+      "loop": false
+    },
+    "moon-rover": {
+      "ready": true,
+      "path": "../assets/motion/collectibles/moon-rover/reveal",
+      "frameCount": 8,
+      "fps": 8,
+      "loop": false
+    },
+    "satellite": {
+      "ready": true,
+      "path": "../assets/motion/collectibles/satellite/reveal",
+      "frameCount": 8,
+      "fps": 8,
+      "loop": false
+    },
+    "space-helmet": {
+      "ready": true,
+      "path": "../assets/motion/collectibles/space-helmet/reveal",
+      "frameCount": 8,
+      "fps": 8,
+      "loop": false
+    },
+    "planet-model": {
+      "ready": true,
+      "path": "../assets/motion/collectibles/planet-model/reveal",
+      "frameCount": 8,
+      "fps": 8,
+      "loop": false
+    },
+    "star-robot": {
+      "ready": true,
+      "path": "../assets/motion/collectibles/star-robot/reveal",
+      "frameCount": 12,
+      "fps": 10,
+      "loop": false
+    },
+    "sea-turtle": {
+      "ready": true,
+      "path": "../assets/motion/collectibles/sea-turtle/reveal",
+      "frameCount": 8,
+      "fps": 8,
+      "loop": false
+    },
+    "clownfish": {
+      "ready": true,
+      "path": "../assets/motion/collectibles/clownfish/reveal",
+      "frameCount": 8,
+      "fps": 10,
+      "loop": false
+    },
+    "octopus": {
+      "ready": true,
+      "path": "../assets/motion/collectibles/octopus/reveal",
+      "frameCount": 8,
+      "fps": 8,
+      "loop": false
+    },
+    "shell-house": {
+      "ready": true,
+      "path": "../assets/motion/collectibles/shell-house/reveal",
+      "frameCount": 8,
+      "fps": 8,
+      "loop": false
+    },
+    "submarine": {
+      "ready": true,
+      "path": "../assets/motion/collectibles/submarine/reveal",
+      "frameCount": 8,
+      "fps": 10,
+      "loop": false
+    },
+    "little-whale": {
+      "ready": true,
+      "path": "../assets/motion/collectibles/little-whale/reveal",
+      "frameCount": 12,
+      "fps": 10,
+      "loop": false
+    }
+  }
+}

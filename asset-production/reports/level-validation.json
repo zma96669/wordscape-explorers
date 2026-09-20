@@ -1,0 +1,18 @@
+{
+  "generatedAt": "2026-09-20T10:09:13.255Z",
+  "result": "passed",
+  "templateCount": 8,
+  "routeVariantCount": 24,
+  "runtimeRouteVariantCount": 192,
+  "checkedRules": [
+    "bounds",
+    "adjacent task steps",
+    "no revisits",
+    "blocked river cells",
+    "five tasks plus exit",
+    "step budget",
+    "route variants",
+    "eight rotations and reflections"
+  ],
+  "errors": []
+}

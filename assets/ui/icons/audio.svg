@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" role="img" aria-label="音频">
+  <rect x="4" y="4" width="56" height="56" rx="14" fill="#FFF8EC" stroke="#24364B" stroke-width="2.5"/>
+  <path d="M22 27.5 H27 L34 21.5 V42.5 L27 36.5 H22 A2.5 2.5 0 0 1 19.5 34 V30 A2.5 2.5 0 0 1 22 27.5 Z" fill="#6FB5DF" stroke="#24364B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M39 26.5c2.4 2 2.4 9 0 11" stroke="#24364B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M44 23c4.2 3.6 4.2 14.4 0 18" stroke="#24364B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

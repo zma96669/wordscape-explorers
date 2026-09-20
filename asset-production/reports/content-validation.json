@@ -1,0 +1,23 @@
+{
+  "generatedAt": "2026-09-20T10:09:11.889Z",
+  "result": "passed_programmatic_checks",
+  "scope": "Structural validation only; English educational review and audio listening review remain required.",
+  "counts": {
+    "words": 48,
+    "tasks": 120,
+    "taskTypes": {
+      "listen": 48,
+      "meaning": 48,
+      "context": 24
+    },
+    "voiceRows": 156,
+    "voiceKinds": {
+      "word": 48,
+      "task": 72,
+      "collection": 36
+    },
+    "missingAudioFiles": 0
+  },
+  "errors": [],
+  "warnings": []
+}

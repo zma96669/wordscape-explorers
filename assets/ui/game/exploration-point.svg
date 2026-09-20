@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" fill="none" role="img" aria-label="探索点">
+  <circle cx="64" cy="64" r="38" fill="#FFF8EC" stroke="#183F49" stroke-width="5"/>
+  <circle cx="64" cy="64" r="29" fill="#F5C95E" opacity=".92"/>
+  <path d="M64 31 L71 55 L96 58 L77 73 L82 98 L64 85 L46 98 L51 73 L32 58 L57 55 Z" fill="#DD8B42" stroke="#183F49" stroke-width="4" stroke-linejoin="round"/>
+  <circle cx="64" cy="64" r="7" fill="#FFFAF0"/>
+</svg>

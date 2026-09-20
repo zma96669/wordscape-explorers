@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="none" role="img" aria-label="关闭的收藏箱">
+  <g id="chest-body">
+    <ellipse cx="128" cy="214" rx="78" ry="14" fill="#1A2A3A" opacity=".18"/>
+    <rect x="46" y="118" width="164" height="92" rx="18" fill="#C9844A" stroke="#24364B" stroke-width="4"/>
+    <rect x="46" y="150" width="164" height="12" fill="#F4D27A" stroke="#24364B" stroke-width="2.5"/>
+    <rect x="114" y="146" width="28" height="22" rx="6" fill="#F4D27A" stroke="#24364B" stroke-width="3"/>
+    <circle cx="128" cy="157" r="4" fill="#24364B"/>
+  </g>
+  <g id="chest-lid">
+    <path d="M50 126 C50 86, 206 86, 206 126 L190 118 H66 Z" fill="#E39A4A" stroke="#24364B" stroke-width="4" stroke-linejoin="round"/>
+    <path d="M70 112 H186" stroke="#F4D27A" stroke-width="6" stroke-linecap="round"/>
+  </g>
+
+</svg>

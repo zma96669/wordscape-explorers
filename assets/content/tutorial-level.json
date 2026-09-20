@@ -1,0 +1,135 @@
+{
+  "id": "tutorial-1",
+  "titleZh": "教学关：找到三个目标，再走回营地",
+  "size": 3,
+  "stepBudget": 4,
+  "start": [
+    0,
+    0
+  ],
+  "exit": [
+    2,
+    2
+  ],
+  "note": "示范教学内容，尚未教研审核。",
+  "tasks": [
+    {
+      "id": "listen-umbrella",
+      "type": "listen",
+      "labelZh": "听音",
+      "promptZh": "听一听，找到对应的单词。",
+      "spokenText": "umbrella",
+      "correctId": "umbrella",
+      "hintZh": "这个词常用来表示“雨伞”。",
+      "explanationZh": "umbrella 在本词包中表示“雨伞”。"
+    },
+    {
+      "id": "meaning-rabbit",
+      "type": "meaning",
+      "labelZh": "含义",
+      "promptZh": "找到表示“兔子”的词。",
+      "spokenText": "An animal with long ears that can hop.",
+      "correctId": "rabbit",
+      "hintZh": "这是一种动物，也会出现在目标词的发音里。",
+      "explanationZh": "rabbit 表示“兔子”。"
+    },
+    {
+      "id": "context-run",
+      "type": "context",
+      "labelZh": "语境",
+      "promptZh": "根据句子选择合适的动词。",
+      "promptEn": "During the race, I ___ as fast as I can.",
+      "spokenText": "During the race, I blank as fast as I can.",
+      "correctId": "run",
+      "hintZh": "注意句子里的动作是在比赛中赛跑。",
+      "explanationZh": "句子意思是：比赛时，我尽可能快跑。"
+    }
+  ],
+  "words": {
+    "umbrella": {
+      "en": "umbrella",
+      "zh": "雨伞"
+    },
+    "rabbit": {
+      "en": "rabbit",
+      "zh": "兔子"
+    },
+    "run": {
+      "en": "run",
+      "zh": "跑"
+    },
+    "eat": {
+      "en": "eat",
+      "zh": "吃"
+    },
+    "hot": {
+      "en": "hot",
+      "zh": "热的"
+    },
+    "book": {
+      "en": "book",
+      "zh": "书"
+    }
+  },
+  "cells": [
+    {
+      "x": 0,
+      "y": 0,
+      "tile": "start"
+    },
+    {
+      "x": 1,
+      "y": 0,
+      "tile": "path-h",
+      "wordId": "umbrella"
+    },
+    {
+      "x": 2,
+      "y": 0,
+      "tile": "path",
+      "wordId": "rabbit"
+    },
+    {
+      "x": 0,
+      "y": 1,
+      "tile": "ground",
+      "wordId": "eat"
+    },
+    {
+      "x": 1,
+      "y": 1,
+      "tile": "ground"
+    },
+    {
+      "x": 2,
+      "y": 1,
+      "tile": "path",
+      "wordId": "run"
+    },
+    {
+      "x": 0,
+      "y": 2,
+      "tile": "ground",
+      "wordId": "hot"
+    },
+    {
+      "x": 1,
+      "y": 2,
+      "tile": "ground",
+      "wordId": "book"
+    },
+    {
+      "x": 2,
+      "y": 2,
+      "tile": "exit"
+    }
+  ],
+  "reward": {
+    "id": "triceratops",
+    "nameZh": "三角龙",
+    "nameEn": "Triceratops",
+    "image": "../assets/art/collectibles/dinosaur/triceratops.webp",
+    "lineEn": "I have three horns.",
+    "lineZh": "我有三只角。"
+  }
+}

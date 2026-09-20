@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>基础音效试听</title>
+  <link rel="stylesheet" href="../../ui/components.css">
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; padding: 24px; font-family: "Trebuchet MS", "Segoe UI", "Microsoft YaHei", sans-serif; color: #24364b; background: #fff8ec; }
+    main { width: min(760px, 100%); margin: auto; }
+    h1 { margin-bottom: 4px; }
+    p { color: #486071; }
+    .sounds { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 10px; margin-top: 20px; }
+    button { justify-content: flex-start; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>程序合成音效</h1>
+    <p>点击逐项试听。当前文件用于原型联调，正式交付前仍需人工听审。</p>
+    <div class="sounds" id="sounds"></div>
+  </main>
+  <script>
+    const sounds = ["click", "mark", "route", "undo", "move", "collect", "tool", "complete", "chest", "reward", "rare", "exchange", "series-complete"];
+    const labels = ["轻按", "标记", "路线", "撤销", "移动", "收集", "工具", "完成", "开箱", "普通奖励", "珍藏奖励", "兑换", "系列完成"];
+    const root = document.getElementById("sounds");
+    root.innerHTML = sounds.map((name, index) => `<button type="button" class="wx-btn wx-btn--secondary" data-sound="${name}">${labels[index]}</button>`).join("");
+    root.addEventListener("click", (event) => {
+      const button = event.target.closest("[data-sound]");
+      if (!button) return;
+      const audio = new Audio(`${button.dataset.sound}.wav`);
+      audio.volume = .55;
+      audio.play();
+    });
+  </script>
+</body>
+</html>

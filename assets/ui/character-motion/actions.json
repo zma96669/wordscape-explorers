@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "source": "../../art/characters/explorer.png",
+  "implementation": "whole_image_transform",
+  "anchor": "50% 92%",
+  "actions": {
+    "idle": {
+      "durationMs": 3000,
+      "loop": true,
+      "descriptionZh": "轻微呼吸和重心起伏"
+    },
+    "move": {
+      "durationMs": 1200,
+      "loop": true,
+      "descriptionZh": "原地轻步与身体小幅摆动"
+    },
+    "think": {
+      "durationMs": 2000,
+      "loop": false,
+      "descriptionZh": "停顿后轻轻歪头"
+    },
+    "happy": {
+      "durationMs": 2000,
+      "loop": false,
+      "descriptionZh": "小幅跳起后回到原位"
+    },
+    "encourage": {
+      "durationMs": 2000,
+      "loop": false,
+      "descriptionZh": "友好地左右轻摆"
+    }
+  }
+}

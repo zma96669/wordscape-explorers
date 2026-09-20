@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" fill="none" role="img" aria-label="交叉道路">
+  <rect width="128" height="128" fill="#C8E29A"/>
+  <rect x="8" y="8" width="112" height="112" rx="20" fill="#FFF8EC" stroke="#24364B" stroke-width="3"/>
+  <path d="M8 64 H120" stroke="#E7C98A" stroke-width="28"/>
+  <path d="M64 8 V120" stroke="#E7C98A" stroke-width="28"/>
+  <path d="M8 64 H120" stroke="#24364B" stroke-width="3" opacity=".12"/>
+  <path d="M64 8 V120" stroke="#24364B" stroke-width="3" opacity=".12"/>
+</svg>

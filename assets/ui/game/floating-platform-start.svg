@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" fill="none" role="img" aria-label="起点浮台">
+  <defs>
+    <linearGradient id="side" x1="64" y1="64" x2="64" y2="111" gradientUnits="userSpaceOnUse"><stop stop-color="#A98458"/><stop offset="1" stop-color="#684A39"/></linearGradient>
+    <linearGradient id="top" x1="35" y1="18" x2="93" y2="99" gradientUnits="userSpaceOnUse"><stop stop-color="#F3F4C6"/><stop offset="1" stop-color="#BCD69A"/></linearGradient>
+  </defs>
+  <ellipse cx="64" cy="106" rx="51" ry="10" stroke="#D9FAF3" stroke-width="3" opacity=".65"/>
+  <ellipse cx="64" cy="106" rx="39" ry="6" stroke="#71D1D0" stroke-width="2" opacity=".58"/>
+  <path d="M10 58C12 35 28 18 50 14C74 9 102 18 114 38C124 55 119 79 103 94C89 107 33 108 18 93C9 84 7 70 10 58Z" fill="url(#side)" stroke="#31545A" stroke-width="2.4"/>
+  <path d="M10 52C14 31 31 17 52 14C77 10 101 18 113 36C122 50 116 67 104 78C91 90 35 92 19 80C10 73 7 63 10 52Z" fill="url(#top)" stroke="#31545A" stroke-width="2.4"/>
+  <path d="M14 48C17 32 32 19 49 16C39 24 36 32 38 42C30 39 22 41 14 48Z" fill="#7EAD67"/>
+  <circle cx="64" cy="52" r="19" fill="#FFF8E2" stroke="#247A65" stroke-width="3" opacity=".9"/>
+  <path d="M64 35L70 51L64 68L58 51L64 35Z" fill="#DD8B42" stroke="#31545A" stroke-width="1.8"/>
+  <circle cx="64" cy="52" r="4" fill="#247A65"/>
+</svg>

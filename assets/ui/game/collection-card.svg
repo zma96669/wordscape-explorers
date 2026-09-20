@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 320" fill="none" role="img" aria-label="收藏卡底板">
+  <rect x="8" y="8" width="224" height="304" rx="28" fill="#FFF8EC" stroke="#24364B" stroke-width="4"/>
+  <rect x="24" y="24" width="192" height="192" rx="22" fill="#F7EDD3" stroke="#24364B" stroke-width="3"/>
+  <rect x="24" y="232" width="192" height="60" rx="16" fill="#268574" stroke="#24364B" stroke-width="3"/>
+
+</svg>

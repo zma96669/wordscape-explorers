@@ -1,0 +1,7 @@
+Use case: stylized-concept.
+Asset type: seamless terrain texture for a mobile board game.
+Primary request: a square top-down shallow river water surface tile for a cheerful children's English adventure game. Water must fill the entire square edge to edge and read immediately as a real flowing river, with a broad turquoise current, layered blue-green depth, gentle foam streaks, small ripples, a few submerged rounded pebbles and soft reflected light.
+Style/medium: polished rounded 3D toy-like game illustration, soft painterly texture, matching a bright forest campsite.
+Composition: orthographic top-down view, uniform scale, seamless on all four edges so neighboring copies connect without visible seams.
+Color palette: turquoise, sky blue, muted teal, small cream highlights.
+Constraints: no border, no rounded white card, no grass bank, no frame, no text, no icons, no characters, no bridge, no objects above water, no isolated narrow stripe, no watermark.

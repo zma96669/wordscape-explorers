@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" fill="none" role="img" aria-label="营地出口">
+  <rect width="128" height="128" fill="#B9D98F"/>
+  <rect x="7" y="7" width="114" height="114" rx="22" fill="#FFFAF0" stroke="#628176" stroke-width="1.5"/>
+  <path d="M40 86 H88 L80 52 H48 Z" fill="#DD8B42" stroke="#183F49" stroke-width="2.4" stroke-linejoin="round"/>
+  <path d="M48 52 H80 L64 36 Z" fill="#F5C95E" stroke="#183F49" stroke-width="2.4" stroke-linejoin="round"/>
+  <rect x="58" y="64" width="12" height="22" rx="2" fill="#247A65" stroke="#183F49" stroke-width="2"/>
+
+</svg>

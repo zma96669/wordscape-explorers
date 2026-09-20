@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" fill="none" role="img" aria-label="路线合法">
+  <circle cx="98" cy="30" r="18" fill="#268574" stroke="#24364B" stroke-width="3"/>
+  <path d="M88 30 L95 37 L109 22" stroke="#FFF8EC" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+
+</svg>

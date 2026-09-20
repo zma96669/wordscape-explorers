@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" fill="none" role="img" aria-label="水下暗礁">
+  <defs>
+    <linearGradient id="rock" x1="40" y1="30" x2="82" y2="101" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#69898A"/>
+      <stop offset=".48" stop-color="#355E66"/>
+      <stop offset="1" stop-color="#173F4E"/>
+    </linearGradient>
+  </defs>
+  <path d="M9 83C24 73 37 79 47 87C59 97 73 97 85 86C96 76 109 75 121 83" stroke="#E9FFF8" stroke-width="5" stroke-linecap="round" opacity=".78"/>
+  <path d="M16 97C33 89 45 94 56 101C67 108 87 107 105 96" stroke="#8FE0DE" stroke-width="3.5" stroke-linecap="round" opacity=".72"/>
+  <path d="M27 84L38 52L55 43L69 57L63 87L43 98L27 84Z" fill="url(#rock)" stroke="#173F4E" stroke-width="2.6" stroke-linejoin="round"/>
+  <path d="M54 87L69 43L84 31L103 51L99 79L83 96L54 87Z" fill="url(#rock)" stroke="#173F4E" stroke-width="2.8" stroke-linejoin="round"/>
+  <path d="M70 44L84 31L87 56L100 51" stroke="#A8C0B5" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity=".65"/>
+  <path d="M37 53L47 65L55 44" stroke="#9EB9AD" stroke-width="2.6" stroke-linecap="round" opacity=".58"/>
+  <path d="M75 68C80 64 88 64 93 68" stroke="#C6D8C6" stroke-width="3" stroke-linecap="round" opacity=".35"/>
+  <circle cx="31" cy="104" r="3" fill="#E9FFF8" opacity=".74"/>
+  <circle cx="111" cy="91" r="2.5" fill="#E9FFF8" opacity=".68"/>
+</svg>

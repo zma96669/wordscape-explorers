@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 128" fill="none" role="img" aria-label="主展示台">
+  <ellipse cx="128" cy="102" rx="100" ry="18" fill="#1A2A3A" opacity=".2"/>
+  <path d="M28 90 H228 L206 56 H50 Z" fill="#C9844A" stroke="#24364B" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M50 56 H206 L190 32 H66 Z" fill="#F4D27A" stroke="#24364B" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M78 32 H178 L168 18 H88 Z" fill="#268574" stroke="#24364B" stroke-width="3" stroke-linejoin="round"/>
+  <circle cx="128" cy="25" r="4" fill="#F4D27A" stroke="#24364B" stroke-width="2"/>
+
+</svg>

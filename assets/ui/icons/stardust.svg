@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" role="img" aria-label="星砂">
+  <rect x="4" y="4" width="56" height="56" rx="14" fill="#FFF8EC" stroke="#24364B" stroke-width="2.5"/>
+  <path d="M24 22 l1.8 4.4 4.6.4-3.5 3 1.2 4.5L24 31.8 19.9 34.3l1.2-4.5-3.5-3 4.6-.4Z" fill="#F4D27A" stroke="#24364B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M41 20 l1.3 3.2 3.4.3-2.6 2.2.9 3.3L41 27.3l-3 1.7.9-3.3-2.6-2.2 3.4-.3Z" fill="#6FB5DF" stroke="#24364B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M36 36 l1.6 3.8 4.1.4-3.1 2.7 1.1 4L36 44.4 32.3 47l1.1-4-3.1-2.7 4.1-.4Z" fill="#E39A4A" stroke="#24364B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

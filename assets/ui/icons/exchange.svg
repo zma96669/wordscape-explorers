@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" role="img" aria-label="兑换">
+  <rect x="4" y="4" width="56" height="56" rx="14" fill="#FFF8EC" stroke="#24364B" stroke-width="2.5"/>
+  <path d="M21 26 H41 L35.5 20.5" stroke="#24364B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M43 38 H23 L28.5 43.5" stroke="#24364B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="21" cy="26" r="2.2" fill="#268574"/>
+  <circle cx="43" cy="38" r="2.2" fill="#E39A4A"/>
+</svg>

@@ -1,0 +1,106 @@
+:root {
+  --motion-navy: #24364b;
+  --motion-green: #268574;
+  --motion-sky: #6fb5df;
+  --motion-cream: #fff8ec;
+  --motion-yellow: #f4d27a;
+}
+
+.character-stage {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: min(360px, 100%);
+  aspect-ratio: 1;
+  overflow: hidden;
+  border: 4px solid var(--motion-navy);
+  border-radius: 28px;
+  background:
+    radial-gradient(circle at 50% 82%, rgba(38, 133, 116, .15) 0 20%, transparent 21%),
+    linear-gradient(180deg, #d9eef5 0 56%, #d7ebc0 57% 100%);
+  box-shadow: 0 8px 0 rgba(36, 54, 75, .14);
+}
+
+.character-stage::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 13%;
+  width: 34%;
+  height: 7%;
+  border-radius: 50%;
+  background: rgba(36, 54, 75, .16);
+  transform: translateX(-50%);
+  filter: blur(3px);
+}
+
+.character-actor {
+  position: relative;
+  z-index: 1;
+  width: 66%;
+  height: 66%;
+  object-fit: contain;
+  transform-origin: 50% 92%;
+  filter: drop-shadow(0 5px 0 rgba(36, 54, 75, .14));
+}
+
+.character-actor[data-action="idle"] {
+  animation: character-idle 3s ease-in-out infinite;
+}
+
+.character-actor[data-action="move"] {
+  animation: character-move 1.2s ease-in-out infinite;
+}
+
+.character-actor[data-action="think"] {
+  animation: character-think 2s ease-in-out both;
+}
+
+.character-actor[data-action="happy"] {
+  animation: character-happy 2s cubic-bezier(.2, .8, .25, 1) both;
+}
+
+.character-actor[data-action="encourage"] {
+  animation: character-encourage 2s ease-in-out both;
+}
+
+@keyframes character-idle {
+  0%, 100% { transform: translateY(0) scale(1); }
+  48% { transform: translateY(-1.5%) scale(1.012, .996); }
+  55% { transform: translateY(-1.5%) scale(1.012, .996); }
+}
+
+@keyframes character-move {
+  0%, 100% { transform: translateY(0) rotate(-1.5deg); }
+  25% { transform: translateY(-3%) rotate(1.5deg); }
+  50% { transform: translateY(0) rotate(1.5deg); }
+  75% { transform: translateY(-3%) rotate(-1.5deg); }
+}
+
+@keyframes character-think {
+  0%, 15%, 100% { transform: rotate(0) translateY(0); }
+  36%, 72% { transform: rotate(-4deg) translateY(-1%); }
+}
+
+@keyframes character-happy {
+  0%, 18%, 100% { transform: translateY(0) scale(1); }
+  38% { transform: translateY(-8%) scale(.98, 1.02); }
+  54% { transform: translateY(0) scale(1.04, .96); }
+  68% { transform: translateY(-2%) scale(1); }
+}
+
+@keyframes character-encourage {
+  0%, 15%, 100% { transform: rotate(0); }
+  32% { transform: rotate(-3deg); }
+  50% { transform: rotate(3deg); }
+  68% { transform: rotate(-2deg); }
+  84% { transform: rotate(1deg); }
+}
+
+.reduce-motion .character-actor {
+  animation: none !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .character-actor { animation: none !important; }
+}
