@@ -22,13 +22,18 @@ body {
 .phone {
   width: min(430px, 100%);
   min-height: 100vh;
+  min-height: 100dvh;
   margin: 0 auto;
   position: relative;
   overflow: hidden;
   background: var(--cream);
 }
 
-.screen { min-height: 100vh; display: none; }
+.screen {
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: none;
+}
 .screen.is-on { display: flex; flex-direction: column; }
 
 .bg {
@@ -133,7 +138,12 @@ body {
 .wx-btn--reward img { width: 30px; height: 30px; object-fit: contain; }
 
 .map-screen,
-.board-screen { height: 100vh; overflow-y: auto; overflow-x: hidden; }
+.board-screen {
+  height: 100vh;
+  height: 100dvh;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
 .map-bg {
   position: fixed;
   inset: 0;
@@ -676,7 +686,12 @@ body {
 .chest-controls { margin-top: 0; }
 .reward-actions { display: grid; grid-template-columns: 1fr 1fr; gap: .55rem; }
 
-.collection-screen { height: 100vh; overflow-y: auto; background: #d9eef5; }
+.collection-screen {
+  height: 100vh;
+  height: 100dvh;
+  overflow-y: auto;
+  background: #d9eef5;
+}
 .collection-bg {
   position: fixed;
   inset: 0;
@@ -939,7 +954,8 @@ body { background: #143842; }
 .camp-progress { border-left: 4px solid var(--green); background: #e6f2e9; }
 .camp-actions .wx-btn { border-width: 2px; box-shadow: 0 4px 0 rgba(24,63,73,.72); }
 #camp .camp-stage {
-  flex: 0 0 clamp(330px, 51vh, 430px);
+  flex: 1 1 clamp(330px, 51vh, 430px);
+  min-height: 260px;
   padding-bottom: 0;
   place-items: end center;
 }
