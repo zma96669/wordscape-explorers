@@ -42,8 +42,8 @@ body {
   background-position: center top;
   transform: scale(1.04);
 }
-.bg--camp { background-image: url("../assets/art/backgrounds/camp.png"); }
-.bg--board { background-image: url("../assets/art/backgrounds/board.png"); }
+.bg--camp { background-image: url("../assets/art/backgrounds/camp.webp"); }
+.bg--board { background-image: url("../assets/art/backgrounds/board.webp"); }
 .shade {
   position: absolute; inset: 0;
   background: linear-gradient(180deg, rgba(36,54,75,.18), rgba(255,248,236,.55) 46%, rgba(255,248,236,.92));

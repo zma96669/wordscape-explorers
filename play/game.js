@@ -378,7 +378,7 @@ function pawnArt(action) {
   const entry = explorerMotion(action);
   return motionEntryLoaded(entry)
     ? motionFramePath(entry, state.pawnFrameIndex % entry.frameCount)
-    : "../assets/art/characters/explorer.png";
+    : "../assets/art/characters/explorer.webp";
 }
 
 function syncPawnFrameAnimation() {
