@@ -44,6 +44,7 @@ const PROFILE_KEY = "wordQuestProfileV1";
 let narrationAudio = null;
 let musicAudio = null;
 let musicTrack = "";
+const motionPreloadPromises = new Map();
 const SERIES = {
   dinosaur: { nameZh: "恐龙探索", icon: "../assets/ui/series/dinosaur-icon.svg" },
   space: { nameZh: "太空旅行", icon: "../assets/ui/series/space-icon.svg" },
@@ -334,18 +335,39 @@ function motionFramePath(entry, index) {
 
 function preloadMotionEntry(entry) {
   if (!entry || !entry.ready || !entry.frameCount) return Promise.resolve();
-  return Promise.all(Array.from({ length: entry.frameCount }, (_, index) => {
+  if (motionPreloadPromises.has(entry.path)) return motionPreloadPromises.get(entry.path);
+  const pending = Promise.all(Array.from({ length: entry.frameCount }, (_, index) => {
     const path = motionFramePath(entry, index);
     if (motionFrameCache.has(path)) return motionFrameCache.get(path);
-    const pending = new Promise((resolve) => {
+    const frame = new Promise((resolve) => {
       const image = new Image();
       image.onload = () => resolve(image);
       image.onerror = () => resolve(null);
       image.src = path;
     });
-    motionFrameCache.set(path, pending);
-    return pending;
-  }));
+    motionFrameCache.set(path, frame);
+    return frame;
+  })).then((frames) => {
+    entry.loaded = frames.every(Boolean);
+    return frames;
+  });
+  motionPreloadPromises.set(entry.path, pending);
+  return pending;
+}
+
+function motionEntryLoaded(entry) {
+  return Boolean(entry && entry.ready && entry.loaded);
+}
+
+function warmBoardMotion() {
+  ["idle", "move"].forEach((action) => {
+    const entry = explorerMotion(action);
+    if (entry) preloadMotionEntry(entry).then(() => {
+      if (state.motionManifest && explorerMotion(state.actorAction) === entry && $("board").classList.contains("is-on")) {
+        renderGrid();
+      }
+    });
+  });
 }
 
 function explorerMotion(action) {
@@ -354,7 +376,9 @@ function explorerMotion(action) {
 
 function pawnArt(action) {
   const entry = explorerMotion(action);
-  return entry && entry.ready ? motionFramePath(entry, state.pawnFrameIndex % entry.frameCount) : "../assets/art/characters/explorer.png";
+  return motionEntryLoaded(entry)
+    ? motionFramePath(entry, state.pawnFrameIndex % entry.frameCount)
+    : "../assets/art/characters/explorer.png";
 }
 
 function syncPawnFrameAnimation() {
@@ -364,6 +388,15 @@ function syncPawnFrameAnimation() {
     state.pawnFrameTimer = 0;
     state.pawnFrameAction = "";
     state.pawnFrameIndex = 0;
+    return;
+  }
+  if (!motionEntryLoaded(entry)) {
+    clearInterval(state.pawnFrameTimer);
+    state.pawnFrameTimer = 0;
+    state.pawnFrameAction = "";
+    preloadMotionEntry(entry).then(() => {
+      if (explorerMotion(state.actorAction) === entry && $("board").classList.contains("is-on")) renderGrid();
+    });
     return;
   }
   if (state.pawnFrameAction === state.actorAction && state.pawnFrameTimer) return;
@@ -405,8 +438,10 @@ async function loadMotionManifest() {
     const response = await fetch("../assets/motion/animation-manifest.json", { cache: "no-store" });
     if (!response.ok) return;
     state.motionManifest = await response.json();
-    await Promise.all(Object.values(state.motionManifest.explorer || {}).map(preloadMotionEntry));
-    if ($("board").classList.contains("is-on") && state.level) renderGrid();
+    if ($("board").classList.contains("is-on") && state.level) {
+      warmBoardMotion();
+      renderGrid();
+    }
   } catch (_) {
     // 动画帧尚未生产时继续使用静态素材。
   }
@@ -1125,6 +1160,7 @@ function startLevel(level, mode, levelIndex = -1, snapshot = null) {
   state.levelMode = mode;
   state.currentLevelIndex = levelIndex;
   resetBoard(snapshot);
+  warmBoardMotion();
   transitionScreen("board", () => {
     renderGrid();
     playCurrent();
