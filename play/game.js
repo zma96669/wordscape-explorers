@@ -275,6 +275,14 @@ const COLLECTIBLES = [
 const $ = (id) => document.getElementById(id);
 const sfxCache = new Map();
 const motionFrameCache = new Map();
+const motionExtension = (() => {
+  try {
+    const canvas = document.createElement("canvas");
+    return canvas.toDataURL("image/webp").startsWith("data:image/webp") ? "webp" : "png";
+  } catch (_) {
+    return "png";
+  }
+})();
 const keyOf = (p) => p.x + "," + p.y;
 const same = (a, b) => a.x === b.x && a.y === b.y;
 const nonNegativeNumber = (value) => Number.isFinite(Number(value)) ? Math.max(0, Number(value)) : 0;
@@ -330,7 +338,7 @@ function collectibleArt(item, kind = "runtime") {
 }
 
 function motionFramePath(entry, index) {
-  return `${entry.path}/frame-${String(index).padStart(3, "0")}.png`;
+  return `${entry.path}/frame-${String(index).padStart(3, "0")}.${motionExtension}`;
 }
 
 function preloadMotionEntry(entry) {
@@ -631,7 +639,7 @@ function syncBackgroundMusic(screenId) {
   if (musicTrack === track && musicAudio) return;
   if (musicAudio) musicAudio.pause();
   musicTrack = track;
-  musicAudio = new Audio(`../assets/audio/music/${track}.wav`);
+  musicAudio = new Audio(`../assets/audio/music/${track}.mp3`);
   musicAudio.loop = true;
   musicAudio.volume = .11;
   const playback = musicAudio.play();
@@ -1334,7 +1342,7 @@ function renderCollection() {
         ? `data-collectible="${item.id}" aria-label="播放${item.nameZh}互动和英文"`
         : `data-locked-collectible="${item.id}" aria-label="查看${item.nameZh}兑换信息"`;
       return `<button type="button" class="collectible-card ${owned ? "is-owned" : "is-locked"} ${item.rarity === "rare" ? "is-rare" : ""}" ${attrs}>
-        <img src="${collectibleArt(item, owned ? "thumbnail" : "silhouette")}" alt="">
+        <img src="${collectibleArt(item, owned ? "thumbnail" : "silhouette")}" loading="lazy" decoding="async" alt="">
         <strong>${item.nameZh}</strong>
         <small>${owned ? item.nameEn : "未获得 · 点击查看"}</small>
       </button>`;
