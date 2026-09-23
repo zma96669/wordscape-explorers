@@ -296,19 +296,19 @@
     {
       "id": "chest-closed",
       "category": "game_component",
-      "plannedPath": "assets/ui/game/chest-closed.svg",
+      "plannedPath": "assets/ui/game/chest-closed.webp",
       "status": "complete_runtime",
-      "productionMethod": "editable_svg",
-      "acceptance": "形状统一、可缩放；可交互状态清楚",
+      "productionMethod": "image_generation",
+      "acceptance": "透明背景、关闭状态清晰；结算页与开箱页可辨认",
       "dependsOn": []
     },
     {
       "id": "chest-open",
       "category": "game_component",
-      "plannedPath": "assets/ui/game/chest-open.svg",
+      "plannedPath": "assets/ui/game/chest-open.webp",
       "status": "complete_runtime",
-      "productionMethod": "editable_svg",
-      "acceptance": "形状统一、可缩放；可交互状态清楚",
+      "productionMethod": "image_generation",
+      "acceptance": "透明背景、打开状态带奖励光效；开箱动画可辨认",
       "dependsOn": []
     },
     {

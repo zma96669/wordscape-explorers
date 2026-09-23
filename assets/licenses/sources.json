@@ -19,6 +19,11 @@
       "notes": "俯视水面源图位于 assets/art/terrain/river-water-source.png，运行图位于 assets/art/terrain/river-water.webp；整块棋盘以该图作为连续水面，CSS 提供缓慢水流与光纹动画。"
     },
     {
+      "scope": "漂流瓶寻宝与结算收藏宝箱插画",
+      "source": "gpt-image-2",
+      "notes": "深绿色木质宝箱的关闭与打开状态由 gpt-image-2 生成，运行图位于 assets/ui/game/chest-closed.webp 和 assets/ui/game/chest-open.webp；洋红色背景已抠除并保留透明通道。"
+    },
+    {
       "scope": "英语语音",
       "source": "gpt-4o-mini-tts，voice coral",
       "notes": "156条运行时 MP3，文本映射见 assets/content/voice-script.csv。"

@@ -42,7 +42,7 @@
     <button class="wx-btn wx-btn--secondary" id="reduce">减少动画</button>
   </div>
   <div id="wx-stage">
-    <img class="chest" id="chest" src="../game/chest-closed.svg" alt="箱子">
+    <img class="chest" id="chest" src="../game/chest-closed.webp" alt="箱子">
     <img class="reward" id="reward" src="../../art/collectibles/space/star-robot.png" alt="奖励">
     <img class="route" id="route" src="../game/route-segment.svg" alt="路线">
     <img class="mark" id="mark" src="../game/target-marker.svg" alt="标记">
@@ -75,7 +75,7 @@
     document.querySelectorAll("[data-play]").forEach((btn) => {
       btn.addEventListener("click", async () => {
         const name = btn.dataset.play;
-        if (name === "chest") document.getElementById("chest").src = "../game/chest-open.svg";
+        if (name === "chest") document.getElementById("chest").src = "../game/chest-open.webp";
         if (name === "rare") document.getElementById("reward").src = "../../art/collectibles/dinosaur/little-tyrannosaurus.png";
         if (name === "common") document.getElementById("reward").src = "../../art/collectibles/space/rocket.png";
         els[name].style.opacity = "1";

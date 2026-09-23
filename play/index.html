@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>词境探险队</title>
   <link rel="icon" href="../assets/ui/app-entry.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="game.css?v=20260921-1">
+  <link rel="stylesheet" href="game.css?v=20260923-2">
 </head>
 <body>
   <div class="phone">
@@ -45,7 +45,7 @@
         <p class="camp-progress" id="camp-progress">学习进度 0/100 · 完成全部内容后进入下一轮复习</p>
         <div class="camp-actions">
           <button class="wx-btn" id="normal-btn"><img src="../assets/ui/icons/compass.svg" alt=""><span>开始随机探险</span></button>
-          <button class="wx-btn wx-btn--reward hidden" id="pending-chest-btn"><img src="../assets/ui/game/chest-closed.svg" alt="">开箱（0）</button>
+          <button class="wx-btn wx-btn--reward hidden" id="pending-chest-btn"><img src="../assets/ui/game/chest-closed.webp" alt="">开箱（0）</button>
           <button class="wx-btn wx-btn--secondary" id="start-btn">教学关</button>
           <button class="wx-btn wx-btn--secondary" id="collection-btn"><img src="../assets/ui/icons/collection.svg" alt="">收藏柜</button>
         </div>
@@ -105,14 +105,45 @@
         <div id="result-tasks"></div>
         <div class="result-discovery hidden" id="result-discovery"></div>
         <div class="result-reward">
-          <img src="../assets/ui/game/chest-closed.svg" alt="收藏箱">
-          <p><strong>获得 1 个收藏箱</strong><br>基础奖励：1 点星砂</p>
+          <img src="../assets/ui/game/chest-closed.webp" alt="收藏箱">
+          <p id="result-reward-copy"><strong>获得 1 个收藏箱</strong><br>基础奖励：1 点星砂</p>
         </div>
         <div class="result-actions">
           <button class="wx-btn" id="choose-series">选择收藏系列</button>
           <button class="wx-btn wx-btn--secondary hidden" id="result-map">继续随机探险</button>
           <button class="wx-btn wx-btn--secondary" id="result-home">稍后开启，返回营地</button>
         </div>
+      </div>
+    </section>
+
+    <section id="treasure" class="screen treasure-screen">
+      <div class="bg bg--board"></div>
+      <div class="shade"></div>
+      <header class="topbar treasure-topbar">
+        <div class="brand">
+          <img src="../assets/ui/icons/compass.svg" alt="">
+          <div><strong>漂流瓶寻宝</strong><small id="treasure-subtitle">修复藏宝图，找到最终奖励</small></div>
+        </div>
+        <span class="stat-pill" id="treasure-progress">地图 1 / 3</span>
+      </header>
+      <div class="treasure-body">
+        <div class="treasure-map" id="treasure-map" aria-live="polite">
+          <span class="treasure-map__route route-a"></span>
+          <span class="treasure-map__route route-b"></span>
+          <span class="treasure-map__fragment fragment-a">✦</span>
+          <span class="treasure-map__fragment fragment-b">✦</span>
+          <span class="treasure-map__compass">⌖</span>
+          <div class="treasure-map__copy">
+            <span id="treasure-step-label">漂流瓶线索</span>
+            <h1 id="treasure-title">听音找线索</h1>
+            <p id="treasure-copy">听一听，点击你听到的英文单词。</p>
+          </div>
+        </div>
+        <div class="treasure-clue" id="treasure-clue"></div>
+        <div class="treasure-options" id="treasure-options"></div>
+        <button class="wx-btn wx-btn--secondary treasure-listen" id="treasure-listen" type="button">
+          <img src="../assets/ui/icons/audio.svg" alt="">再听一次
+        </button>
       </div>
     </section>
 
@@ -140,7 +171,7 @@
         </div>
       </header>
       <div class="chest-stage">
-        <img class="chest-art" id="chest-art" src="../assets/ui/game/chest-closed.svg" alt="关闭的收藏箱">
+        <img class="chest-art" id="chest-art" src="../assets/ui/game/chest-closed.webp" alt="关闭的收藏箱">
         <div class="reward-reveal hidden" id="reward-reveal">
           <span class="rarity-label" id="reward-rarity"></span>
           <img id="reward-art" alt="">
@@ -184,6 +215,6 @@
     </div>
     <div id="toast" class="toast hidden" role="status" aria-live="polite"></div>
   </div>
-  <script src="game.js?v=20260922-1"></script>
+  <script src="game.js?v=20260923-2"></script>
 </body>
 </html>
