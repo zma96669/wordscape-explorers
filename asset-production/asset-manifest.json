@@ -303,6 +303,42 @@
       "dependsOn": []
     },
     {
+      "id": "treasure-message-bottle",
+      "category": "game_component",
+      "plannedPath": "assets/ui/game/treasure-event/message-bottle.webp",
+      "status": "complete_runtime",
+      "productionMethod": "image_generation",
+      "acceptance": "透明漂流瓶切图；寻宝页面可辨认；边缘无洋红背景",
+      "dependsOn": []
+    },
+    {
+      "id": "treasure-scroll",
+      "category": "game_component",
+      "plannedPath": "assets/ui/game/treasure-event/treasure-scroll.webp",
+      "status": "complete_runtime",
+      "productionMethod": "image_generation",
+      "acceptance": "透明藏宝图切图；寻宝完成状态可显示",
+      "dependsOn": []
+    },
+    {
+      "id": "treasure-map-panel",
+      "category": "game_component",
+      "plannedPath": "assets/ui/game/treasure-event/treasure-map-panel.webp",
+      "status": "complete_runtime",
+      "productionMethod": "image_generation",
+      "acceptance": "横向藏宝图面板；中心留有文字与选项空间",
+      "dependsOn": []
+    },
+    {
+      "id": "treasure-river-header",
+      "category": "game_component",
+      "plannedPath": "assets/ui/game/treasure-event/treasure-river-header.webp",
+      "status": "complete_runtime",
+      "productionMethod": "image_generation",
+      "acceptance": "河面寻宝横幅；无文字、无人物、适合页面背景",
+      "dependsOn": []
+    },
+    {
       "id": "chest-open",
       "category": "game_component",
       "plannedPath": "assets/ui/game/chest-open.webp",

@@ -36,6 +36,7 @@ const state = {
   pawnFrameAction: "",
   pawnFrameIndex: 0,
   rewardFrameTimer: 0,
+  rewardWarmup: null,
   treasure: null,
   transitioning: false,
   profile: null
@@ -46,6 +47,7 @@ let narrationAudio = null;
 let musicAudio = null;
 let musicTrack = "";
 const motionPreloadPromises = new Map();
+const imagePreloadCache = new Map();
 const SERIES = {
   dinosaur: { nameZh: "恐龙探索", icon: "../assets/ui/series/dinosaur-icon.svg" },
   space: { nameZh: "太空旅行", icon: "../assets/ui/series/space-icon.svg" },
@@ -379,6 +381,53 @@ function warmBoardMotion() {
   });
 }
 
+function preloadImage(path) {
+  if (!path) return Promise.resolve(null);
+  if (imagePreloadCache.has(path)) return imagePreloadCache.get(path);
+  const pending = new Promise((resolve) => {
+    const image = new Image();
+    image.onload = () => resolve(image);
+    image.onerror = () => resolve(null);
+    image.src = path;
+  });
+  imagePreloadCache.set(path, pending);
+  return pending;
+}
+
+function selectRewardCandidate(seriesId) {
+  const rarity = randomUnit() < .1 ? "rare" : "normal";
+  const rarityPool = COLLECTIBLES.filter((item) => item.series === seriesId && item.rarity === rarity);
+  const unowned = rarityPool.filter((item) => !state.profile.owned[item.id]);
+  const pool = rarity === "normal" && unowned.length ? unowned : rarityPool;
+  return pool[Math.floor(randomUnit() * pool.length)];
+}
+
+function prepareRewardWarmup(ids = null) {
+  const warmed = {};
+  Object.keys(SERIES).forEach((seriesId) => {
+    const savedId = ids && typeof ids[seriesId] === "string" ? ids[seriesId] : "";
+    const savedItem = savedId && COLLECTIBLES.find((item) => item.id === savedId && item.series === seriesId);
+    const item = savedItem || selectRewardCandidate(seriesId);
+    if (!item) return;
+    warmed[seriesId] = item.id;
+    preloadImage(collectibleArt(item, "runtime"));
+    const motion = state.motionManifest && state.motionManifest.collectibles && state.motionManifest.collectibles[item.id];
+    preloadMotionEntry(motion);
+  });
+  state.rewardWarmup = warmed;
+}
+
+function warmRewardAssetsFromState() {
+  if (!state.rewardWarmup) return;
+  Object.values(state.rewardWarmup).forEach((itemId) => {
+    const item = COLLECTIBLES.find((entry) => entry.id === itemId);
+    if (!item) return;
+    preloadImage(collectibleArt(item, "runtime"));
+    const motion = state.motionManifest && state.motionManifest.collectibles && state.motionManifest.collectibles[item.id];
+    preloadMotionEntry(motion);
+  });
+}
+
 function explorerMotion(action) {
   return state.motionManifest && state.motionManifest.explorer && state.motionManifest.explorer[action];
 }
@@ -451,6 +500,7 @@ async function loadMotionManifest() {
       warmBoardMotion();
       renderGrid();
     }
+    warmRewardAssetsFromState();
   } catch (_) {
     // 动画帧尚未生产时继续使用静态素材。
   }
@@ -726,6 +776,7 @@ function renderTreasure() {
   const word = treasureWord(round.wordId);
   const total = event.rounds.length;
   $("treasure-progress").textContent = `地图 ${event.roundIndex + 1} / ${total}`;
+  $("treasure-map").classList.remove("is-complete");
   $("treasure-map").classList.toggle("is-spelling", event.phase === "spell");
   $("treasure-map").classList.toggle("is-meaning", event.phase === "meaning");
   const options = $("treasure-options");
@@ -828,6 +879,7 @@ async function finishTreasureEvent() {
   $("treasure-clue").textContent = "✦ 发现收藏宝箱 ✦";
   $("treasure-options").innerHTML = "";
   $("treasure-listen").classList.add("hidden");
+  $("treasure-map").classList.add("is-complete");
   await wait(1200);
   persistActiveRun();
   finishIfReady();
@@ -1300,6 +1352,7 @@ function persistActiveRun() {
     pos: { ...state.pos },
     route: state.route.map((point) => ({ ...point })),
     foundExploration: state.foundExploration,
+    rewardWarmup: state.rewardWarmup,
     treasure: state.treasure && state.treasure.active ? state.treasure : null,
     savedAt: new Date().toISOString()
   };
@@ -1331,6 +1384,7 @@ function resetBoard(snapshot = null) {
     }
   }
   state.foundExploration = Boolean(snapshot && snapshot.foundExploration);
+  state.rewardWarmup = snapshot && snapshot.rewardWarmup && typeof snapshot.rewardWarmup === "object" ? { ...snapshot.rewardWarmup } : state.rewardWarmup;
   state.treasure = snapshot && snapshot.treasure && snapshot.treasure.active ? snapshot.treasure : null;
   state.hintLevel = 0;
   state.runRewardGranted = false;
@@ -1350,6 +1404,7 @@ function startLevel(level, mode, levelIndex = -1, snapshot = null) {
   state.level = level;
   state.levelMode = mode;
   state.currentLevelIndex = levelIndex;
+  if (mode !== "normal") state.rewardWarmup = null;
   resetBoard(snapshot);
   if (state.levelMode === "normal" && state.treasure && state.treasure.active) {
     transitionScreen("treasure", () => {
@@ -1375,6 +1430,7 @@ function startRandomLevel() {
       const level = buildNormalLevel(active.levelIndex, variantIndex, tasks, symmetryIndex);
       level.variantIndex = variantIndex;
       level.symmetryIndex = symmetryIndex;
+      prepareRewardWarmup(active.rewardWarmup);
       startLevel(level, "normal", active.levelIndex, active);
       return;
     }
@@ -1395,6 +1451,7 @@ function startRandomLevel() {
   const level = buildNormalLevel(index, variantIndex, selectRoundTasks(), symmetryIndex);
   level.variantIndex = variantIndex;
   level.symmetryIndex = symmetryIndex;
+  prepareRewardWarmup();
   startLevel(level, "normal", index);
 }
 
@@ -1431,11 +1488,10 @@ function randomUnit() {
 }
 
 function chooseReward(seriesId) {
-  const rarity = randomUnit() < .1 ? "rare" : "normal";
-  const rarityPool = COLLECTIBLES.filter((item) => item.series === seriesId && item.rarity === rarity);
-  const unowned = rarityPool.filter((item) => !state.profile.owned[item.id]);
-  const pool = rarity === "normal" && unowned.length ? unowned : rarityPool;
-  return pool[Math.floor(randomUnit() * pool.length)];
+  const warmedId = state.rewardWarmup && state.rewardWarmup[seriesId];
+  const warmedItem = warmedId && COLLECTIBLES.find((item) => item.id === warmedId && item.series === seriesId);
+  if (warmedItem) return warmedItem;
+  return selectRewardCandidate(seriesId);
 }
 
 function prepareChest(seriesId) {

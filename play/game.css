@@ -609,12 +609,28 @@ body {
 .result-reward p { margin: 0; }
 .result-actions { display: grid; gap: .55rem; }
 
-.treasure-screen { min-height: 100vh; min-height: 100dvh; overflow-y: auto; }
-.treasure-topbar { background: rgba(24, 63, 73, .08); }
+.treasure-screen {
+  height: 100vh;
+  height: 100dvh;
+  min-height: 100vh;
+  min-height: 100dvh;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.treasure-screen .bg--board { background-image: url("../assets/ui/game/treasure-event/treasure-river-header.webp"); background-position: center; }
+.treasure-screen .shade { background: linear-gradient(180deg, rgba(24,63,73,.16), rgba(255,250,240,.48) 38%, rgba(255,250,240,.9)); }
+.treasure-topbar { gap: .5rem; background: rgba(24, 63, 73, .08); }
+.treasure-topbar .brand,
+.treasure-topbar .brand > div { min-width: 0; }
+.treasure-topbar .brand strong,
+.treasure-topbar .brand small { overflow-wrap: anywhere; }
+.treasure-topbar .stat-pill { flex: 0 0 auto; }
 .treasure-body {
   position: relative;
   z-index: 2;
-  width: min(100%, 430px);
+  width: 100%;
+  max-width: 430px;
+  min-width: 0;
   margin: auto;
   padding: .5rem .8rem 1.4rem;
 }
@@ -629,11 +645,15 @@ body {
   border: 4px solid var(--navy);
   border-radius: 28px;
   background:
-    radial-gradient(circle at 15% 20%, rgba(244,210,122,.5), transparent 23%),
-    linear-gradient(145deg, rgba(244,252,224,.96), rgba(190,232,220,.94));
+    linear-gradient(90deg, rgba(255,250,240,.12), rgba(255,250,240,.7) 42%, rgba(255,250,240,.78)),
+    url("../assets/ui/game/treasure-event/treasure-map-panel.webp") center / cover;
   box-shadow: 0 8px 0 rgba(24,63,73,.16), inset 0 0 0 5px rgba(255,248,236,.4);
 }
-.treasure-map__copy { position: relative; z-index: 2; max-width: 285px; text-align: center; }
+.treasure-map__scroll,
+.treasure-map__bottle { position: absolute; pointer-events: none; object-fit: contain; }
+.treasure-map__scroll { z-index: 1; width: 82%; opacity: 0; transform: scale(.86) rotate(-2deg); transition: opacity .35s ease, transform .35s ease; }
+.treasure-map__bottle { z-index: 3; right: -1.2rem; bottom: -1.4rem; width: 8.4rem; transform: rotate(13deg); filter: drop-shadow(0 8px 6px rgba(24,63,73,.22)); animation: bottle-float 3.2s ease-in-out infinite; }
+.treasure-map__copy { position: relative; z-index: 4; max-width: 245px; padding: .8rem .95rem; border-radius: 20px; background: rgba(255,250,240,.82); box-shadow: 0 5px 16px rgba(24,63,73,.12); text-align: center; }
 .treasure-map__copy > span { color: var(--orange); font-size: .78rem; font-weight: 900; letter-spacing: .08em; }
 .treasure-map__copy h1 { margin: .3rem 0 .25rem; font-size: 1.5rem; }
 .treasure-map__copy p { margin: 0; color: #3d6178; font-size: .9rem; font-weight: 700; line-height: 1.4; }
@@ -644,6 +664,8 @@ body {
 .treasure-map__fragment.fragment-a { left: 12%; top: 20%; }
 .treasure-map__fragment.fragment-b { right: 13%; bottom: 17%; animation-delay: .5s; }
 .treasure-map__compass { position: absolute; right: 13%; top: 14%; color: var(--green); font-size: 2.2rem; transform: rotate(-18deg); opacity: .75; }
+.treasure-map.is-complete .treasure-map__scroll { opacity: .9; transform: scale(.92) rotate(-2deg); }
+.treasure-map.is-complete .treasure-map__bottle { opacity: .18; }
 .treasure-clue {
   min-height: 2.8rem;
   display: grid;
@@ -680,6 +702,27 @@ body {
 .treasure-listen { width: 100%; margin-top: .7rem; }
 .treasure-listen img { width: 22px; height: 22px; }
 @keyframes treasure-spark { 0%, 100% { transform: translateY(0) scale(1); opacity: .65; } 50% { transform: translateY(-5px) scale(1.12); opacity: 1; } }
+@keyframes bottle-float { 0%, 100% { margin-bottom: 0; } 50% { margin-bottom: .38rem; } }
+
+@media (max-width: 350px) {
+  .treasure-topbar .brand { gap: .35rem; }
+  .treasure-topbar .brand img { width: 36px; height: 36px; }
+  .treasure-topbar .brand strong { font-size: .96rem; }
+  .treasure-topbar .brand small { font-size: .65rem; }
+  .treasure-topbar .stat-pill { min-height: 34px; font-size: .65rem; }
+}
+
+@media (max-height: 680px) {
+  .treasure-body { margin: 0 auto; padding-top: .2rem; padding-bottom: .8rem; }
+  .treasure-map { min-height: 170px; margin-bottom: .45rem; padding-block: .7rem; }
+  .treasure-map__copy { padding: .55rem .75rem; }
+  .treasure-map__copy h1 { font-size: 1.25rem; }
+  .treasure-map__copy p { font-size: .8rem; }
+  .treasure-clue { min-height: 2.45rem; margin-block: .3rem .45rem; padding-block: .45rem; }
+  .treasure-option { min-height: 52px; }
+  .treasure-option.is-meaning { min-height: 58px; }
+  .treasure-listen { margin-top: .5rem; }
+}
 .result-discovery {
   display: flex;
   align-items: center;
@@ -1266,7 +1309,7 @@ button.collectible-card:active { transform: scale(.96); }
   .screen.is-on, .task-dot, .cell, .exploration-marker, .answer-burst i, .route-layer line,
   .camp-stage, .camp-hero, #result.is-on::before, .result-reward, .toast, .chest-stage::before,
   .grid, .grid::before, .floating-platform, .scene-transition, .scene-transition::before,
-  .result-word-card, .result-word-card > img,
+  .result-word-card, .result-word-card > img, .treasure-map__bottle, .treasure-map__fragment,
   #board.is-entering .mission-banner, #board.is-entering .tasks, #board.is-entering .board-stage,
   #board.is-entering .meter, #board.is-entering .board-legend, #board.is-entering .footer { animation: none !important; transition: none !important; }
 }

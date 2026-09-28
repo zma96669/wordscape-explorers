@@ -11,7 +11,7 @@
     "soundEffectFiles": 13
   },
   "manifest": {
-    "entries": 195,
+    "entries": 199,
     "missing": 0,
     "notRequired": 1
   },
@@ -42,7 +42,7 @@
     }
   },
   "runtimeReferences": {
-    "staticFilesChecked": 29
+    "staticFilesChecked": 33
   },
   "errors": []
 }

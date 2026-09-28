@@ -24,6 +24,11 @@
       "notes": "深绿色木质宝箱的关闭与打开状态由 gpt-image-2 生成，运行图位于 assets/ui/game/chest-closed.webp 和 assets/ui/game/chest-open.webp；洋红色背景已抠除并保留透明通道。"
     },
     {
+      "scope": "漂流瓶寻宝界面视觉素材",
+      "source": "gpt-image-2",
+      "notes": "消息漂流瓶、展开藏宝图、藏宝图面板与河面线索横幅由 gpt-image-2 生成；运行图位于 assets/ui/game/treasure-event，透明 PNG 同时保留为生产源文件，WebP 用于页面加载。"
+    },
+    {
       "scope": "英语语音",
       "source": "gpt-4o-mini-tts，voice coral",
       "notes": "156条运行时 MP3，文本映射见 assets/content/voice-script.csv。"
