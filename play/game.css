@@ -618,8 +618,8 @@ body {
   overflow-y: auto;
 }
 .treasure-screen .bg--board { background-image: url("../assets/ui/game/treasure-event/treasure-river-header.webp"); background-position: center; }
-.treasure-screen .shade { background: linear-gradient(180deg, rgba(24,63,73,.16), rgba(255,250,240,.48) 38%, rgba(255,250,240,.9)); }
-.treasure-topbar { gap: .5rem; background: rgba(24, 63, 73, .08); }
+.treasure-screen .shade { background: linear-gradient(180deg, rgba(5,52,68,.12), rgba(15,105,116,.12) 52%, rgba(8,55,67,.32)); }
+.treasure-topbar { gap: .5rem; background: rgba(233,253,250,.9); box-shadow: 0 3px 0 rgba(13,73,80,.14); }
 .treasure-topbar .brand,
 .treasure-topbar .brand > div { min-width: 0; }
 .treasure-topbar .brand strong,
@@ -629,104 +629,216 @@ body {
   position: relative;
   z-index: 2;
   width: 100%;
-  max-width: 430px;
+  max-width: 480px;
   min-width: 0;
   margin: auto;
-  padding: .5rem .8rem 1.4rem;
+  padding: 0 .65rem .65rem;
 }
 .treasure-map {
   position: relative;
-  min-height: 205px;
+  min-height: calc(100dvh - 76px);
+  max-height: 720px;
   overflow: hidden;
-  display: grid;
-  place-items: center;
-  margin: .3rem 0 .75rem;
-  padding: 1.25rem .9rem;
-  border: 4px solid var(--navy);
-  border-radius: 28px;
-  background:
-    linear-gradient(90deg, rgba(255,250,240,.12), rgba(255,250,240,.7) 42%, rgba(255,250,240,.78)),
-    url("../assets/ui/game/treasure-event/treasure-map-panel.webp") center / cover;
-  box-shadow: 0 8px 0 rgba(24,63,73,.16), inset 0 0 0 5px rgba(255,248,236,.4);
+  isolation: isolate;
 }
-.treasure-map__scroll,
-.treasure-map__bottle,
-.treasure-map__bottle-tag { position: absolute; pointer-events: none; object-fit: contain; }
-.treasure-map__scroll { z-index: 1; width: 82%; opacity: 0; transform: scale(.86) rotate(-2deg); transition: opacity .35s ease, transform .35s ease; }
-.treasure-map__bottle { z-index: 3; left: -.7rem; bottom: -1.45rem; width: 11.8rem; transform: rotate(11deg); filter: drop-shadow(0 8px 6px rgba(24,63,73,.22)); animation: bottle-float 3.2s ease-in-out infinite; }
-.treasure-map__bottle-tag { z-index: 5; left: 1.05rem; bottom: .6rem; padding: .22rem .55rem; border: 2px solid rgba(24,63,73,.82); border-radius: 999px; color: var(--navy); background: rgba(255,250,240,.94); box-shadow: 0 3px 0 rgba(24,63,73,.16); font-size: .72rem; font-weight: 900; transform: rotate(-7deg); }
-.treasure-map__copy { position: relative; z-index: 4; max-width: 220px; margin-left: 6rem; padding: .8rem .95rem; border-radius: 20px; background: rgba(255,250,240,.86); box-shadow: 0 5px 16px rgba(24,63,73,.12); text-align: center; }
-.treasure-map__copy > span { color: var(--orange); font-size: .78rem; font-weight: 900; letter-spacing: .08em; }
-.treasure-map__copy h1 { margin: .3rem 0 .25rem; font-size: 1.5rem; }
-.treasure-map__copy p { margin: 0; color: #3d6178; font-size: .9rem; font-weight: 700; line-height: 1.4; }
-.treasure-map__route { position: absolute; z-index: 0; height: 9px; border-radius: 999px; background: rgba(36,122,101,.25); transform: rotate(-18deg); }
-.treasure-map__route.route-a { width: 76%; left: -8%; top: 42%; }
-.treasure-map__route.route-b { width: 70%; right: -10%; bottom: 25%; transform: rotate(22deg); background: rgba(227,154,74,.25); }
-.treasure-map__fragment { position: absolute; color: var(--orange); font-size: 1.35rem; animation: treasure-spark 1.8s ease-in-out infinite; }
-.treasure-map__fragment.fragment-a { left: 12%; top: 20%; }
-.treasure-map__fragment.fragment-b { right: 13%; bottom: 17%; animation-delay: .5s; }
-.treasure-map__compass { position: absolute; right: 13%; top: 14%; color: var(--green); font-size: 2.2rem; transform: rotate(-18deg); opacity: .75; }
-.treasure-map.is-complete .treasure-map__scroll { opacity: .9; transform: scale(.92) rotate(-2deg); }
-.treasure-map.is-complete .treasure-map__bottle { opacity: .18; }
-.treasure-map.is-complete .treasure-map__bottle-tag { opacity: 0; }
-.treasure-map.is-complete .treasure-map__copy { margin-left: 0; }
-.treasure-map.is-letter-open .treasure-map__bottle { transform: rotate(11deg) scale(.9); }
-.treasure-letter {
+.treasure-map::before {
+  content: "";
+  position: absolute;
+  inset: 7% -16% auto;
+  height: 43%;
+  opacity: .38;
+  background: repeating-linear-gradient(173deg, transparent 0 18px, rgba(226,255,250,.72) 20px 23px, transparent 25px 44px);
+  transform: rotate(-4deg);
+  animation: treasure-water 8s linear infinite;
+}
+.treasure-water-ring {
+  position: absolute;
+  z-index: 0;
+  width: 15rem;
+  height: 4.5rem;
+  border: 4px solid rgba(226,255,250,.58);
+  border-radius: 50%;
+  opacity: .55;
+  transform: scale(.65);
+  animation: water-ring 3.2s ease-out infinite;
+}
+.treasure-water-ring.ring-a { left: 6%; top: 37%; }
+.treasure-water-ring.ring-b { right: -7%; top: 23%; animation-delay: 1.4s; }
+.treasure-spark { position: absolute; z-index: 8; color: #ffd36b; font-size: 1.45rem; text-shadow: 0 2px 0 rgba(99,62,25,.28); animation: treasure-spark 1.8s ease-in-out infinite; }
+.treasure-spark.spark-a { left: 12%; top: 18%; }
+.treasure-spark.spark-b { right: 11%; top: 42%; animation-delay: .55s; }
+.treasure-bottle {
+  --cork-pull: 0px;
+  position: absolute;
+  z-index: 4;
+  inset: 2% 0 auto;
+  width: 100%;
+  height: 76%;
+  padding: 0;
+  border: 0;
+  outline-offset: -6px;
+  background: transparent;
+  color: var(--navy);
+  cursor: grab;
+  touch-action: none;
+}
+.treasure-bottle.is-pulling { cursor: grabbing; }
+.treasure-map__bottle {
+  position: absolute;
+  left: 50%;
+  top: 2%;
+  width: min(84%, 340px);
+  height: auto;
+  object-fit: contain;
+  pointer-events: none;
+  filter: drop-shadow(0 16px 12px rgba(9,54,61,.28));
+  transform: translateX(-50%) rotate(8deg);
+  animation: bottle-float 3.2s ease-in-out infinite;
+}
+.treasure-cork {
+  position: absolute;
+  z-index: 3;
+  left: calc(50% + 76px);
+  top: calc(4% - var(--cork-pull));
+  width: 62px;
+  height: 43px;
+  border: 3px solid #88501f;
+  border-radius: 12px 17px 9px 13px;
+  background: linear-gradient(150deg, #f1bd70, #bd7634 70%, #8b4f22);
+  box-shadow: inset 5px 4px 0 rgba(255,224,158,.5), 0 5px 7px rgba(64,38,20,.25);
+  pointer-events: none;
+  transform: rotate(20deg);
+  transition: top .16s ease;
+  animation: cork-wiggle 1.9s ease-in-out infinite;
+}
+.treasure-cork::before,
+.treasure-cork::after { content: ""; position: absolute; border-radius: 50%; background: rgba(104,61,26,.3); }
+.treasure-cork::before { width: 5px; height: 5px; left: 13px; top: 11px; }
+.treasure-cork::after { width: 7px; height: 4px; right: 12px; bottom: 9px; }
+.treasure-bottle__prompt {
+  position: absolute;
+  left: 50%;
+  bottom: .4rem;
   display: grid;
-  gap: .18rem;
-  margin: .45rem 0 .65rem;
-  padding: .8rem .9rem;
-  border: 3px solid #a86c35;
+  min-width: 235px;
+  padding: .72rem 2.6rem .72rem 1rem;
+  border: 3px solid rgba(21,74,80,.9);
   border-radius: 18px;
-  background: linear-gradient(145deg, #fff4cf, #f4d99d);
-  box-shadow: 0 5px 0 rgba(117,76,38,.16), inset 0 0 0 2px rgba(255,255,255,.45);
+  background: rgba(242,255,249,.94);
+  box-shadow: 0 6px 0 rgba(12,73,80,.2);
+  text-align: left;
+  transform: translateX(-50%);
+}
+.treasure-bottle__prompt b { font-size: 1rem; }
+.treasure-bottle__prompt small { margin-top: .12rem; color: #426b72; font-size: .72rem; font-weight: 800; }
+.treasure-bottle__prompt i { position: absolute; right: .85rem; top: .45rem; font-size: 1.8rem; font-style: normal; animation: pull-hint 1.1s ease-in-out infinite; }
+.treasure-map.is-opening .treasure-cork { animation: cork-pop .68s ease-out forwards; }
+.treasure-map.is-opening .treasure-map__bottle { animation: bottle-release .68s ease-in forwards; }
+.treasure-map.is-opening .treasure-bottle__prompt { animation: prompt-away .25s ease forwards; }
+.treasure-letter {
+  position: absolute;
+  z-index: 5;
+  inset: .45rem 0;
+  overflow: hidden;
+  border: 4px solid #916032;
+  border-radius: 22px 13px 25px 16px;
+  background:
+    linear-gradient(rgba(255,244,205,.18), rgba(247,218,158,.2)),
+    url("../assets/ui/game/treasure-event/treasure-map-panel.webp") center / cover;
+  box-shadow: 0 14px 22px rgba(7,54,62,.32), inset 0 0 22px rgba(117,70,24,.2);
   color: var(--navy);
   text-align: center;
-  transform: rotate(-1deg);
-  animation: letter-unroll .35s ease-out both;
+  transform: rotate(-.7deg);
+  transform-origin: center;
+  animation: letter-unroll .58s cubic-bezier(.18,.9,.35,1.08) both;
 }
+.treasure-letter::before,
+.treasure-letter::after { content: ""; position: absolute; z-index: 0; left: 4%; right: 4%; height: 18px; border-radius: 50%; background: rgba(106,62,22,.18); filter: blur(8px); }
+.treasure-letter::before { top: -9px; }
+.treasure-letter::after { bottom: -9px; }
+.treasure-route { position: absolute; z-index: 2; left: 10%; right: 10%; top: 5%; height: 18%; }
+.treasure-route svg { width: 100%; height: 100%; overflow: visible; }
+.treasure-route__guide,
+.treasure-route__ink { fill: none; stroke-linecap: round; stroke-linejoin: round; }
+.treasure-route__guide { stroke: rgba(103,70,37,.26); stroke-width: 6; stroke-dasharray: 4 12; }
+.treasure-route__ink { stroke: #1b8a78; stroke-width: 7; stroke-dasharray: 320; stroke-dashoffset: 320; filter: drop-shadow(0 2px 0 rgba(255,255,255,.55)); transition: stroke-dashoffset .55s ease; }
+.treasure-route__start,
+.treasure-route__mark { position: absolute; display: grid; place-items: center; width: 29px; height: 29px; border: 3px solid #8e6230; border-radius: 50%; background: #f6daa1; color: #855326; font-size: .72rem; font-weight: 900; box-shadow: 0 3px 0 rgba(106,66,24,.18); transition: transform .3s ease, background .3s ease, color .3s ease; }
+.treasure-route__start { left: -2px; bottom: 5px; }
+.treasure-route__mark.mark-one { left: 33%; bottom: 12%; }
+.treasure-route__mark.mark-two { left: 62%; top: 8%; }
+.treasure-route__mark.mark-three { right: -3px; bottom: 17%; }
+.treasure-route__mark.is-found { color: white; background: #df8d37; transform: scale(1.15); animation: route-mark-found .5s ease both; }
+.treasure-letter__content { position: absolute; z-index: 3; left: 9%; right: 9%; top: 24%; bottom: 6%; display: flex; flex-direction: column; min-height: 0; overflow-y: auto; padding: .1rem .25rem .35rem; scrollbar-width: thin; }
 .treasure-letter__eyebrow { color: #9d5b2b; font-size: .72rem; font-weight: 900; letter-spacing: .08em; }
-.treasure-letter strong { font-size: 1rem; }
-.treasure-letter p { margin: 0; color: #5c7180; font-size: .8rem; font-weight: 700; line-height: 1.35; }
-.treasure-open { width: 100%; margin: .2rem 0 .65rem; }
+.treasure-letter__content h1 { margin: .25rem 0 .2rem; font-size: 1.28rem; }
+.treasure-letter__content > p { margin: 0; color: #4d6971; font-size: .78rem; font-weight: 800; line-height: 1.35; }
 .treasure-clue {
-  min-height: 2.8rem;
+  min-height: 2.6rem;
   display: grid;
   place-items: center;
-  margin: .45rem 0 .65rem;
-  padding: .65rem .75rem;
-  border: 3px solid rgba(36,63,75,.22);
-  border-radius: 16px;
-  background: rgba(255,248,236,.9);
+  margin: .45rem 0 .5rem;
+  padding: .55rem .65rem;
+  border-top: 2px solid rgba(111,72,36,.28);
+  border-bottom: 2px solid rgba(111,72,36,.28);
+  background: rgba(255,247,218,.62);
   color: var(--navy);
-  font-size: 1.05rem;
+  font-size: 1rem;
   font-weight: 900;
   text-align: center;
 }
 .treasure-options { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .55rem; }
+.treasure-options.is-letter-grid { grid-template-columns: repeat(5, minmax(0, 1fr)); gap: .35rem; }
 .treasure-option {
-  min-height: 62px;
-  padding: .55rem .35rem;
-  border: 3px solid var(--navy);
-  border-radius: 16px;
+  min-height: 54px;
+  padding: .48rem .28rem;
+  border: 3px solid #274e58;
+  border-radius: 13px;
   color: var(--navy);
-  background: rgba(255,248,236,.96);
+  background: rgba(255,250,226,.92);
+  box-shadow: 0 3px 0 rgba(91,58,27,.15);
   font: inherit;
   font-weight: 900;
   cursor: pointer;
   transition: transform .16s ease, background .16s ease, border-color .16s ease;
 }
 .treasure-option:hover, .treasure-option:focus-visible { transform: translateY(-3px); border-color: var(--green); background: #f4fff8; }
-.treasure-option.is-letter { min-height: 54px; font-size: 1.2rem; text-transform: lowercase; }
+.treasure-option.is-letter { min-height: 45px; padding-inline: .1rem; font-size: 1.08rem; text-transform: lowercase; }
 .treasure-option.is-used { opacity: .35; transform: scale(.94); pointer-events: none; }
-.treasure-option.is-meaning { min-height: 70px; font-size: .86rem; line-height: 1.2; }
-.treasure-spell-slots { display: flex; justify-content: center; gap: .3rem; min-height: 42px; margin: .2rem 0 .65rem; }
-.treasure-spell-slot { width: 27px; border-bottom: 3px solid var(--green); color: var(--navy); font-size: 1.1rem; font-weight: 900; text-transform: lowercase; }
-.treasure-listen { width: 100%; margin-top: .7rem; }
+.treasure-option.is-meaning { min-height: 58px; font-size: .82rem; line-height: 1.2; }
+.treasure-spell-slots { display: flex; justify-content: center; flex-wrap: wrap; gap: .22rem; min-height: 35px; margin: .1rem 0 .3rem; }
+.treasure-spell-slot { width: 23px; border-bottom: 3px solid var(--green); color: var(--navy); font-size: 1rem; font-weight: 900; text-transform: lowercase; }
+.treasure-listen { width: 100%; min-height: 42px; margin-top: .5rem; }
 .treasure-listen img { width: 22px; height: 22px; }
+.treasure-map.is-correct .treasure-letter { animation: treasure-correct .4s ease; }
+.treasure-map.is-correct .treasure-route__ink { filter: drop-shadow(0 0 7px rgba(29,160,126,.8)); }
+.treasure-map.is-wrong .treasure-letter__content { animation: treasure-shake .35s ease; }
+.treasure-reward { position: absolute; z-index: 9; inset: 0; display: grid; place-items: center; overflow: hidden; text-align: center; }
+.treasure-reward::before { content: ""; position: absolute; inset: 0; background: rgba(8,63,70,.18); backdrop-filter: blur(2px); }
+.treasure-reward__map { position: absolute; z-index: 1; left: 50%; top: 4%; width: 92%; max-height: 58%; object-fit: contain; filter: drop-shadow(0 13px 13px rgba(8,50,57,.28)); animation: final-map-in .65s ease both; }
+.treasure-reward__beam { position: absolute; z-index: 2; left: 50%; bottom: 3%; width: 16rem; height: 18rem; background: conic-gradient(from 12deg, transparent, rgba(255,224,107,.65), transparent 18%, rgba(255,244,184,.6), transparent 38%, rgba(255,214,71,.6), transparent 58%); transform: translateX(-50%); animation: reward-beam 5s linear infinite; }
+.treasure-reward__chest { position: absolute; z-index: 3; left: 50%; bottom: 12%; width: min(58%, 240px); object-fit: contain; filter: drop-shadow(0 17px 12px rgba(34,44,38,.3)); transform: translateX(-50%); animation: treasure-chest-rise .85s .35s cubic-bezier(.16,.9,.26,1.15) both; }
+.treasure-reward__copy { position: absolute; z-index: 4; left: 8%; right: 8%; bottom: 3%; display: grid; color: white; text-shadow: 0 2px 0 rgba(17,60,64,.65); animation: reward-copy-in .45s 1s ease both; }
+.treasure-reward__copy strong { font-size: 1.2rem; }
+.treasure-reward__copy span { font-size: .76rem; font-weight: 800; }
+.treasure-map.is-complete .treasure-letter { opacity: 0; transform: translateY(-18px) scale(.94); transition: opacity .35s ease, transform .35s ease; }
 @keyframes treasure-spark { 0%, 100% { transform: translateY(0) scale(1); opacity: .65; } 50% { transform: translateY(-5px) scale(1.12); opacity: 1; } }
-@keyframes bottle-float { 0%, 100% { margin-bottom: 0; } 50% { margin-bottom: .38rem; } }
-@keyframes letter-unroll { from { opacity: 0; transform: translateY(10px) rotate(-4deg) scale(.96); } to { opacity: 1; transform: translateY(0) rotate(-1deg) scale(1); } }
+@keyframes treasure-water { to { transform: translateX(44px) rotate(-4deg); } }
+@keyframes water-ring { 0% { opacity: .7; transform: scale(.45); } 80%, 100% { opacity: 0; transform: scale(1.1); } }
+@keyframes bottle-float { 0%, 100% { transform: translateX(-50%) translateY(0) rotate(8deg); } 50% { transform: translateX(-50%) translateY(-8px) rotate(5deg); } }
+@keyframes cork-wiggle { 0%, 70%, 100% { transform: rotate(20deg); } 80% { transform: translateY(-5px) rotate(16deg); } 90% { transform: translateY(1px) rotate(23deg); } }
+@keyframes pull-hint { 50% { transform: translateY(-6px); } }
+@keyframes cork-pop { 0% { transform: rotate(20deg); opacity: 1; } 55% { transform: translate(18px,-68px) rotate(66deg); opacity: 1; } 100% { transform: translate(58px,-115px) rotate(135deg); opacity: 0; } }
+@keyframes bottle-release { 0% { transform: translateX(-50%) rotate(8deg) scale(1); opacity: 1; } 55% { transform: translateX(-50%) translateY(8px) rotate(-4deg) scale(1.03); opacity: 1; } 100% { transform: translateX(-50%) translateY(90px) rotate(-18deg) scale(.82); opacity: 0; } }
+@keyframes prompt-away { to { opacity: 0; transform: translateX(-50%) translateY(12px); } }
+@keyframes letter-unroll { from { opacity: 0; transform: rotate(-3deg) scaleY(.08) scaleX(.82); } to { opacity: 1; transform: rotate(-.7deg) scaleY(1) scaleX(1); } }
+@keyframes route-mark-found { 50% { transform: scale(1.35) rotate(12deg); } }
+@keyframes treasure-correct { 50% { transform: rotate(-.7deg) translateY(-4px) scale(1.01); } }
+@keyframes treasure-shake { 25% { transform: translateX(-6px); } 50% { transform: translateX(5px); } 75% { transform: translateX(-3px); } }
+@keyframes final-map-in { from { opacity: 0; transform: translate(-50%,-35px) scale(.85); } to { opacity: 1; transform: translate(-50%,0) scale(1); } }
+@keyframes treasure-chest-rise { from { opacity: 0; transform: translate(-50%,85px) scale(.72); } to { opacity: 1; transform: translate(-50%,0) scale(1); } }
+@keyframes reward-beam { to { transform: translateX(-50%) rotate(360deg); } }
+@keyframes reward-copy-in { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
 
 @media (max-width: 350px) {
   .treasure-topbar .brand { gap: .35rem; }
@@ -734,20 +846,25 @@ body {
   .treasure-topbar .brand strong { font-size: .96rem; }
   .treasure-topbar .brand small { font-size: .65rem; }
   .treasure-topbar .stat-pill { min-height: 34px; font-size: .65rem; }
+  .treasure-bottle__prompt { min-width: 215px; }
+  .treasure-letter__content { left: 7%; right: 7%; }
 }
 
 @media (max-height: 680px) {
-  .treasure-body { margin: 0 auto; padding-top: .2rem; padding-bottom: .8rem; }
-  .treasure-map { min-height: 170px; margin-bottom: .45rem; padding-block: .7rem; }
-  .treasure-map__bottle { left: -.8rem; bottom: -1.15rem; width: 10.8rem; }
-  .treasure-map__bottle-tag { left: .45rem; bottom: .35rem; font-size: .62rem; }
-  .treasure-map__copy { max-width: 205px; margin-left: 5.2rem; padding: .55rem .75rem; }
-  .treasure-map__copy h1 { font-size: 1.25rem; }
-  .treasure-map__copy p { font-size: .8rem; }
-  .treasure-clue { min-height: 2.45rem; margin-block: .3rem .45rem; padding-block: .45rem; }
-  .treasure-option { min-height: 52px; }
-  .treasure-option.is-meaning { min-height: 58px; }
-  .treasure-listen { margin-top: .5rem; }
+  .treasure-map { min-height: calc(100dvh - 68px); }
+  .treasure-map__bottle { top: 0; width: min(73%, 300px); }
+  .treasure-bottle__prompt { bottom: 0; padding-block: .55rem; }
+  .treasure-letter { inset-block: .2rem; }
+  .treasure-route { top: 3%; height: 15%; }
+  .treasure-letter__content { top: 20%; bottom: 4%; }
+  .treasure-letter__content h1 { margin-block: .15rem; font-size: 1.1rem; }
+  .treasure-letter__content > p { font-size: .72rem; }
+  .treasure-clue { min-height: 2.2rem; margin-block: .3rem .38rem; padding-block: .38rem; }
+  .treasure-option { min-height: 45px; }
+  .treasure-option.is-meaning { min-height: 49px; }
+  .treasure-listen { min-height: 38px; margin-top: .35rem; }
+  .treasure-reward__map { top: 2%; max-height: 54%; }
+  .treasure-reward__chest { bottom: 11%; width: min(50%, 210px); }
 }
 .result-discovery {
   display: flex;
@@ -1335,7 +1452,9 @@ button.collectible-card:active { transform: scale(.96); }
   .screen.is-on, .task-dot, .cell, .exploration-marker, .answer-burst i, .route-layer line,
   .camp-stage, .camp-hero, #result.is-on::before, .result-reward, .toast, .chest-stage::before,
   .grid, .grid::before, .floating-platform, .scene-transition, .scene-transition::before,
-  .result-word-card, .result-word-card > img, .treasure-map__bottle, .treasure-map__bottle-tag, .treasure-map__fragment,
+  .result-word-card, .result-word-card > img, .treasure-map::before, .treasure-map__bottle, .treasure-cork,
+  .treasure-water-ring, .treasure-spark, .treasure-bottle__prompt i, .treasure-letter,
+  .treasure-route__mark, .treasure-reward__map, .treasure-reward__beam, .treasure-reward__chest, .treasure-reward__copy,
   #board.is-entering .mission-banner, #board.is-entering .tasks, #board.is-entering .board-stage,
   #board.is-entering .meter, #board.is-entering .board-legend, #board.is-entering .footer { animation: none !important; transition: none !important; }
 }

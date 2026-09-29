@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>词境探险队</title>
   <link rel="icon" href="../assets/ui/app-entry.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="game.css?v=20260929-2">
+  <link rel="stylesheet" href="game.css?v=20260929-3">
 </head>
 <body>
   <div class="phone">
@@ -128,31 +128,54 @@
       </header>
       <div class="treasure-body">
         <div class="treasure-map" id="treasure-map" aria-live="polite">
-          <img class="treasure-map__scroll" src="../assets/ui/game/treasure-event/treasure-scroll.webp" alt="展开的藏宝图">
-          <img class="treasure-map__bottle" src="../assets/ui/game/treasure-event/message-bottle.webp" alt="漂流瓶线索">
-          <span class="treasure-map__bottle-tag">瓶中信</span>
-          <span class="treasure-map__route route-a"></span>
-          <span class="treasure-map__route route-b"></span>
-          <span class="treasure-map__fragment fragment-a">✦</span>
-          <span class="treasure-map__fragment fragment-b">✦</span>
-          <span class="treasure-map__compass">⌖</span>
-          <div class="treasure-map__copy">
-            <span id="treasure-step-label">漂流瓶线索</span>
-            <h1 id="treasure-title">听音找线索</h1>
-            <p id="treasure-copy">听一听，点击你听到的英文单词。</p>
+          <span class="treasure-water-ring ring-a" aria-hidden="true"></span>
+          <span class="treasure-water-ring ring-b" aria-hidden="true"></span>
+          <span class="treasure-spark spark-a" aria-hidden="true">✦</span>
+          <span class="treasure-spark spark-b" aria-hidden="true">✦</span>
+
+          <button class="treasure-bottle" id="treasure-open" type="button" aria-label="打开漂流瓶，取出瓶中信">
+            <img class="treasure-map__bottle" src="../assets/ui/game/treasure-event/message-bottle.webp" alt="装着藏宝信的漂流瓶">
+            <span class="treasure-cork" aria-hidden="true"></span>
+            <span class="treasure-bottle__prompt">
+              <b>发现瓶中信</b>
+              <small>向上拖动瓶塞，或点击瓶子</small>
+              <i aria-hidden="true">↑</i>
+            </span>
+          </button>
+
+          <div class="treasure-letter hidden" id="treasure-letter">
+            <div class="treasure-route" aria-hidden="true">
+              <svg viewBox="0 0 320 104" preserveAspectRatio="none">
+                <path class="treasure-route__guide" d="M22 78 C70 12 103 96 151 49 S232 7 298 66"></path>
+                <path class="treasure-route__ink" id="treasure-route-ink" d="M22 78 C70 12 103 96 151 49 S232 7 298 66"></path>
+              </svg>
+              <span class="treasure-route__start">瓶</span>
+              <span class="treasure-route__mark mark-one">✦</span>
+              <span class="treasure-route__mark mark-two">✦</span>
+              <span class="treasure-route__mark mark-three">×</span>
+            </div>
+            <div class="treasure-letter__content">
+              <span class="treasure-letter__eyebrow" id="treasure-step-label">瓶中信已展开</span>
+              <h1 id="treasure-title">听音找线索</h1>
+              <p id="treasure-copy">听一听，找出信件里藏着的英文单词。</p>
+              <div class="treasure-clue" id="treasure-clue"></div>
+              <div class="treasure-options" id="treasure-options"></div>
+              <button class="wx-btn wx-btn--secondary treasure-listen" id="treasure-listen" type="button">
+                <img src="../assets/ui/icons/audio.svg" alt="">再听一次
+              </button>
+            </div>
+          </div>
+
+          <div class="treasure-reward hidden" id="treasure-reward">
+            <img class="treasure-reward__map" src="../assets/ui/game/treasure-event/treasure-scroll.webp" alt="已经修复完成的藏宝图">
+            <span class="treasure-reward__beam" aria-hidden="true"></span>
+            <img class="treasure-reward__chest" src="../assets/ui/game/chest-closed.webp" alt="寻宝获得的收藏宝箱">
+            <div class="treasure-reward__copy">
+              <strong>找到收藏宝箱</strong>
+              <span>宝箱已带回营地，结算后就能打开</span>
+            </div>
           </div>
         </div>
-        <div class="treasure-letter hidden" id="treasure-letter" aria-live="polite">
-          <span class="treasure-letter__eyebrow">瓶中信已展开</span>
-          <strong>听一听信件里的英文线索</strong>
-          <p>纸条已经从漂流瓶里取出来了，点击下方选项找出你听到的单词。</p>
-        </div>
-        <div class="treasure-clue" id="treasure-clue"></div>
-        <div class="treasure-options" id="treasure-options"></div>
-        <button class="wx-btn treasure-open hidden" id="treasure-open" type="button">打开漂流瓶，取出信件</button>
-        <button class="wx-btn wx-btn--secondary treasure-listen" id="treasure-listen" type="button">
-          <img src="../assets/ui/icons/audio.svg" alt="">再听一次
-        </button>
       </div>
     </section>
 
@@ -224,6 +247,6 @@
     </div>
     <div id="toast" class="toast hidden" role="status" aria-live="polite"></div>
   </div>
-  <script src="game.js?v=20260929-2"></script>
+  <script src="game.js?v=20260929-3"></script>
 </body>
 </html>

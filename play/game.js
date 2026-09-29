@@ -769,17 +769,43 @@ function playTreasurePrompt() {
   speak(word.en, [wordAudioPath(round.wordId)]);
 }
 
+let treasureOpening = false;
+let treasurePullStartY = null;
+
+function treasureFeedback(className) {
+  const map = $("treasure-map");
+  map.classList.remove("is-correct", "is-wrong");
+  void map.offsetWidth;
+  map.classList.add(className);
+  setTimeout(() => map.classList.remove(className), 420);
+}
+
+function updateTreasureRoute(event, complete = false) {
+  const phaseStep = { bottle: 0, listen: 0, spell: 1, meaning: 2 }[event.phase] || 0;
+  const totalSteps = Math.max(1, event.rounds.length * 3);
+  const completedSteps = complete ? totalSteps : event.roundIndex * 3 + phaseStep;
+  const routeLength = 320;
+  const route = $("treasure-route-ink");
+  route.style.strokeDasharray = String(routeLength);
+  route.style.strokeDashoffset = String(routeLength - (completedSteps / totalSteps) * routeLength);
+  document.querySelectorAll(".treasure-route__mark").forEach((mark, index) => {
+    mark.classList.toggle("is-found", complete || index < event.roundIndex);
+  });
+}
+
 function renderTreasure() {
   const event = state.treasure;
   const round = currentTreasureRound();
   if (!event || !round) return;
   const word = treasureWord(round.wordId);
   const total = event.rounds.length;
-  $("treasure-progress").textContent = `地图 ${event.roundIndex + 1} / ${total}`;
-  $("treasure-map").classList.remove("is-complete");
-  $("treasure-map").classList.toggle("is-letter-open", event.phase !== "bottle");
-  $("treasure-map").classList.toggle("is-spelling", event.phase === "spell");
-  $("treasure-map").classList.toggle("is-meaning", event.phase === "meaning");
+  const map = $("treasure-map");
+  $("treasure-progress").textContent = event.phase === "bottle" ? "发现线索" : `线索 ${event.roundIndex + 1} / ${total}`;
+  $("treasure-subtitle").textContent = event.phase === "bottle" ? "海浪送来一封神秘信" : "完成三条线索，让路线抵达宝藏";
+  map.classList.remove("is-complete", "is-opening");
+  map.classList.toggle("is-letter-open", event.phase !== "bottle");
+  map.classList.toggle("is-spelling", event.phase === "spell");
+  map.classList.toggle("is-meaning", event.phase === "meaning");
   const options = $("treasure-options");
   const clue = $("treasure-clue");
   const listen = $("treasure-listen");
@@ -787,32 +813,35 @@ function renderTreasure() {
   const letter = $("treasure-letter");
   openBottle.classList.toggle("hidden", event.phase !== "bottle");
   letter.classList.toggle("hidden", event.phase === "bottle");
+  $("treasure-reward").classList.add("hidden");
+  options.classList.toggle("is-letter-grid", event.phase === "spell");
+  updateTreasureRoute(event);
   if (event.phase === "bottle") {
     $("treasure-step-label").textContent = "发现漂流瓶";
     $("treasure-title").textContent = "瓶子里有一封信";
-    $("treasure-copy").textContent = "点击瓶塞，取出藏在里面的英文线索。";
-    clue.textContent = "海浪把一只漂流瓶送到了你的面前……";
+    $("treasure-copy").textContent = "向上拖动瓶塞，取出藏在里面的英文线索。";
+    clue.textContent = "";
     options.innerHTML = "";
     listen.classList.add("hidden");
   } else if (event.phase === "listen") {
-    $("treasure-step-label").textContent = "第一步 · 漂流瓶线索";
+    $("treasure-step-label").textContent = `线索 ${event.roundIndex + 1} · 听音`;
     $("treasure-title").textContent = "听音找线索";
-    $("treasure-copy").textContent = "听一听，点击你听到的英文单词。";
-    clue.textContent = "漂流瓶里传来一个英文单词……";
+    $("treasure-copy").textContent = "听一听，找出信件里藏着的英文单词。";
+    clue.textContent = "信纸上传来一个英文单词……";
     options.innerHTML = round.optionIds.map((id) => `<button type="button" class="treasure-option" data-treasure-word="${id}">${treasureWord(id).en}</button>`).join("");
     listen.classList.remove("hidden");
   } else if (event.phase === "spell") {
-    $("treasure-step-label").textContent = "第二步 · 修复藏宝图";
+    $("treasure-step-label").textContent = `线索 ${event.roundIndex + 1} · 拼写`;
     $("treasure-title").textContent = "拼出这个单词";
-    $("treasure-copy").textContent = "按照正确顺序点击字母，让地图恢复完整。";
+    $("treasure-copy").textContent = "按顺序点击字母，墨水路线会继续向前。";
     const picked = event.spellOrder.map((tokenId) => round.letterTokens.find((token) => token.id === tokenId)?.letter || "");
     clue.innerHTML = `<div class="treasure-spell-slots">${[...word.en].map((_, index) => `<span class="treasure-spell-slot">${picked[index] || ""}</span>`).join("")}</div>`;
     options.innerHTML = round.letterTokens.map((token) => `<button type="button" class="treasure-option is-letter ${event.spellOrder.includes(token.id) ? "is-used" : ""}" data-treasure-letter="${token.id}">${token.letter}</button>`).join("");
     listen.classList.add("hidden");
   } else {
-    $("treasure-step-label").textContent = "第三步 · 线索归位";
-    $("treasure-title").textContent = "把线索放回地图";
-    $("treasure-copy").textContent = "点击这个单词的中文含义。";
+    $("treasure-step-label").textContent = `线索 ${event.roundIndex + 1} · 释义`;
+    $("treasure-title").textContent = "确认线索的含义";
+    $("treasure-copy").textContent = "选出正确含义，点亮这段藏宝路线。";
     clue.textContent = word.en;
     options.innerHTML = round.meaningIds.map((id) => `<button type="button" class="treasure-option is-meaning" data-treasure-meaning="${id}">${treasureWord(id).zh}</button>`).join("");
     listen.classList.add("hidden");
@@ -828,13 +857,16 @@ function handleTreasureChoice(event) {
     if (button.dataset.treasureWord !== round.wordId) {
       playSfx("undo", .2);
       pulseActor("encourage", 900);
+      treasureFeedback("is-wrong");
       toast("再听一次，找出漂流瓶里的单词。");
       return;
     }
     playSfx("mark", .25);
     state.treasure.phase = "spell";
     state.treasure.spellOrder = [];
+    persistActiveRun();
     renderTreasure();
+    treasureFeedback("is-correct");
     return;
   }
   if (button.dataset.treasureLetter) {
@@ -842,18 +874,22 @@ function handleTreasureChoice(event) {
     const expected = round.wordId[state.treasure.spellOrder.length];
     if (!token || token.letter !== expected) {
       playSfx("undo", .18);
+      treasureFeedback("is-wrong");
       toast("这个字母还没到顺序，再找找看。");
       return;
     }
     state.treasure.spellOrder.push(token.id);
     playSfx("mark", .2);
     if (state.treasure.spellOrder.length >= round.wordId.length) state.treasure.phase = "meaning";
+    persistActiveRun();
     renderTreasure();
+    treasureFeedback("is-correct");
     return;
   }
   if (button.dataset.treasureMeaning) {
     if (button.dataset.treasureMeaning !== round.wordId) {
       playSfx("undo", .2);
+      treasureFeedback("is-wrong");
       toast("再看一看这个单词的意思。");
       return;
     }
@@ -865,9 +901,29 @@ function handleTreasureChoice(event) {
       return;
     }
     state.treasure.phase = "listen";
+    persistActiveRun();
     renderTreasure();
+    treasureFeedback("is-correct");
     requestAnimationFrame(playTreasurePrompt);
   }
+}
+
+async function openTreasureBottle() {
+  if (treasureOpening || !state.treasure || state.treasure.phase !== "bottle") return;
+  treasureOpening = true;
+  const map = $("treasure-map");
+  $("treasure-open").style.removeProperty("--cork-pull");
+  map.classList.add("is-opening");
+  playSfx("tool", .3);
+  await wait(680);
+  state.treasure.phase = "listen";
+  persistActiveRun();
+  renderTreasure();
+  map.classList.add("is-unrolling");
+  playSfx("mark", .2);
+  requestAnimationFrame(playTreasurePrompt);
+  setTimeout(() => map.classList.remove("is-unrolling"), 620);
+  treasureOpening = false;
 }
 
 function startTreasureEvent(snapshot = null) {
@@ -884,18 +940,16 @@ async function finishTreasureEvent() {
   state.treasure.active = false;
   state.treasure.completed = true;
   playSfx("complete", .32);
-  renderTreasure();
-  $("treasure-step-label").textContent = "寻宝完成";
-  $("treasure-title").textContent = "藏宝图修复成功";
-  $("treasure-copy").textContent = "探险宝箱已经找到，回到营地领取奖励。";
-  $("treasure-clue").textContent = "✦ 发现收藏宝箱 ✦";
-  $("treasure-options").innerHTML = "";
+  $("treasure-progress").textContent = "宝箱已找到";
+  $("treasure-subtitle").textContent = "藏宝路线修复完成";
   $("treasure-open").classList.add("hidden");
-  $("treasure-letter").classList.add("hidden");
-  $("treasure-listen").classList.add("hidden");
-  $("treasure-map").classList.add("is-complete");
-  await wait(1200);
+  $("treasure-letter").classList.remove("hidden");
+  $("treasure-reward").classList.remove("hidden");
+  const map = $("treasure-map");
+  map.classList.add("is-complete");
+  updateTreasureRoute(state.treasure, true);
   persistActiveRun();
+  await wait(2800);
   finishIfReady();
 }
 
@@ -1743,13 +1797,32 @@ function bind() {
     playSfx("click", .16);
     playTreasurePrompt();
   };
-  $("treasure-open").onclick = () => {
+  const treasureBottle = $("treasure-open");
+  treasureBottle.onclick = openTreasureBottle;
+  treasureBottle.onpointerdown = (event) => {
     if (!state.treasure || state.treasure.phase !== "bottle") return;
-    playSfx("click", .2);
-    state.treasure.phase = "listen";
-    persistActiveRun();
-    renderTreasure();
-    requestAnimationFrame(playTreasurePrompt);
+    treasurePullStartY = event.clientY;
+    treasureBottle.setPointerCapture(event.pointerId);
+    treasureBottle.classList.add("is-pulling");
+  };
+  treasureBottle.onpointermove = (event) => {
+    if (treasurePullStartY === null) return;
+    const pull = Math.max(0, Math.min(52, treasurePullStartY - event.clientY));
+    treasureBottle.style.setProperty("--cork-pull", `${pull}px`);
+  };
+  treasureBottle.onpointerup = (event) => {
+    if (treasurePullStartY === null) return;
+    const pull = Math.max(0, treasurePullStartY - event.clientY);
+    treasurePullStartY = null;
+    treasureBottle.classList.remove("is-pulling");
+    if (treasureBottle.hasPointerCapture(event.pointerId)) treasureBottle.releasePointerCapture(event.pointerId);
+    if (pull >= 30) openTreasureBottle();
+    else treasureBottle.style.removeProperty("--cork-pull");
+  };
+  treasureBottle.onpointercancel = () => {
+    treasurePullStartY = null;
+    treasureBottle.classList.remove("is-pulling");
+    treasureBottle.style.removeProperty("--cork-pull");
   };
   $("voice-toggle").onclick = () => {
     playSfx("click", .2);
