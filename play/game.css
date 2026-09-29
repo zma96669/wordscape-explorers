@@ -650,10 +650,12 @@ body {
   box-shadow: 0 8px 0 rgba(24,63,73,.16), inset 0 0 0 5px rgba(255,248,236,.4);
 }
 .treasure-map__scroll,
-.treasure-map__bottle { position: absolute; pointer-events: none; object-fit: contain; }
+.treasure-map__bottle,
+.treasure-map__bottle-tag { position: absolute; pointer-events: none; object-fit: contain; }
 .treasure-map__scroll { z-index: 1; width: 82%; opacity: 0; transform: scale(.86) rotate(-2deg); transition: opacity .35s ease, transform .35s ease; }
-.treasure-map__bottle { z-index: 3; right: -1.2rem; bottom: -1.4rem; width: 8.4rem; transform: rotate(13deg); filter: drop-shadow(0 8px 6px rgba(24,63,73,.22)); animation: bottle-float 3.2s ease-in-out infinite; }
-.treasure-map__copy { position: relative; z-index: 4; max-width: 245px; padding: .8rem .95rem; border-radius: 20px; background: rgba(255,250,240,.82); box-shadow: 0 5px 16px rgba(24,63,73,.12); text-align: center; }
+.treasure-map__bottle { z-index: 3; left: -.7rem; bottom: -1.45rem; width: 11.8rem; transform: rotate(11deg); filter: drop-shadow(0 8px 6px rgba(24,63,73,.22)); animation: bottle-float 3.2s ease-in-out infinite; }
+.treasure-map__bottle-tag { z-index: 5; left: 1.05rem; bottom: .6rem; padding: .22rem .55rem; border: 2px solid rgba(24,63,73,.82); border-radius: 999px; color: var(--navy); background: rgba(255,250,240,.94); box-shadow: 0 3px 0 rgba(24,63,73,.16); font-size: .72rem; font-weight: 900; transform: rotate(-7deg); }
+.treasure-map__copy { position: relative; z-index: 4; max-width: 220px; margin-left: 6rem; padding: .8rem .95rem; border-radius: 20px; background: rgba(255,250,240,.86); box-shadow: 0 5px 16px rgba(24,63,73,.12); text-align: center; }
 .treasure-map__copy > span { color: var(--orange); font-size: .78rem; font-weight: 900; letter-spacing: .08em; }
 .treasure-map__copy h1 { margin: .3rem 0 .25rem; font-size: 1.5rem; }
 .treasure-map__copy p { margin: 0; color: #3d6178; font-size: .9rem; font-weight: 700; line-height: 1.4; }
@@ -666,6 +668,8 @@ body {
 .treasure-map__compass { position: absolute; right: 13%; top: 14%; color: var(--green); font-size: 2.2rem; transform: rotate(-18deg); opacity: .75; }
 .treasure-map.is-complete .treasure-map__scroll { opacity: .9; transform: scale(.92) rotate(-2deg); }
 .treasure-map.is-complete .treasure-map__bottle { opacity: .18; }
+.treasure-map.is-complete .treasure-map__bottle-tag { opacity: 0; }
+.treasure-map.is-complete .treasure-map__copy { margin-left: 0; }
 .treasure-clue {
   min-height: 2.8rem;
   display: grid;
@@ -715,7 +719,9 @@ body {
 @media (max-height: 680px) {
   .treasure-body { margin: 0 auto; padding-top: .2rem; padding-bottom: .8rem; }
   .treasure-map { min-height: 170px; margin-bottom: .45rem; padding-block: .7rem; }
-  .treasure-map__copy { padding: .55rem .75rem; }
+  .treasure-map__bottle { left: -.8rem; bottom: -1.15rem; width: 10.8rem; }
+  .treasure-map__bottle-tag { left: .45rem; bottom: .35rem; font-size: .62rem; }
+  .treasure-map__copy { max-width: 205px; margin-left: 5.2rem; padding: .55rem .75rem; }
   .treasure-map__copy h1 { font-size: 1.25rem; }
   .treasure-map__copy p { font-size: .8rem; }
   .treasure-clue { min-height: 2.45rem; margin-block: .3rem .45rem; padding-block: .45rem; }
@@ -1309,7 +1315,7 @@ button.collectible-card:active { transform: scale(.96); }
   .screen.is-on, .task-dot, .cell, .exploration-marker, .answer-burst i, .route-layer line,
   .camp-stage, .camp-hero, #result.is-on::before, .result-reward, .toast, .chest-stage::before,
   .grid, .grid::before, .floating-platform, .scene-transition, .scene-transition::before,
-  .result-word-card, .result-word-card > img, .treasure-map__bottle, .treasure-map__fragment,
+  .result-word-card, .result-word-card > img, .treasure-map__bottle, .treasure-map__bottle-tag, .treasure-map__fragment,
   #board.is-entering .mission-banner, #board.is-entering .tasks, #board.is-entering .board-stage,
   #board.is-entering .meter, #board.is-entering .board-legend, #board.is-entering .footer { animation: none !important; transition: none !important; }
 }
