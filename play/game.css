@@ -810,9 +810,10 @@ body {
 .treasure-spell-slot { width: 23px; border-bottom: 3px solid var(--green); color: var(--navy); font-size: 1rem; font-weight: 900; text-transform: lowercase; }
 .treasure-listen { width: 100%; min-height: 42px; margin-top: .5rem; }
 .treasure-listen img { width: 22px; height: 22px; }
-.treasure-map.is-correct .treasure-letter { animation: treasure-correct .4s ease; }
+.treasure-map.is-correct .treasure-letter__content { animation: treasure-correct .32s ease; }
 .treasure-map.is-correct .treasure-route__ink { filter: drop-shadow(0 0 7px rgba(29,160,126,.8)); }
 .treasure-map.is-wrong .treasure-letter__content { animation: treasure-shake .35s ease; }
+.treasure-map.is-unrolling .treasure-letter__content { pointer-events: none; }
 .treasure-reward { position: absolute; z-index: 9; inset: 0; display: grid; place-items: center; overflow: hidden; text-align: center; }
 .treasure-reward::before { content: ""; position: absolute; inset: 0; background: rgba(8,63,70,.18); backdrop-filter: blur(2px); }
 .treasure-reward__map { position: absolute; z-index: 1; left: 50%; top: 4%; width: 92%; max-height: 58%; object-fit: contain; filter: drop-shadow(0 13px 13px rgba(8,50,57,.28)); animation: final-map-in .65s ease both; }
@@ -833,7 +834,7 @@ body {
 @keyframes prompt-away { to { opacity: 0; transform: translateX(-50%) translateY(12px); } }
 @keyframes letter-unroll { from { opacity: 0; transform: rotate(-3deg) scaleY(.08) scaleX(.82); } to { opacity: 1; transform: rotate(-.7deg) scaleY(1) scaleX(1); } }
 @keyframes route-mark-found { 50% { transform: scale(1.35) rotate(12deg); } }
-@keyframes treasure-correct { 50% { transform: rotate(-.7deg) translateY(-4px) scale(1.01); } }
+@keyframes treasure-correct { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-3px); } }
 @keyframes treasure-shake { 25% { transform: translateX(-6px); } 50% { transform: translateX(5px); } 75% { transform: translateX(-3px); } }
 @keyframes final-map-in { from { opacity: 0; transform: translate(-50%,-35px) scale(.85); } to { opacity: 1; transform: translate(-50%,0) scale(1); } }
 @keyframes treasure-chest-rise { from { opacity: 0; transform: translate(-50%,85px) scale(.72); } to { opacity: 1; transform: translate(-50%,0) scale(1); } }
@@ -1453,7 +1454,7 @@ button.collectible-card:active { transform: scale(.96); }
   .camp-stage, .camp-hero, #result.is-on::before, .result-reward, .toast, .chest-stage::before,
   .grid, .grid::before, .floating-platform, .scene-transition, .scene-transition::before,
   .result-word-card, .result-word-card > img, .treasure-map::before, .treasure-map__bottle, .treasure-cork,
-  .treasure-water-ring, .treasure-spark, .treasure-bottle__prompt i, .treasure-letter,
+  .treasure-water-ring, .treasure-spark, .treasure-bottle__prompt i, .treasure-letter, .treasure-letter__content,
   .treasure-route__mark, .treasure-reward__map, .treasure-reward__beam, .treasure-reward__chest, .treasure-reward__copy,
   #board.is-entering .mission-banner, #board.is-entering .tasks, #board.is-entering .board-stage,
   #board.is-entering .meter, #board.is-entering .board-legend, #board.is-entering .footer { animation: none !important; transition: none !important; }
