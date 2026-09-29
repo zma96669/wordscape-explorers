@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>词境探险队</title>
   <link rel="icon" href="../assets/ui/app-entry.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="game.css?v=20260929-4">
+  <link rel="stylesheet" href="game.css?v=20260929-6">
 </head>
 <body>
   <div class="phone">
@@ -229,14 +229,23 @@
       </header>
       <div class="collection-body">
         <h1 class="wx-title">我的收藏柜</h1>
-        <p>点击已获得的收藏，可以听英文并播放轻动作。</p>
-        <div class="collection-detail hidden" id="collection-detail" aria-live="polite">
+        <p>点击收藏，放大查看并听英文。</p>
+        <div id="collection-content"></div>
+      </div>
+      <div class="collection-detail hidden" id="collection-detail" role="dialog" aria-modal="true" aria-labelledby="collection-detail-title">
+        <div class="collection-detail__backdrop" data-close-collection-detail></div>
+        <div class="collection-detail__dialog">
+          <button class="collection-detail__close" id="collection-detail-close" type="button" aria-label="关闭收藏详情">×</button>
+          <div class="collection-detail__art-stage" id="collection-detail-art-stage">
+            <span class="collection-detail__glow" aria-hidden="true"></span>
+            <img id="collection-detail-art" alt="">
+          </div>
+          <span class="collection-detail__label" id="collection-detail-label"></span>
           <strong id="collection-detail-title"></strong>
           <p id="collection-detail-line"></p>
           <small id="collection-detail-date"></small>
           <button class="wx-btn collection-exchange hidden" id="collection-exchange" type="button"></button>
         </div>
-        <div id="collection-content"></div>
       </div>
     </section>
     <div class="scene-transition" id="scene-transition" aria-hidden="true">
@@ -247,6 +256,6 @@
     </div>
     <div id="toast" class="toast hidden" role="status" aria-live="polite"></div>
   </div>
-  <script src="game.js?v=20260929-4"></script>
+  <script src="game.js?v=20260929-6"></script>
 </body>
 </html>

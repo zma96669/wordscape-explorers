@@ -36,6 +36,9 @@ const state = {
   pawnFrameAction: "",
   pawnFrameIndex: 0,
   rewardFrameTimer: 0,
+  collectionFrameTimer: 0,
+  collectionItemId: null,
+  collectionModalTrigger: null,
   rewardWarmup: null,
   treasure: null,
   transitioning: false,
@@ -486,6 +489,29 @@ function playRewardFrameAnimation(item) {
         state.rewardFrameTimer = 0;
         return;
       }
+    }
+    image.src = motionFramePath(entry, index);
+  }, Math.max(60, Math.round(1000 / entry.fps)));
+}
+
+function stopCollectionFrameAnimation() {
+  clearInterval(state.collectionFrameTimer);
+  state.collectionFrameTimer = 0;
+}
+
+function playCollectionFrameAnimation(item) {
+  stopCollectionFrameAnimation();
+  const entry = state.motionManifest && state.motionManifest.collectibles && state.motionManifest.collectibles[item.id];
+  const image = $("collection-detail-art");
+  if (!entry || !entry.ready || !entry.frameCount || !entry.fps || !image) return;
+  let index = 0;
+  image.src = motionFramePath(entry, index);
+  state.collectionFrameTimer = setInterval(() => {
+    index += 1;
+    if (index >= entry.frameCount) {
+      stopCollectionFrameAnimation();
+      image.src = collectibleArt(item, "runtime");
+      return;
     }
     image.src = motionFramePath(entry, index);
   }, Math.max(60, Math.round(1000 / entry.fps)));
@@ -1646,8 +1672,7 @@ async function openChest() {
 function renderCollection() {
   updateStats();
   state.exchangeCandidate = null;
-  $("collection-detail").classList.add("hidden");
-  $("collection-exchange").classList.add("hidden");
+  closeCollectionDetail(false);
   $("collection-content").innerHTML = Object.entries(SERIES).map(([seriesId, series]) => {
     const items = COLLECTIBLES.filter((item) => item.series === seriesId);
     const cards = items.map((item) => {
@@ -1668,7 +1693,37 @@ function renderCollection() {
   }).join("");
 }
 
-function playCollectible(itemId, card) {
+function openCollectionDetail(item, owned, trigger = null) {
+  state.collectionItemId = item.id;
+  state.collectionModalTrigger = trigger;
+  $("collection-detail-art").src = collectibleArt(item, owned ? "runtime" : "silhouette");
+  $("collection-detail-art").alt = owned ? item.nameZh : `${item.nameZh}剪影`;
+  $("collection-detail-art-stage").classList.toggle("is-locked", !owned);
+  $("collection-detail-label").textContent = owned
+    ? (item.rarity === "rare" ? "珍藏收藏" : `${SERIES[item.series].nameZh}收藏`)
+    : "尚未获得";
+  $("collection").classList.add("is-detail-open");
+  $("collection-detail").classList.remove("hidden");
+  requestAnimationFrame(() => $("collection-detail").classList.add("is-open"));
+  $("collection-detail-close").focus({ preventScroll: true });
+}
+
+function closeCollectionDetail(restoreFocus = true) {
+  stopCollectionFrameAnimation();
+  const modal = $("collection-detail");
+  modal.classList.remove("is-open");
+  modal.classList.add("hidden");
+  $("collection").classList.remove("is-detail-open");
+  state.collectionItemId = null;
+  state.exchangeCandidate = null;
+  $("collection-exchange").classList.add("hidden");
+  if (restoreFocus && state.collectionModalTrigger && document.contains(state.collectionModalTrigger)) {
+    state.collectionModalTrigger.focus({ preventScroll: true });
+  }
+  state.collectionModalTrigger = null;
+}
+
+async function playCollectible(itemId, card) {
   const item = COLLECTIBLES.find((candidate) => candidate.id === itemId);
   if (!item || !state.profile.owned[item.id]) return;
   playSfx("mark", .2);
@@ -1681,19 +1736,18 @@ function playCollectible(itemId, card) {
   $("collection-detail-date").textContent = obtainedDate && !Number.isNaN(obtainedDate.getTime())
     ? `获得日期：${obtainedDate.toLocaleDateString("zh-CN")}`
     : "获得日期：本机记录中未保存";
-  $("collection-detail").classList.remove("hidden");
   $("collection-exchange").classList.add("hidden");
-  card.classList.remove("is-playing");
-  void card.offsetWidth;
-  card.classList.add("is-playing");
-  setTimeout(() => card.classList.remove("is-playing"), 850);
+  openCollectionDetail(item, true, card);
+  const entry = state.motionManifest && state.motionManifest.collectibles && state.motionManifest.collectibles[item.id];
+  await preloadMotionEntry(entry);
+  if (state.collectionItemId === item.id) playCollectionFrameAnimation(item);
 }
 
 function exchangeCost(item) {
   return item.rarity === "rare" ? 12 : 6;
 }
 
-function showLockedCollectible(itemId) {
+function showLockedCollectible(itemId, card = null) {
   const item = COLLECTIBLES.find((candidate) => candidate.id === itemId);
   if (!item || state.profile.owned[item.id]) return;
   const cost = exchangeCost(item);
@@ -1708,7 +1762,7 @@ function showLockedCollectible(itemId) {
   button.textContent = missing ? `星砂不足，还差 ${missing} 点` : `用 ${cost} 点星砂兑换`;
   button.disabled = missing > 0;
   button.classList.remove("hidden");
-  $("collection-detail").classList.remove("hidden");
+  openCollectionDetail(item, false, card);
 }
 
 function exchangeCollectible() {
@@ -1777,7 +1831,14 @@ function bind() {
     const card = e.target.closest("[data-collectible]");
     if (card) playCollectible(card.dataset.collectible, card);
     const lockedCard = e.target.closest("[data-locked-collectible]");
-    if (lockedCard) showLockedCollectible(lockedCard.dataset.lockedCollectible);
+    if (lockedCard) showLockedCollectible(lockedCard.dataset.lockedCollectible, lockedCard);
+  });
+  $("collection-detail-close").onclick = () => closeCollectionDetail();
+  $("collection-detail").addEventListener("click", (e) => {
+    if (e.target.closest("[data-close-collection-detail]")) closeCollectionDetail();
+  });
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && !$("collection-detail").classList.contains("hidden")) closeCollectionDetail();
   });
   $("result-tasks").addEventListener("click", (e) => {
     const card = e.target.closest("[data-word-id]");
