@@ -748,7 +748,7 @@ function buildTreasureState(snapshot = null) {
     active: true,
     completed: false,
     roundIndex: 0,
-    phase: "listen",
+    phase: "bottle",
     spellOrder: [],
     rounds
   };
@@ -777,12 +777,24 @@ function renderTreasure() {
   const total = event.rounds.length;
   $("treasure-progress").textContent = `地图 ${event.roundIndex + 1} / ${total}`;
   $("treasure-map").classList.remove("is-complete");
+  $("treasure-map").classList.toggle("is-letter-open", event.phase !== "bottle");
   $("treasure-map").classList.toggle("is-spelling", event.phase === "spell");
   $("treasure-map").classList.toggle("is-meaning", event.phase === "meaning");
   const options = $("treasure-options");
   const clue = $("treasure-clue");
   const listen = $("treasure-listen");
-  if (event.phase === "listen") {
+  const openBottle = $("treasure-open");
+  const letter = $("treasure-letter");
+  openBottle.classList.toggle("hidden", event.phase !== "bottle");
+  letter.classList.toggle("hidden", event.phase === "bottle");
+  if (event.phase === "bottle") {
+    $("treasure-step-label").textContent = "发现漂流瓶";
+    $("treasure-title").textContent = "瓶子里有一封信";
+    $("treasure-copy").textContent = "点击瓶塞，取出藏在里面的英文线索。";
+    clue.textContent = "海浪把一只漂流瓶送到了你的面前……";
+    options.innerHTML = "";
+    listen.classList.add("hidden");
+  } else if (event.phase === "listen") {
     $("treasure-step-label").textContent = "第一步 · 漂流瓶线索";
     $("treasure-title").textContent = "听音找线索";
     $("treasure-copy").textContent = "听一听，点击你听到的英文单词。";
@@ -863,7 +875,7 @@ function startTreasureEvent(snapshot = null) {
   persistActiveRun();
   transitionScreen("treasure", () => {
     renderTreasure();
-    playTreasurePrompt();
+    if (state.treasure.phase !== "bottle") playTreasurePrompt();
   });
 }
 
@@ -878,6 +890,8 @@ async function finishTreasureEvent() {
   $("treasure-copy").textContent = "探险宝箱已经找到，回到营地领取奖励。";
   $("treasure-clue").textContent = "✦ 发现收藏宝箱 ✦";
   $("treasure-options").innerHTML = "";
+  $("treasure-open").classList.add("hidden");
+  $("treasure-letter").classList.add("hidden");
   $("treasure-listen").classList.add("hidden");
   $("treasure-map").classList.add("is-complete");
   await wait(1200);
@@ -1409,7 +1423,7 @@ function startLevel(level, mode, levelIndex = -1, snapshot = null) {
   if (state.levelMode === "normal" && state.treasure && state.treasure.active) {
     transitionScreen("treasure", () => {
       renderTreasure();
-      playTreasurePrompt();
+      if (state.treasure.phase !== "bottle") playTreasurePrompt();
     });
     return;
   }
@@ -1728,6 +1742,14 @@ function bind() {
   $("treasure-listen").onclick = () => {
     playSfx("click", .16);
     playTreasurePrompt();
+  };
+  $("treasure-open").onclick = () => {
+    if (!state.treasure || state.treasure.phase !== "bottle") return;
+    playSfx("click", .2);
+    state.treasure.phase = "listen";
+    persistActiveRun();
+    renderTreasure();
+    requestAnimationFrame(playTreasurePrompt);
   };
   $("voice-toggle").onclick = () => {
     playSfx("click", .2);

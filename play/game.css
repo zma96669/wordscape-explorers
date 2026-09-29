@@ -670,6 +670,25 @@ body {
 .treasure-map.is-complete .treasure-map__bottle { opacity: .18; }
 .treasure-map.is-complete .treasure-map__bottle-tag { opacity: 0; }
 .treasure-map.is-complete .treasure-map__copy { margin-left: 0; }
+.treasure-map.is-letter-open .treasure-map__bottle { transform: rotate(11deg) scale(.9); }
+.treasure-letter {
+  display: grid;
+  gap: .18rem;
+  margin: .45rem 0 .65rem;
+  padding: .8rem .9rem;
+  border: 3px solid #a86c35;
+  border-radius: 18px;
+  background: linear-gradient(145deg, #fff4cf, #f4d99d);
+  box-shadow: 0 5px 0 rgba(117,76,38,.16), inset 0 0 0 2px rgba(255,255,255,.45);
+  color: var(--navy);
+  text-align: center;
+  transform: rotate(-1deg);
+  animation: letter-unroll .35s ease-out both;
+}
+.treasure-letter__eyebrow { color: #9d5b2b; font-size: .72rem; font-weight: 900; letter-spacing: .08em; }
+.treasure-letter strong { font-size: 1rem; }
+.treasure-letter p { margin: 0; color: #5c7180; font-size: .8rem; font-weight: 700; line-height: 1.35; }
+.treasure-open { width: 100%; margin: .2rem 0 .65rem; }
 .treasure-clue {
   min-height: 2.8rem;
   display: grid;
@@ -707,6 +726,7 @@ body {
 .treasure-listen img { width: 22px; height: 22px; }
 @keyframes treasure-spark { 0%, 100% { transform: translateY(0) scale(1); opacity: .65; } 50% { transform: translateY(-5px) scale(1.12); opacity: 1; } }
 @keyframes bottle-float { 0%, 100% { margin-bottom: 0; } 50% { margin-bottom: .38rem; } }
+@keyframes letter-unroll { from { opacity: 0; transform: translateY(10px) rotate(-4deg) scale(.96); } to { opacity: 1; transform: translateY(0) rotate(-1deg) scale(1); } }
 
 @media (max-width: 350px) {
   .treasure-topbar .brand { gap: .35rem; }
