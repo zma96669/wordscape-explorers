@@ -617,7 +617,7 @@ body {
   overflow-x: hidden;
   overflow-y: auto;
 }
-.treasure-screen .bg--board { background-image: url("../assets/ui/game/treasure-event/treasure-river-header.webp"); background-position: center; }
+#treasure.is-on .bg--board { background-image: url("../assets/ui/game/treasure-event/treasure-river-header.webp"); background-position: center; }
 .treasure-screen .shade { background: linear-gradient(180deg, rgba(5,52,68,.12), rgba(15,105,116,.12) 52%, rgba(8,55,67,.32)); }
 .treasure-topbar { gap: .5rem; background: rgba(233,253,250,.9); box-shadow: 0 3px 0 rgba(13,73,80,.14); }
 .treasure-topbar .brand,
@@ -1199,7 +1199,6 @@ body { background: #143842; }
   border: 6px solid #806847;
   border-radius: 29px;
   background-color: #238ca5;
-  background-image: url("../assets/art/terrain/river-water.webp");
   background-size: 142% 142%;
   background-position: 20% 44%;
   box-shadow: 0 10px 20px rgba(18,60,70,.2), inset 0 0 0 3px rgba(223,232,174,.42), 0 0 0 2px #31545a;
@@ -1419,6 +1418,7 @@ body { background: #143842; }
   background: radial-gradient(circle, rgba(245,201,94,.42), rgba(245,201,94,0) 68%);
   animation: treasure-glow 2.6s ease-in-out infinite;
 }
+#board.is-on .grid { background-image: url("../assets/art/terrain/river-water.webp"); }
 .chest-stage::after {
   content: "";
   position: absolute;
@@ -1469,8 +1469,7 @@ button.collectible-card:active { transform: scale(.96); }
   pointer-events: none;
   transform: translate(-50%, 102%);
   background:
-    linear-gradient(180deg, rgba(18,91,112,.22), rgba(12,70,84,.78)),
-    url("../assets/art/terrain/river-water.webp") center / cover;
+    linear-gradient(180deg, rgba(18,91,112,.22), rgba(12,70,84,.78));
   box-shadow: 0 -14px 0 rgba(226,255,246,.72), 0 -22px 0 rgba(81,183,193,.48);
 }
 .scene-transition::before {
@@ -1484,6 +1483,11 @@ button.collectible-card:active { transform: scale(.96); }
 .scene-transition.is-active {
   visibility: visible;
   pointer-events: auto;
+  background-image:
+    linear-gradient(180deg, rgba(18,91,112,.22), rgba(12,70,84,.78)),
+    url("../assets/art/terrain/river-water.webp");
+  background-position: center;
+  background-size: cover;
   transition: transform .36s cubic-bezier(.65,0,.35,1);
 }
 .scene-transition.is-covering { transform: translate(-50%, 0); }

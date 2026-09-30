@@ -374,14 +374,17 @@ function motionEntryLoaded(entry) {
 }
 
 function warmBoardMotion() {
-  ["idle", "move"].forEach((action) => {
-    const entry = explorerMotion(action);
-    if (entry) preloadMotionEntry(entry).then(() => {
-      if (state.motionManifest && explorerMotion(state.actorAction) === entry && $("board").classList.contains("is-on")) {
-        renderGrid();
-      }
-    });
+  const idle = explorerMotion("idle");
+  if (idle) preloadMotionEntry(idle).then(() => {
+    if (state.motionManifest && explorerMotion(state.actorAction) === idle && $("board").classList.contains("is-on")) {
+      renderGrid();
+    }
   });
+  setTimeout(() => {
+    if (!$("board").classList.contains("is-on")) return;
+    const move = explorerMotion("move");
+    if (move) preloadMotionEntry(move);
+  }, 2600);
 }
 
 function preloadImage(path) {
@@ -395,6 +398,25 @@ function preloadImage(path) {
   });
   imagePreloadCache.set(path, pending);
   return pending;
+}
+
+function loadDeferredImages(root, includeLate = false) {
+  if (!root) return Promise.resolve([]);
+  const images = Array.from(root.querySelectorAll("img[data-src]"))
+    .filter((image) => includeLate || image.dataset.defer !== "late");
+  return Promise.all(images.map((image) => new Promise((resolve) => {
+    const source = image.dataset.src;
+    if (!source) {
+      resolve(image);
+      return;
+    }
+    const finish = () => resolve(image);
+    image.addEventListener("load", finish, { once: true });
+    image.addEventListener("error", finish, { once: true });
+    image.src = source;
+    delete image.dataset.src;
+    if (image.complete) finish();
+  })));
 }
 
 function selectRewardCandidate(seriesId) {
@@ -413,22 +435,12 @@ function prepareRewardWarmup(ids = null) {
     const item = savedItem || selectRewardCandidate(seriesId);
     if (!item) return;
     warmed[seriesId] = item.id;
-    preloadImage(collectibleArt(item, "runtime"));
-    const motion = state.motionManifest && state.motionManifest.collectibles && state.motionManifest.collectibles[item.id];
-    preloadMotionEntry(motion);
   });
   state.rewardWarmup = warmed;
 }
 
 function warmRewardAssetsFromState() {
-  if (!state.rewardWarmup) return;
-  Object.values(state.rewardWarmup).forEach((itemId) => {
-    const item = COLLECTIBLES.find((entry) => entry.id === itemId);
-    if (!item) return;
-    preloadImage(collectibleArt(item, "runtime"));
-    const motion = state.motionManifest && state.motionManifest.collectibles && state.motionManifest.collectibles[item.id];
-    preloadMotionEntry(motion);
-  });
+  // 奖励素材在玩家选择系列后再预载，避免探险开始时下载三套动画。
 }
 
 function explorerMotion(action) {
@@ -543,6 +555,7 @@ function updateStats() {
   $("series-stats").textContent = `星砂 ${state.profile.stardust} · 箱 ${state.profile.chests}`;
   const pendingButton = $("pending-chest-btn");
   pendingButton.classList.toggle("hidden", state.profile.chests < 1);
+  if (state.profile.chests > 0) loadDeferredImages(pendingButton);
   pendingButton.lastChild.textContent = `开箱（${state.profile.chests}）`;
   $("choose-series").disabled = state.profile.chests < 1;
 }
@@ -671,6 +684,7 @@ function allDone() {
 function show(id) {
   const leavingBoard = $("board").classList.contains("is-on") && id !== "board";
   if (leavingBoard) cancelBoardActivity();
+  loadDeferredImages($(id));
   document.querySelectorAll(".screen").forEach((el) => el.classList.toggle("is-on", el.id === id));
   if (id === "camp") renderCamp();
   if (id === "collection") renderCollection();
@@ -970,6 +984,7 @@ async function finishTreasureEvent() {
   $("treasure-subtitle").textContent = "藏宝路线修复完成";
   $("treasure-open").classList.add("hidden");
   $("treasure-letter").classList.remove("hidden");
+  await loadDeferredImages($("treasure-reward"), true);
   $("treasure-reward").classList.remove("hidden");
   const map = $("treasure-map");
   map.classList.add("is-complete");
@@ -1594,6 +1609,12 @@ function prepareChest(seriesId) {
     return;
   }
   state.selectedSeries = seriesId;
+  const rewardItem = chooseReward(seriesId);
+  if (rewardItem) {
+    preloadImage(collectibleArt(rewardItem, "runtime"));
+    const motion = state.motionManifest && state.motionManifest.collectibles && state.motionManifest.collectibles[rewardItem.id];
+    preloadMotionEntry(motion);
+  }
   state.pendingReward = null;
   state.chestOpening = false;
   clearInterval(state.rewardFrameTimer);
@@ -1919,4 +1940,3 @@ function main() {
 }
 
 main();
-
