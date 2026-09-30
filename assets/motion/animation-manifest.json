@@ -1,7 +1,7 @@
 {
   "version": "1.0",
-  "framePattern": "frame-000.png",
-  "notes": "Set ready to true only after every numbered transparent PNG frame exists.",
+  "framePattern": "frame-000.webp",
+  "notes": "Runtime delivery contains numbered transparent WebP frames. Authoring PNG frames are generated locally and excluded from publishing.",
   "explorer": {
     "idle": {
       "ready": true,

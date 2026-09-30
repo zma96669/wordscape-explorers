@@ -2,7 +2,7 @@ from pathlib import Path
 from PIL import Image, ImageChops, ImageOps, ImageStat
 import json
 
-ROOT = Path(r"D:\xueli_code\bisai\game")
+ROOT = Path(__file__).resolve().parents[2]
 SRC_ROOT = ROOT / "assets" / "art" / "collectibles"
 RUNTIME_ROOT = ROOT / "assets" / "art" / "collectibles"
 THUMB_ROOT = ROOT / "assets" / "art" / "thumbnails"
@@ -63,7 +63,7 @@ def inspect_alpha(path: Path) -> dict:
 
 
 def export_one(series: str, name: str) -> dict:
-    src = SRC_ROOT / series / f"{name}.png"
+    src = SRC_ROOT / series / f"{name}.webp"
     record = {"id": name, "series": series, "src": str(src.relative_to(ROOT)).replace("\\", "/")}
     if not src.exists():
         record["status"] = "missing"

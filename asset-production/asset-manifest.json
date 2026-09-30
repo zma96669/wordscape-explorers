@@ -3,7 +3,7 @@
   "created": "2026-09-16",
   "status": "ready_for_delivery",
   "entryCount": 195,
-  "note": "Each entry represents one runtime file or an explicitly identified bundle/directory. Learning images are intentionally omitted because the shipped gameplay is text and audio based.",
+  "note": "Delivery manifest points to compressed runtime assets. Authoring PNG and music WAV masters are generated locally and excluded from the published package.",
   "assets": [
     {
       "id": "title-lockup",
@@ -170,7 +170,7 @@
     {
       "id": "explorer",
       "category": "character",
-      "plannedPath": "assets/art/characters/explorer.png",
+      "plannedPath": "assets/art/characters/explorer.webp",
       "status": "complete_runtime",
       "productionMethod": "image_generation_then_animation_preparation",
       "acceptance": "主形象一致；待机/移动/思考/开心/鼓励动作不改变身份",
@@ -179,7 +179,7 @@
     {
       "id": "camp",
       "category": "background",
-      "plannedPath": "assets/art/backgrounds/camp.png",
+      "plannedPath": "assets/art/backgrounds/camp.webp",
       "status": "complete_runtime",
       "productionMethod": "image_generation",
       "acceptance": "手机竖屏裁切安全；界面区域留白；无烘焙文字",
@@ -188,7 +188,7 @@
     {
       "id": "board",
       "category": "background",
-      "plannedPath": "assets/art/backgrounds/board.png",
+      "plannedPath": "assets/art/backgrounds/board.webp",
       "status": "complete_runtime",
       "productionMethod": "image_generation",
       "acceptance": "手机竖屏裁切安全；界面区域留白；无烘焙文字",
@@ -359,7 +359,7 @@
     {
       "id": "collectible-triceratops",
       "category": "collectible",
-      "plannedPath": "assets/art/collectibles/dinosaur/triceratops.png",
+      "plannedPath": "assets/art/collectibles/dinosaur/triceratops.webp",
       "status": "complete_runtime",
       "productionMethod": "image_generation",
       "acceptance": "独立透明底、无裁切；收藏格与详情中均可辨认；与系列参考风格一致",
@@ -430,7 +430,7 @@
     {
       "id": "collectible-stegosaurus",
       "category": "collectible",
-      "plannedPath": "assets/art/collectibles/dinosaur/stegosaurus.png",
+      "plannedPath": "assets/art/collectibles/dinosaur/stegosaurus.webp",
       "status": "complete_runtime",
       "productionMethod": "image_generation",
       "acceptance": "独立透明底、无裁切；收藏格与详情中均可辨认；与系列参考风格一致",
@@ -501,7 +501,7 @@
     {
       "id": "collectible-pterosaur",
       "category": "collectible",
-      "plannedPath": "assets/art/collectibles/dinosaur/pterosaur.png",
+      "plannedPath": "assets/art/collectibles/dinosaur/pterosaur.webp",
       "status": "complete_runtime",
       "productionMethod": "image_generation",
       "acceptance": "独立透明底、无裁切；收藏格与详情中均可辨认；与系列参考风格一致",
@@ -572,7 +572,7 @@
     {
       "id": "collectible-dinosaur-egg",
       "category": "collectible",
-      "plannedPath": "assets/art/collectibles/dinosaur/dinosaur-egg.png",
+      "plannedPath": "assets/art/collectibles/dinosaur/dinosaur-egg.webp",
       "status": "complete_runtime",
       "productionMethod": "image_generation",
       "acceptance": "独立透明底、无裁切；收藏格与详情中均可辨认；与系列参考风格一致",
@@ -643,7 +643,7 @@
     {
       "id": "collectible-fossil-display",
       "category": "collectible",
-      "plannedPath": "assets/art/collectibles/dinosaur/fossil-display.png",
+      "plannedPath": "assets/art/collectibles/dinosaur/fossil-display.webp",
       "status": "complete_runtime",
       "productionMethod": "image_generation",
       "acceptance": "独立透明底、无裁切；收藏格与详情中均可辨认；与系列参考风格一致",
@@ -714,7 +714,7 @@
     {
       "id": "collectible-little-tyrannosaurus",
       "category": "collectible",
-      "plannedPath": "assets/art/collectibles/dinosaur/little-tyrannosaurus.png",
+      "plannedPath": "assets/art/collectibles/dinosaur/little-tyrannosaurus.webp",
       "status": "complete_runtime",
       "productionMethod": "image_generation",
       "acceptance": "独立透明底、无裁切；收藏格与详情中均可辨认；与系列参考风格一致",
@@ -785,7 +785,7 @@
     {
       "id": "collectible-rocket",
       "category": "collectible",
-      "plannedPath": "assets/art/collectibles/space/rocket.png",
+      "plannedPath": "assets/art/collectibles/space/rocket.webp",
       "status": "complete_runtime",
       "productionMethod": "image_generation",
       "acceptance": "独立透明底、无裁切；收藏格与详情中均可辨认；与系列参考风格一致",
@@ -856,7 +856,7 @@
     {
       "id": "collectible-moon-rover",
       "category": "collectible",
-      "plannedPath": "assets/art/collectibles/space/moon-rover.png",
+      "plannedPath": "assets/art/collectibles/space/moon-rover.webp",
       "status": "complete_runtime",
       "productionMethod": "image_generation",
       "acceptance": "独立透明底、无裁切；收藏格与详情中均可辨认；与系列参考风格一致",
@@ -927,7 +927,7 @@
     {
       "id": "collectible-satellite",
       "category": "collectible",
-      "plannedPath": "assets/art/collectibles/space/satellite.png",
+      "plannedPath": "assets/art/collectibles/space/satellite.webp",
       "status": "complete_runtime",
       "productionMethod": "image_generation",
       "acceptance": "独立透明底、无裁切；收藏格与详情中均可辨认；与系列参考风格一致",
@@ -998,7 +998,7 @@
     {
       "id": "collectible-space-helmet",
       "category": "collectible",
-      "plannedPath": "assets/art/collectibles/space/space-helmet.png",
+      "plannedPath": "assets/art/collectibles/space/space-helmet.webp",
       "status": "complete_runtime",
       "productionMethod": "image_generation",
       "acceptance": "独立透明底、无裁切；收藏格与详情中均可辨认；与系列参考风格一致",
@@ -1069,7 +1069,7 @@
     {
       "id": "collectible-planet-model",
       "category": "collectible",
-      "plannedPath": "assets/art/collectibles/space/planet-model.png",
+      "plannedPath": "assets/art/collectibles/space/planet-model.webp",
       "status": "complete_runtime",
       "productionMethod": "image_generation",
       "acceptance": "独立透明底、无裁切；收藏格与详情中均可辨认；与系列参考风格一致",
@@ -1140,7 +1140,7 @@
     {
       "id": "collectible-star-robot",
       "category": "collectible",
-      "plannedPath": "assets/art/collectibles/space/star-robot.png",
+      "plannedPath": "assets/art/collectibles/space/star-robot.webp",
       "status": "complete_runtime",
       "productionMethod": "image_generation",
       "acceptance": "独立透明底、无裁切；收藏格与详情中均可辨认；与系列参考风格一致",
@@ -1211,7 +1211,7 @@
     {
       "id": "collectible-sea-turtle",
       "category": "collectible",
-      "plannedPath": "assets/art/collectibles/ocean/sea-turtle.png",
+      "plannedPath": "assets/art/collectibles/ocean/sea-turtle.webp",
       "status": "complete_runtime",
       "productionMethod": "image_generation",
       "acceptance": "独立透明底、无裁切；收藏格与详情中均可辨认；与系列参考风格一致",
@@ -1282,7 +1282,7 @@
     {
       "id": "collectible-clownfish",
       "category": "collectible",
-      "plannedPath": "assets/art/collectibles/ocean/clownfish.png",
+      "plannedPath": "assets/art/collectibles/ocean/clownfish.webp",
       "status": "complete_runtime",
       "productionMethod": "image_generation",
       "acceptance": "独立透明底、无裁切；收藏格与详情中均可辨认；与系列参考风格一致",
@@ -1353,7 +1353,7 @@
     {
       "id": "collectible-octopus",
       "category": "collectible",
-      "plannedPath": "assets/art/collectibles/ocean/octopus.png",
+      "plannedPath": "assets/art/collectibles/ocean/octopus.webp",
       "status": "complete_runtime",
       "productionMethod": "image_generation",
       "acceptance": "独立透明底、无裁切；收藏格与详情中均可辨认；与系列参考风格一致",
@@ -1424,7 +1424,7 @@
     {
       "id": "collectible-shell-house",
       "category": "collectible",
-      "plannedPath": "assets/art/collectibles/ocean/shell-house.png",
+      "plannedPath": "assets/art/collectibles/ocean/shell-house.webp",
       "status": "complete_runtime",
       "productionMethod": "image_generation",
       "acceptance": "独立透明底、无裁切；收藏格与详情中均可辨认；与系列参考风格一致",
@@ -1495,7 +1495,7 @@
     {
       "id": "collectible-submarine",
       "category": "collectible",
-      "plannedPath": "assets/art/collectibles/ocean/submarine.png",
+      "plannedPath": "assets/art/collectibles/ocean/submarine.webp",
       "status": "complete_runtime",
       "productionMethod": "image_generation",
       "acceptance": "独立透明底、无裁切；收藏格与详情中均可辨认；与系列参考风格一致",
@@ -1566,7 +1566,7 @@
     {
       "id": "collectible-little-whale",
       "category": "collectible",
-      "plannedPath": "assets/art/collectibles/ocean/little-whale.png",
+      "plannedPath": "assets/art/collectibles/ocean/little-whale.webp",
       "status": "complete_runtime",
       "productionMethod": "image_generation",
       "acceptance": "独立透明底、无裁切；收藏格与详情中均可辨认；与系列参考风格一致",
@@ -1835,7 +1835,7 @@
     {
       "id": "music-camp",
       "category": "music",
-      "plannedPath": "assets/audio/music/camp-loop.wav",
+      "plannedPath": "assets/audio/music/camp-loop.mp3",
       "status": "complete_runtime",
       "productionMethod": "procedural_demo_or_confirmed_music_provider",
       "acceptance": "可循环、不喧宾夺主；基础合成版与成品配乐分别标记",
@@ -1844,7 +1844,7 @@
     {
       "id": "music-exploration",
       "category": "music",
-      "plannedPath": "assets/audio/music/explore-loop.wav",
+      "plannedPath": "assets/audio/music/explore-loop.mp3",
       "status": "complete_runtime",
       "productionMethod": "procedural_demo_or_confirmed_music_provider",
       "acceptance": "可循环、不喧宾夺主；基础合成版与成品配乐分别标记",
@@ -1941,5 +1941,5 @@
       "dependsOn": []
     }
   ],
-  "updated": "2026-09-20"
+  "updated": "2026-09-30"
 }

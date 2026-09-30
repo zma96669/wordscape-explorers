@@ -6,7 +6,7 @@
     {
       "id": "triceratops",
       "series": "dinosaur",
-      "src": "assets/art/collectibles/dinosaur/triceratops.png",
+      "src": "assets/art/collectibles/dinosaur/triceratops.webp",
       "status": "ok",
       "source": {
         "size": [
@@ -32,7 +32,7 @@
     {
       "id": "stegosaurus",
       "series": "dinosaur",
-      "src": "assets/art/collectibles/dinosaur/stegosaurus.png",
+      "src": "assets/art/collectibles/dinosaur/stegosaurus.webp",
       "status": "ok",
       "source": {
         "size": [
@@ -58,7 +58,7 @@
     {
       "id": "pterosaur",
       "series": "dinosaur",
-      "src": "assets/art/collectibles/dinosaur/pterosaur.png",
+      "src": "assets/art/collectibles/dinosaur/pterosaur.webp",
       "status": "ok",
       "source": {
         "size": [
@@ -84,7 +84,7 @@
     {
       "id": "dinosaur-egg",
       "series": "dinosaur",
-      "src": "assets/art/collectibles/dinosaur/dinosaur-egg.png",
+      "src": "assets/art/collectibles/dinosaur/dinosaur-egg.webp",
       "status": "ok",
       "source": {
         "size": [
@@ -110,7 +110,7 @@
     {
       "id": "fossil-display",
       "series": "dinosaur",
-      "src": "assets/art/collectibles/dinosaur/fossil-display.png",
+      "src": "assets/art/collectibles/dinosaur/fossil-display.webp",
       "status": "ok",
       "source": {
         "size": [
@@ -136,7 +136,7 @@
     {
       "id": "little-tyrannosaurus",
       "series": "dinosaur",
-      "src": "assets/art/collectibles/dinosaur/little-tyrannosaurus.png",
+      "src": "assets/art/collectibles/dinosaur/little-tyrannosaurus.webp",
       "status": "ok",
       "source": {
         "size": [
@@ -162,7 +162,7 @@
     {
       "id": "rocket",
       "series": "space",
-      "src": "assets/art/collectibles/space/rocket.png",
+      "src": "assets/art/collectibles/space/rocket.webp",
       "status": "ok",
       "source": {
         "size": [
@@ -188,7 +188,7 @@
     {
       "id": "moon-rover",
       "series": "space",
-      "src": "assets/art/collectibles/space/moon-rover.png",
+      "src": "assets/art/collectibles/space/moon-rover.webp",
       "status": "ok",
       "source": {
         "size": [
@@ -214,7 +214,7 @@
     {
       "id": "satellite",
       "series": "space",
-      "src": "assets/art/collectibles/space/satellite.png",
+      "src": "assets/art/collectibles/space/satellite.webp",
       "status": "ok",
       "source": {
         "size": [
@@ -240,7 +240,7 @@
     {
       "id": "space-helmet",
       "series": "space",
-      "src": "assets/art/collectibles/space/space-helmet.png",
+      "src": "assets/art/collectibles/space/space-helmet.webp",
       "status": "ok",
       "source": {
         "size": [
@@ -266,7 +266,7 @@
     {
       "id": "planet-model",
       "series": "space",
-      "src": "assets/art/collectibles/space/planet-model.png",
+      "src": "assets/art/collectibles/space/planet-model.webp",
       "status": "ok",
       "source": {
         "size": [
@@ -292,7 +292,7 @@
     {
       "id": "star-robot",
       "series": "space",
-      "src": "assets/art/collectibles/space/star-robot.png",
+      "src": "assets/art/collectibles/space/star-robot.webp",
       "status": "ok",
       "source": {
         "size": [
@@ -318,7 +318,7 @@
     {
       "id": "sea-turtle",
       "series": "ocean",
-      "src": "assets/art/collectibles/ocean/sea-turtle.png",
+      "src": "assets/art/collectibles/ocean/sea-turtle.webp",
       "status": "ok",
       "source": {
         "size": [
@@ -344,7 +344,7 @@
     {
       "id": "clownfish",
       "series": "ocean",
-      "src": "assets/art/collectibles/ocean/clownfish.png",
+      "src": "assets/art/collectibles/ocean/clownfish.webp",
       "status": "ok",
       "source": {
         "size": [
@@ -370,7 +370,7 @@
     {
       "id": "octopus",
       "series": "ocean",
-      "src": "assets/art/collectibles/ocean/octopus.png",
+      "src": "assets/art/collectibles/ocean/octopus.webp",
       "status": "ok",
       "source": {
         "size": [
@@ -396,7 +396,7 @@
     {
       "id": "shell-house",
       "series": "ocean",
-      "src": "assets/art/collectibles/ocean/shell-house.png",
+      "src": "assets/art/collectibles/ocean/shell-house.webp",
       "status": "ok",
       "source": {
         "size": [
@@ -422,7 +422,7 @@
     {
       "id": "submarine",
       "series": "ocean",
-      "src": "assets/art/collectibles/ocean/submarine.png",
+      "src": "assets/art/collectibles/ocean/submarine.webp",
       "status": "ok",
       "source": {
         "size": [
@@ -448,7 +448,7 @@
     {
       "id": "little-whale",
       "series": "ocean",
-      "src": "assets/art/collectibles/ocean/little-whale.png",
+      "src": "assets/art/collectibles/ocean/little-whale.webp",
       "status": "ok",
       "source": {
         "size": [

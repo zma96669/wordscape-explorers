@@ -12,3 +12,9 @@ __pycache__/
 .DS_Store
 Thumbs.db
 
+# Authoring masters are generated locally; delivery keeps compressed runtime assets.
+assets/art/**/*.png
+assets/motion/**/*.png
+assets/ui/game/**/*.png
+assets/audio/music/*.wav
+

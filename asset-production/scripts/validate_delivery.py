@@ -24,7 +24,7 @@ def validate_animations(errors: list[str], report: dict) -> None:
     frame_total = 0
     for name, entry in entries.items():
         directory = (ROOT / "play" / entry["path"]).resolve()
-        frames = sorted(directory.glob("frame-*.png"))
+        frames = sorted(directory.glob("frame-*.webp"))
         frame_total += len(frames)
         if not entry["ready"]:
             errors.append(f"Animation is not ready: {name}")
@@ -54,13 +54,12 @@ def validate_audio(errors: list[str], report: dict) -> None:
         else:
             voice_files.append(path)
 
-    music_files = sorted((ROOT / "assets/audio/music").glob("*.wav"))
-    if {path.name for path in music_files} != {"camp-loop.wav", "explore-loop.wav"}:
-        errors.append("Expected camp-loop.wav and explore-loop.wav")
+    music_files = sorted((ROOT / "assets/audio/music").glob("*.mp3"))
+    if {path.name for path in music_files} != {"camp-loop.mp3", "explore-loop.mp3"}:
+        errors.append("Expected camp-loop.mp3 and explore-loop.mp3")
     for path in music_files:
-        with wave.open(str(path)) as audio:
-            if audio.getnchannels() != 2 or audio.getframerate() != 32_000 or audio.getnframes() <= 0:
-                errors.append(f"Invalid music WAV: {path}")
+        if path.stat().st_size <= 32_000:
+            errors.append(f"Invalid music MP3: {path}")
 
     sfx_files = sorted((ROOT / "assets/audio/sfx").glob("*.wav"))
     if {path.name for path in sfx_files} != EXPECTED_SFX:
@@ -135,6 +134,29 @@ def validate_runtime_references(errors: list[str], report: dict) -> None:
     report["runtimeReferences"] = {"staticFilesChecked": len(checked)}
 
 
+def validate_package_weight(errors: list[str], report: dict) -> None:
+    budget_bytes = 20 * 1024 * 1024
+    assets = ROOT / "assets"
+    files = [path for path in assets.rglob("*") if path.is_file()]
+    authoring_sources = [
+        path for path in files
+        if (path.suffix.lower() == ".png" and "showcase" not in path.parts)
+        or (path.suffix.lower() == ".wav" and "music" in path.parts)
+    ]
+    if authoring_sources:
+        errors.append("Authoring source files leaked into the runtime package: " + ", ".join(str(path.relative_to(ROOT)) for path in authoring_sources[:8]))
+    total_bytes = sum(path.stat().st_size for path in files)
+    if total_bytes > budget_bytes:
+        errors.append(f"Runtime asset package exceeds 20 MB budget: {total_bytes / 1024 / 1024:.2f} MB")
+    report["packageWeight"] = {
+        "files": len(files),
+        "bytes": total_bytes,
+        "megabytes": round(total_bytes / 1024 / 1024, 2),
+        "budgetMegabytes": 20,
+        "authoringSources": len(authoring_sources),
+    }
+
+
 def main() -> None:
     errors: list[str] = []
     report: dict = {"result": "passed"}
@@ -143,6 +165,7 @@ def main() -> None:
     validate_manifest(errors, report)
     validate_showcase(errors, report)
     validate_runtime_references(errors, report)
+    validate_package_weight(errors, report)
     report["errors"] = errors
     if errors:
         report["result"] = "failed"

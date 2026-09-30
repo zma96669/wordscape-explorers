@@ -1,12 +1,12 @@
 {
   "version": "1.0",
-  "updated": "2026-09-20",
+  "updated": "2026-09-30",
   "project": "词境探险队",
   "records": [
     {
       "scope": "角色、背景与18件收藏插画",
       "source": "项目内生成式图像工作流",
-      "notes": "最终运行图与透明衍生图保存在 assets/art；连续动作帧保存在 assets/motion。"
+      "notes": "运行图与透明衍生图保存在 assets/art，连续动作运行帧保存在 assets/motion；发布包仅保留 WebP。"
     },
     {
       "scope": "界面图标与棋盘组件",
@@ -16,7 +16,7 @@
     {
       "scope": "棋盘动态水面素材",
       "source": "gpt-image-2",
-      "notes": "俯视水面源图位于 assets/art/terrain/river-water-source.png，运行图位于 assets/art/terrain/river-water.webp；整块棋盘以该图作为连续水面，CSS 提供缓慢水流与光纹动画。"
+      "notes": "运行图位于 assets/art/terrain/river-water.webp；高分辨率制作源文件不包含在发布包中。"
     },
     {
       "scope": "漂流瓶寻宝与结算收藏宝箱插画",
@@ -26,7 +26,7 @@
     {
       "scope": "漂流瓶寻宝界面视觉素材",
       "source": "gpt-image-2",
-      "notes": "消息漂流瓶、展开藏宝图、藏宝图面板与河面线索横幅由 gpt-image-2 生成；运行图位于 assets/ui/game/treasure-event，透明 PNG 同时保留为生产源文件，WebP 用于页面加载。"
+      "notes": "运行图位于 assets/ui/game/treasure-event，统一使用 WebP；制作源文件不包含在发布包中。"
     },
     {
       "scope": "英语语音",
@@ -36,7 +36,7 @@
     {
       "scope": "背景音乐与操作音效",
       "source": "项目内程序合成",
-      "notes": "生成脚本位于 asset-production/scripts；运行时文件保存在 assets/audio。"
+      "notes": "背景音乐运行文件为 MP3，操作音效为短 WAV；未压缩音乐母带不包含在发布包中。"
     },
     {
       "scope": "字体",

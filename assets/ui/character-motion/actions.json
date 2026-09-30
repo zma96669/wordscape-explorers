@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "source": "../../art/characters/explorer.png",
+  "source": "../../art/characters/explorer.webp",
   "implementation": "whole_image_transform",
   "anchor": "50% 92%",
   "actions": {

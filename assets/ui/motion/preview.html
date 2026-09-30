@@ -43,11 +43,11 @@
   </div>
   <div id="wx-stage">
     <img class="chest" id="chest" src="../game/chest-closed.webp" alt="箱子">
-    <img class="reward" id="reward" src="../../art/collectibles/space/star-robot.png" alt="奖励">
+    <img class="reward" id="reward" src="../../art/collectibles/space/star-robot.webp" alt="奖励">
     <img class="route" id="route" src="../game/route-segment.svg" alt="路线">
     <img class="mark" id="mark" src="../game/target-marker.svg" alt="标记">
     <img class="card" id="card" src="../icons/collection.svg" alt="词卡">
-    <img class="pawn" id="pawn" src="../../art/characters/explorer.png" alt="探险员">
+    <img class="pawn" id="pawn" src="../../art/characters/explorer.webp" alt="探险员">
   </div>
   <p id="log"></p>
   <script type="module">
@@ -76,8 +76,8 @@
       btn.addEventListener("click", async () => {
         const name = btn.dataset.play;
         if (name === "chest") document.getElementById("chest").src = "../game/chest-open.webp";
-        if (name === "rare") document.getElementById("reward").src = "../../art/collectibles/dinosaur/little-tyrannosaurus.png";
-        if (name === "common") document.getElementById("reward").src = "../../art/collectibles/space/rocket.png";
+        if (name === "rare") document.getElementById("reward").src = "../../art/collectibles/dinosaur/little-tyrannosaurus.webp";
+        if (name === "common") document.getElementById("reward").src = "../../art/collectibles/space/rocket.webp";
         els[name].style.opacity = "1";
         await play(name, els[name]);
         clearSkip();

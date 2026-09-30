@@ -44,5 +44,12 @@
   "runtimeReferences": {
     "staticFilesChecked": 33
   },
+  "packageWeight": {
+    "files": 531,
+    "bytes": 15427300,
+    "megabytes": 14.71,
+    "budgetMegabytes": 20,
+    "authoringSources": 0
+  },
   "errors": []
 }

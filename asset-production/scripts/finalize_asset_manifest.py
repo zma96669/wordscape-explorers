@@ -11,11 +11,11 @@ MANIFEST = ROOT / "asset-production/asset-manifest.json"
 def main() -> None:
     data = json.loads(MANIFEST.read_text(encoding="utf-8"))
     path_overrides = {
-        "camp": "assets/art/backgrounds/camp.png",
-        "board": "assets/art/backgrounds/board.png",
+        "camp": "assets/art/backgrounds/camp.webp",
+        "board": "assets/art/backgrounds/board.webp",
         "ravine": "assets/art/terrain/river-water.webp",
-        "music-camp": "assets/audio/music/camp-loop.wav",
-        "music-exploration": "assets/audio/music/explore-loop.wav",
+        "music-camp": "assets/audio/music/camp-loop.mp3",
+        "music-exploration": "assets/audio/music/explore-loop.mp3",
     }
 
     missing: list[str] = []
@@ -46,7 +46,7 @@ def main() -> None:
             missing.append(f"{asset_id}: {asset['plannedPath']}")
 
     data["version"] = "1.0"
-    data["updated"] = "2026-09-20"
+    data["updated"] = "2026-09-30"
     data["status"] = "ready_for_delivery" if not missing else "incomplete"
     data["entryCount"] = len(data["assets"])
     data["note"] = (
