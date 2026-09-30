@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>词境探险队</title>
   <link rel="icon" href="../assets/ui/app-entry.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="game.css?v=20260930-1">
+  <link rel="stylesheet" href="game.css?v=20260930-4">
 </head>
 <body>
   <div class="phone">
@@ -22,20 +22,6 @@
         </div>
         <span class="stat-pill" id="camp-stats">星砂 0 · 箱 0 · 0/18</span>
       </header>
-      <div class="stands">
-        <div class="stand">
-          <img class="item" id="camp-slot-0" src="../assets/art/silhouettes/little-tyrannosaurus.webp" alt="未解锁展示位">
-          <img class="base" src="../assets/ui/game/display-stand.svg" alt="">
-        </div>
-        <div class="stand">
-          <img class="item" id="camp-slot-1" src="../assets/art/silhouettes/star-robot.webp" alt="未解锁主展示位">
-          <img class="base" src="../assets/ui/game/main-stand.svg" alt="">
-        </div>
-        <div class="stand">
-          <img class="item" id="camp-slot-2" src="../assets/art/silhouettes/little-whale.webp" alt="未解锁展示位">
-          <img class="base" src="../assets/ui/game/display-stand.svg" alt="">
-        </div>
-      </div>
       <div class="camp-stage">
         <img class="camp-hero" src="../assets/art/characters/explorer.webp" alt="小探险员">
       </div>
@@ -45,9 +31,8 @@
         <p class="camp-progress" id="camp-progress">学习进度 0/100 · 完成全部内容后进入下一轮复习</p>
         <div class="camp-actions">
           <button class="wx-btn" id="normal-btn"><img src="../assets/ui/icons/compass.svg" alt=""><span>开始随机探险</span></button>
+          <button class="wx-btn wx-btn--secondary camp-collection-btn" id="collection-btn" type="button" aria-label="打开收藏柜，已收藏 0 件，共 18 件"><img src="../assets/ui/icons/collection.svg" alt=""><span>收藏柜</span><small id="camp-collection-count">0/18</small></button>
           <button class="wx-btn wx-btn--reward hidden" id="pending-chest-btn"><img data-src="../assets/ui/game/chest-closed.webp" alt="">开箱（0）</button>
-          <button class="wx-btn wx-btn--secondary" id="start-btn">教学关</button>
-          <button class="wx-btn wx-btn--secondary" id="collection-btn"><img src="../assets/ui/icons/collection.svg" alt="">收藏柜</button>
         </div>
       </div>
     </section>
@@ -256,6 +241,6 @@
     </div>
     <div id="toast" class="toast hidden" role="status" aria-live="polite"></div>
   </div>
-  <script src="game.js?v=20260930-1"></script>
+  <script src="game.js?v=20260930-4"></script>
 </body>
 </html>

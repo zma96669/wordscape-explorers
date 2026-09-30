@@ -93,19 +93,6 @@ body {
   width: min(220px, 58%);
   filter: none;
 }
-.stands {
-  position: absolute;
-  left: 7%; right: 7%; bottom: 40%;
-  display: flex;
-  justify-content: space-between;
-  pointer-events: none;
-}
-.stand { width: 24%; text-align: center; }
-.stand:nth-child(2) { display: none; }
-.stand img.item { width: 100%; }
-.stand img.item.is-locked { opacity: .45; filter: saturate(.3); }
-.stand img.base { display: none; }
-
 .panel {
   margin: 0 .8rem 1rem;
   padding: 1rem;
@@ -124,9 +111,9 @@ body {
   background: rgba(226,241,236,.82);
 }
 .hint { font-size: .92rem; }
-.camp-actions { display: grid; grid-template-columns: 1fr 1fr; gap: .55rem; }
+.camp-actions { display: grid; grid-template-columns: 1fr; gap: .55rem; }
 .camp-actions #normal-btn { grid-column: 1 / -1; }
-.camp-actions:has(#pending-chest-btn:not(.hidden)) { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.camp-actions:has(#pending-chest-btn:not(.hidden)) { grid-template-columns: 1fr 1fr; }
 .camp-actions:has(#pending-chest-btn:not(.hidden)) .wx-btn:not(#normal-btn) {
   min-width: 0;
   padding-inline: .42rem;
@@ -134,6 +121,17 @@ body {
   gap: .25rem;
 }
 .camp-actions:has(#pending-chest-btn:not(.hidden)) .wx-btn:not(#normal-btn) img { width: 22px; height: 22px; }
+.camp-collection-btn { background: rgba(255,248,236,.98); }
+.camp-collection-btn img { width: 24px; height: 24px; }
+.camp-collection-btn small {
+  margin-left: auto;
+  padding: .18rem .42rem;
+  border-radius: 999px;
+  color: var(--navy);
+  background: #e4f1ec;
+  font-size: .68rem;
+  font-weight: 900;
+}
 .wx-btn--reward { background: #f4d27a; }
 .wx-btn--reward img { width: 30px; height: 30px; object-fit: contain; }
 
@@ -1313,7 +1311,6 @@ body { background: #143842; }
   width: min(196px, 52%);
   transform-origin: 50% 100%;
 }
-#camp .stands { bottom: 39%; }
 #camp > .panel {
   margin-bottom: .72rem;
   padding: .72rem .78rem .78rem;
@@ -1341,7 +1338,6 @@ body { background: #143842; }
 @media (max-height: 740px) {
   #camp .camp-stage { flex-basis: 300px; }
   #camp .camp-hero { width: min(178px, 48%); }
-  #camp .stands { display: none; }
   #camp > .panel { padding-block: .62rem .68rem; }
 }
 
@@ -1556,10 +1552,10 @@ button.collectible-card:active { transform: scale(.96); }
   50% { transform: translateY(var(--float-distance, 2px)) rotate(.18deg); }
 }
 @keyframes route-dash { to { stroke-dashoffset: -10; } }
-
 @media (prefers-reduced-motion: reduce) {
   .screen.is-on, .task-dot, .cell, .exploration-marker, .answer-burst i, .route-layer line,
-  .camp-stage, .camp-hero, #result.is-on::before, .result-reward, .toast, .chest-stage::before, .chest-stage::after,
+  .camp-stage, .camp-hero,
+  #result.is-on::before, .result-reward, .toast, .chest-stage::before, .chest-stage::after,
   .grid, .grid::before, .floating-platform, .scene-transition, .scene-transition::before,
   .result-word-card, .result-word-card > img, .treasure-map::before, .treasure-map__bottle, .treasure-cork,
   .treasure-water-ring, .treasure-spark, .treasure-bottle__prompt i, .treasure-letter, .treasure-letter__content,

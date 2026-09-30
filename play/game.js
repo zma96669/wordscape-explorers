@@ -22,7 +22,7 @@ const state = {
   cellEffectTimer: 0,
   voice: true,
   hintLevel: 0,
-  levelMode: "tutorial",
+  levelMode: "normal",
   currentLevelIndex: -1,
   foundExploration: false,
   runRewardGranted: false,
@@ -575,17 +575,13 @@ function renderCamp() {
     const label = normalButton.querySelector("span");
     if (label) label.textContent = state.profile.activeRun ? "继续上次探险" : "开始随机探险";
   }
-  const owned = COLLECTIBLES.filter((item) => state.profile.owned[item.id]);
-  const lockedFallback = ["little-tyrannosaurus", "star-robot", "little-whale"]
-    .map((id) => COLLECTIBLES.find((item) => item.id === id));
-  for (let index = 0; index < 3; index += 1) {
-    const slot = $(`camp-slot-${index}`);
-    const item = owned[index] || lockedFallback[index];
-    const locked = !owned[index];
-    slot.src = collectibleArt(item, locked ? "silhouette" : "runtime");
-    slot.alt = locked ? `尚未获得的${item.nameZh}` : item.nameZh;
-    slot.classList.toggle("is-locked", locked);
+  const totalOwned = ownedCount();
+  const cabinet = $("collection-btn");
+  if (cabinet) {
+    cabinet.setAttribute("aria-label", `打开收藏柜，已收藏 ${totalOwned} 件，共 18 件`);
   }
+  const cabinetCount = $("camp-collection-count");
+  if (cabinetCount) cabinetCount.textContent = `${totalOwned}/18`;
 }
 
 function makeTask(wordId, type) {
@@ -1321,9 +1317,7 @@ function renderResult() {
   const usedSteps = Math.max(0, state.route.length - 1);
   const treasureDone = Boolean(state.treasure && state.treasure.completed);
   const bonusStars = (state.foundExploration ? 1 : 0) + (treasureDone ? 1 : 0);
-  $("result-sub").textContent = state.levelMode === "tutorial"
-    ? "教学目标都找对了，已经回到营地"
-    : `${state.level.titleZh}完成 · ${usedSteps} 步回营${treasureDone ? " · 寻宝完成" : ""}`;
+  $("result-sub").textContent = `${state.level.titleZh}完成 · ${usedSteps} 步回营${treasureDone ? " · 寻宝完成" : ""}`;
   $("result-tasks").innerHTML = results.map((r, index) => {
     const word = state.level.words[r.correctId] || WORD_BANK[r.correctId];
     return `<button type="button" class="result-word-card" data-word-id="${r.correctId}" aria-label="朗读 ${word.en}，${word.zh}，${wordPartOfSpeech(r.correctId)}">
@@ -1497,12 +1491,8 @@ function resetBoard(snapshot = null) {
   state.treasure = snapshot && snapshot.treasure && snapshot.treasure.active ? snapshot.treasure : null;
   state.hintLevel = 0;
   state.runRewardGranted = false;
-  $("mission-title").textContent = state.levelMode === "tutorial"
-    ? "探险教学 · 第一次出发"
-    : `${state.level.region} · 第 ${state.level.number} 站 ${state.level.titleZh}`;
-  $("mission-copy").textContent = state.levelMode === "tutorial"
-    ? `跟随 ${state.level.tasks.length} 个词语线索，最后点击帐篷回营。`
-    : state.level.mission;
+  $("mission-title").textContent = `${state.level.region} · 第 ${state.level.number} 站 ${state.level.titleZh}`;
+  $("mission-copy").textContent = state.level.mission;
   $("back-camp").lastChild.textContent = "营地";
   renderTasks();
   renderGrid();
@@ -1714,6 +1704,11 @@ function renderCollection() {
   }).join("");
 }
 
+function openCampCollection() {
+  playSfx("click");
+  show("collection");
+}
+
 function openCollectionDetail(item, owned, trigger = null) {
   state.collectionItemId = item.id;
   state.collectionModalTrigger = trigger;
@@ -1821,11 +1816,10 @@ function exchangeCollectible() {
 
 function bind() {
   $("normal-btn").onclick = () => { playSfx("click"); startRandomLevel(); };
-  $("start-btn").onclick = () => { playSfx("click"); startLevel(TUTORIAL_LEVEL, "tutorial"); };
   $("back-camp").onclick = () => { playSfx("click"); persistActiveRun(); transitionScreen("camp"); };
   $("reset").onclick = () => { playSfx("click", .2); playCurrent(); };
   $("hint").onclick = showHint;
-  $("collection-btn").onclick = () => { playSfx("click"); show("collection"); };
+  $("collection-btn").onclick = openCampCollection;
   $("pending-chest-btn").onclick = () => {
     state.seriesReturnScreen = "camp";
     playSfx("click"); renderSeriesOptions(); show("series");
@@ -1929,11 +1923,8 @@ function bind() {
   });
 }
 
-const TUTORIAL_LEVEL = {"id": "tutorial-1", "titleZh": "教学关：找到三个目标，再走回营地", "size": 3, "stepBudget": 4, "start": [0, 0], "exit": [2, 2], "note": "示范教学内容，尚未教研审核。", "tasks": [{"id": "listen-umbrella", "type": "listen", "labelZh": "听音", "promptZh": "听一听，找到对应的单词。", "spokenText": "umbrella", "correctId": "umbrella", "hintZh": "这个词常用来表示“雨伞”。", "explanationZh": "umbrella 在本词包中表示“雨伞”。"}, {"id": "meaning-rabbit", "type": "meaning", "labelZh": "含义", "promptZh": "找到表示“兔子”的词。", "spokenText": "An animal with long ears that can hop.", "correctId": "rabbit", "hintZh": "这是一种动物，也会出现在目标词的发音里。", "explanationZh": "rabbit 表示“兔子”。"}, {"id": "context-run", "type": "context", "labelZh": "语境", "promptZh": "根据句子选择合适的动词。", "promptEn": "During the race, I ___ as fast as I can.", "spokenText": "During the race, I blank as fast as I can.", "correctId": "run", "hintZh": "注意句子里的动作是在比赛中赛跑。", "explanationZh": "句子意思是：比赛时，我尽可能快跑。"}], "words": {"umbrella": {"en": "umbrella", "zh": "雨伞"}, "rabbit": {"en": "rabbit", "zh": "兔子"}, "run": {"en": "run", "zh": "跑"}, "eat": {"en": "eat", "zh": "吃"}, "hot": {"en": "hot", "zh": "热的"}, "book": {"en": "book", "zh": "书"}}, "cells": [{"x": 0, "y": 0, "tile": "start"}, {"x": 1, "y": 0, "tile": "path-h", "wordId": "umbrella"}, {"x": 2, "y": 0, "tile": "path", "wordId": "rabbit"}, {"x": 0, "y": 1, "tile": "ground", "wordId": "eat"}, {"x": 1, "y": 1, "tile": "ground"}, {"x": 2, "y": 1, "tile": "path", "wordId": "run"}, {"x": 0, "y": 2, "tile": "ground", "wordId": "hot"}, {"x": 1, "y": 2, "tile": "ground", "wordId": "book"}, {"x": 2, "y": 2, "tile": "exit"}]};
-
 function main() {
   state.profile = loadProfile();
-  state.level = TUTORIAL_LEVEL;
   bind();
   renderCamp();
   loadMotionManifest();
